@@ -114,6 +114,59 @@
   --font-mono: var(--font-kapwa-mono);
 }
 
+/* ── Scroll-reveal animation ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside a reveal container */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-stagger.reveal-visible > *:nth-child(1) {
+  transition-delay: 0ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(2) {
+  transition-delay: 80ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(3) {
+  transition-delay: 160ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(4) {
+  transition-delay: 240ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(5) {
+  transition-delay: 320ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(6) {
+  transition-delay: 400ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(7) {
+  transition-delay: 480ms;
+}
+.reveal-stagger.reveal-visible > *:nth-child(8) {
+  transition-delay: 560ms;
+}
+
+.reveal-stagger.reveal-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

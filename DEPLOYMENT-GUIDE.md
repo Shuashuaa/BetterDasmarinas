@@ -41,18 +41,18 @@ In your Vercel project dashboard:
 2. **Add the following variables:**
 
 ```env
-VITE_GOVERNMENT_NAME=Your City/Municipality Name
+VITE_GOVERNMENT_NAME=City of Dasmariñas
 VITE_GOVERNMENT_TYPE=City
-VITE_REGION=Region VII
-VITE_PROVINCE=Cebu
+VITE_REGION=Region IV-A
+VITE_PROVINCE=Cavite
 VITE_WEBSITE_URL=https://your-project.vercel.app
-VITE_CONTACT_EMAIL=info@your-city.gov.ph
-VITE_CONTACT_PHONE=(032) 123-4567
+VITE_CONTACT_EMAIL=info@betterdasmarinas.vercel.app
+VITE_CONTACT_PHONE=sample phone
 VITE_FACEBOOK_URL=https://facebook.com/your-government
 VITE_TWITTER_URL=https://twitter.com/your-government
 VITE_INSTAGRAM_URL=https://instagram.com/your-government
 VITE_YOUTUBE_URL=https://youtube.com/your-government
-VITE_SITE_DESCRIPTION=Official website of Your City/Municipality
+VITE_SITE_DESCRIPTION=Official website of City of Dasmariñas/Municipality
 VITE_SITE_KEYWORDS=government, local government, services, your city
 ```
 
@@ -65,7 +65,7 @@ VITE_SITE_KEYWORDS=government, local government, services, your city
 ### Step 5: Custom Domain (Optional)
 
 1. **Go to Settings → Domains**
-2. **Add your custom domain** (e.g., `your-city.gov.ph`)
+2. **Add your custom domain** (e.g., `betterdasmarinas.vercel.app`)
 3. **Follow DNS configuration instructions**
 4. **Enable SSL certificate** (automatic with Vercel)
 
@@ -234,7 +234,7 @@ dist_folder_path = "../dist"
 tags = {
   Project     = "BetterLocalGov"
   Environment = "production"
-  LGU         = "Your City Name"
+  LGU         = "City of Dasmariñas"
   ManagedBy   = "Terraform"
 }
 ```
@@ -343,27 +343,27 @@ terraform destroy
 
 ```env
 # .env.local
-VITE_GOVERNMENT_NAME=Your City (Development)
+VITE_GOVERNMENT_NAME=City of Dasmariñas (Development)
 VITE_WEBSITE_URL=http://localhost:5173
-VITE_CONTACT_EMAIL=dev@your-city.gov.ph
+VITE_CONTACT_EMAIL=dev@betterdasmarinas.vercel.app
 ```
 
 ### Staging Environment
 
 ```env
 # .env.staging
-VITE_GOVERNMENT_NAME=Your City (Staging)
-VITE_WEBSITE_URL=https://staging.your-city.gov.ph
-VITE_CONTACT_EMAIL=staging@your-city.gov.ph
+VITE_GOVERNMENT_NAME=City of Dasmariñas (Staging)
+VITE_WEBSITE_URL=https://staging.betterdasmarinas.vercel.app
+VITE_CONTACT_EMAIL=staging@betterdasmarinas.vercel.app
 ```
 
 ### Production Environment
 
 ```env
 # .env.production
-VITE_GOVERNMENT_NAME=Your City
-VITE_WEBSITE_URL=https://your-city.gov.ph
-VITE_CONTACT_EMAIL=info@your-city.gov.ph
+VITE_GOVERNMENT_NAME=City of Dasmariñas
+VITE_WEBSITE_URL=https://betterdasmarinas.vercel.app
+VITE_CONTACT_EMAIL=info@betterdasmarinas.vercel.app
 ```
 
 ## 🛡️ Security Considerations

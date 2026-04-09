@@ -30,7 +30,7 @@ This guide helps content contributors create clear, helpful, and accessible cont
 ### Department/Office Page Template
 
 ```markdown
-# [Department/Office Name] — [Your City Name]
+# [Department/Office Name] — [City of Dasmariñas]
 
 Brief description of the department, its mandate, and who it serves.
 
@@ -81,7 +81,7 @@ Short description of the program and who benefits from it.
 ### Service Page Template
 
 ```markdown
-# [Service Name] — [Your City Name]
+# [Service Name] — [City of Dasmariñas]
 
 Brief, clear description of what this service is and who it's for.
 
@@ -188,9 +188,9 @@ A: [Clear, helpful answer]
 Use tables for structured information:
 
 ```markdown
-| Service         | Location           | Hours            | Contact        |
-| --------------- | ------------------ | ---------------- | -------------- |
-| Health Check-up | City Health Office | Mon-Fri, 8AM-5PM | (032) 123-4567 |
+| Service         | Location           | Hours            | Contact      |
+| --------------- | ------------------ | ---------------- | ------------ |
+| Health Check-up | City Health Office | Mon-Fri, 8AM-5PM | sample phone |
 ```
 
 #### Lists

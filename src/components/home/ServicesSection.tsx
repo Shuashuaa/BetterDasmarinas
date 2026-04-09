@@ -3,20 +3,14 @@ import * as LucideIcons from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
-import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 import { serviceCategories } from '../../data/yamlLoader';
-
-interface Subcategory {
-  name: string;
-  slug: string;
-}
 
 interface Category {
   category: string;
   slug: string;
-  subcategories: Subcategory[];
   description: string;
   icon: string;
 }
@@ -30,47 +24,55 @@ export default function ServicesSection({
 }) {
   const { t } = useTranslation();
 
-  const getIcon = (category: string) => {
+  const getIcon = (iconName: string) => {
     const IconComponent = LucideIcons[
-      category as keyof typeof LucideIcons
+      iconName as keyof typeof LucideIcons
     ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
+    return IconComponent ? <IconComponent className="h-5 w-5" /> : null;
   };
 
   const displayedCategories = serviceCategories.categories as Category[];
+  const headingRef = useScrollReveal<HTMLDivElement>();
+  const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <Section>
-      <Heading level={2}>{title || t('services.title')}</Heading>
-      <Text className="text-gray-600 mb-6">
-        {description || t('services.description')}
-      </Text>
+      <div ref={headingRef} className="reveal">
+        <Heading level={2}>{title || t('services.title')}</Heading>
+        <Text className="text-gray-600 mb-6">
+          {description || t('services.description')}
+        </Text>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div
+        ref={gridRef}
+        className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
         {displayedCategories.map(category => (
-          <Card
+          <Link
             key={category.slug}
-            hoverable
-            className="border-t-4 border-primary-500"
+            to={`/services/${category.slug}`}
+            className="group block bg-white rounded-xl border border-gray-100 hover:border-primary-200 hover:shadow-md transition-all duration-200 p-5"
           >
-            <Link
-              to={`/services/${category.slug}`}
-              className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
-            >
-              <CardContent className="flex flex-col h-full p-6">
-                <div className="flex gap-2">
-                  <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start">
-                    {getIcon(category.icon)}
-                  </div>
-
-                  <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
-                    {category.category}
-                  </h3>
-                </div>
-                <Text className="text-gray-800">{category.description}</Text>
-              </CardContent>
-            </Link>
-          </Card>
+            <div className="bg-primary-50 text-primary-700 w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+              {getIcon(category.icon)}
+            </div>
+            <h3 className="text-sm font-bold mb-2 text-gray-900">
+              {t(
+                `services.categories.${category.slug}.name`,
+                category.category
+              )}
+            </h3>
+            <p className="text-xs text-gray-500 leading-relaxed mb-3">
+              {t(
+                `services.categories.${category.slug}.description`,
+                category.description
+              )}
+            </p>
+            <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full bg-primary-50 text-primary-700">
+              Services
+            </span>
+          </Link>
         ))}
       </div>
     </Section>

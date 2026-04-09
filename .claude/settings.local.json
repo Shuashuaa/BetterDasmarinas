@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:betterindang.org)",
+      "WebSearch",
+      "Bash(curl -s -L \"https://betterindang.org\" --max-time 15)",
+      "Bash(curl -s -L \"https://betterindang.org/assets/index-bA4sRtwa.css\" --max-time 15)",
+      "Bash(curl -s -L \"https://betterindang.org/assets/index-bA4sRtwa.css\" --max-time 30)",
+      "Bash(grep -E \"\\(primary|secondary|accent|#[0-9a-fA-F]{3,6}|--color|background|gradient\\)\")",
+      "Bash(curl -s -L \"https://betterindang.org/assets/index-uw3CNAo8.js\" --max-time 30)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

@@ -4,7 +4,7 @@ A modern, multilingual, and accessible website template designed specifically fo
 
 ## ✨ Features
 
-- **🌐 Multilingual Support**: English, Filipino, Cebuano, and other Philippine languages
+- **🌐 Multilingual Support**: English, Filipino, Caviteano, and other Philippine languages
 - **📱 Responsive Design**: Mobile-first approach with modern UI/UX
 - **♿ Accessibility**: WCAG 2.1 compliant design
 - **📝 Content Management**: YAML-based content system for easy updates
@@ -59,13 +59,13 @@ A modern, multilingual, and accessible website template designed specifically fo
    Edit `.env.local` with your government information:
 
    ```env
-   VITE_GOVERNMENT_NAME="Your City/Municipality Name"
+   VITE_GOVERNMENT_NAME="City of Dasmariñas"
    VITE_GOVERNMENT_TYPE="City" # or "Municipality"
-   VITE_REGION="Region VII"
-   VITE_PROVINCE="Cebu"
-   VITE_WEBSITE_URL="https://your-website.gov.ph"
-   VITE_CONTACT_EMAIL="info@your-website.gov.ph"
-   VITE_CONTACT_PHONE="(032) 123-4567"
+   VITE_REGION="Region IV-A"
+   VITE_PROVINCE="Cavite"
+   VITE_WEBSITE_URL="https://betterdasmarinas.vercel.app"
+   VITE_CONTACT_EMAIL="info@betterdasmarinas.vercel.app"
+   VITE_CONTACT_PHONE="sample phone"
    ```
 
 6. **Start development server**
@@ -115,12 +115,12 @@ colors: {
 Edit `src/data/government.yaml`:
 
 ```yaml
-name: 'Your City/Municipality Name'
+name: 'City of Dasmariñas'
 type: 'City' # or "Municipality"
-region: 'Region VII'
-province: 'Cebu'
-mayor: "Your Mayor's Name"
-vice_mayor: "Your Vice Mayor's Name"
+region: 'Region IV-A'
+province: 'Cavite'
+mayor: "Jennifer "Jenny" Austria-Barzaga"
+vice_mayor: "Vice Mayor Name"
 established: '1950'
 population: '500,000'
 area: '58.10 km²'
@@ -162,7 +162,7 @@ categories:
 Each service page should follow this structure:
 
 ```markdown
-# Service Title — Your City Name
+# Service Title — City of Dasmariñas
 
 Brief description of the service.
 
@@ -243,13 +243,13 @@ Brief description of the service.
    Set these in your Vercel project settings:
 
    ```
-   VITE_GOVERNMENT_NAME=Your City Name
+   VITE_GOVERNMENT_NAME=City of Dasmariñas
    VITE_GOVERNMENT_TYPE=City
    VITE_REGION=Your Region
    VITE_PROVINCE=Your Province
    VITE_WEBSITE_URL=https://your-domain.vercel.app
-   VITE_CONTACT_EMAIL=info@your-city.gov.ph
-   VITE_CONTACT_PHONE=(032) 123-4567
+   VITE_CONTACT_EMAIL=info@betterdasmarinas.vercel.app
+   VITE_CONTACT_PHONE=sample phone
    ```
 
 3. **Deploy**
