@@ -204,7 +204,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-10 pt-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-gray-500">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>&copy; {currentYear} BetterDasmarinas</span>
+              <span>&copy; {currentYear} BetterDasmariñas</span>
               <span className="hidden sm:inline text-gray-700">·</span>
               <span className="bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono">
                 <a

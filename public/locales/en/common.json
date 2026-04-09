@@ -1,8 +1,8 @@
 {
-  "site_name": "BetterDasmarinas",
+  "site_name": "BetterDasmariñas",
   "site_description": "A free, open-source community portal for residents of Dasmariñas City, Cavite.",
   "hero": {
-    "title": "Welcome to BetterDasmarinas",
+    "title": "Welcome to BetterDasmariñas",
     "welcome": "WELCOME TO",
     "subtitle": "Your community-powered portal for City of Dasmariñas, Cavite — access government services, public officials, and city information.",
     "browseServices": "Browse Services",
@@ -88,7 +88,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 BetterDasmarinas. All content is public domain unless otherwise specified."
+    "copyright": "© 2025 BetterDasmariñas. All content is public domain unless otherwise specified."
   },
   "navbar": {
     "home": "Home",
