@@ -1,4 +1,4 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Lapu-Lapu City
+# Request Special Collection Services for Hazardous Waste & E-Waste — Dasmariñas City
 
 Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
 
@@ -43,10 +43,11 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
 
 ## 4) Contact Information
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+- **City Environment and Natural Resources Office (CENRO)**
+  Dasmariñas City Hall Complex, Brgy. Poblacion I-A, Dasmariñas City, Cavite 4114
+  Phone: 0910-544-5731
+  Email: cenrodasma2020@gmail.com
+  Facebook: [CENRO Dasmariñas City](https://www.facebook.com/p/City-Environment-and-Natural-Resources-Office-CENRO-Dasmari%C3%B1as-City-100064588162660/)
 
 - **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
 
@@ -63,5 +64,5 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
 
 ### Reminder
 
-✅ Never dispose of hazardous waste or e-waste with your regular garbage.  
+✅ Never dispose of hazardous waste or e-waste with your regular garbage.
 ✅ Always coordinate with your **Barangay Hall** or **CENRO** for proper and safe collection.

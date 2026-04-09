@@ -1,6 +1,6 @@
-# Report Illegal Dumping & Waste Management Violations — Lapu-Lapu City
+# Report Illegal Dumping & Waste Management Violations — Dasmariñas City
 
-Illegal dumping, open burning, and improper waste practices are violations of **Republic Act 9003 (Ecological Solid Waste Management Act)** and city ordinances. Residents are encouraged to report offenders to help keep Lapu-Lapu City clean and safe.
+Illegal dumping, open burning, and improper waste practices are violations of **Republic Act 9003 (Ecological Solid Waste Management Act)** and city ordinances. Residents are encouraged to report offenders to help keep Dasmariñas City clean and safe.
 
 ---
 
@@ -25,12 +25,13 @@ Illegal dumping, open burning, and improper waste practices are violations of **
 
 2. **City Environment and Natural Resources Office (CENRO)**
    - If the violation is large-scale, recurring, or unaddressed by the barangay, contact **CENRO** at City Hall.
-   - Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)
-   - Updates and announcements: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+   - Phone: 0910-544-5731
+   - Email: cenrodasma2020@gmail.com
+   - Facebook: [CENRO Dasmariñas City](https://www.facebook.com/p/City-Environment-and-Natural-Resources-Office-CENRO-Dasmari%C3%B1as-City-100064588162660/)
 
 3. **Other Hotlines**
-   - **City Information Office (CIO):** (032) 340-1615 (for reports and follow-up).
-   - **Philippine National Police (PNP):** for dumping that threatens public safety or involves large-scale transport.
+   - **City Information Office (CIO):** (046) 501-2321 / pio.lgudasma@gmail.com
+   - **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598
 
 ---
 
@@ -62,4 +63,4 @@ Illegal dumping, open burning, and improper waste practices are violations of **
 
 ### Key Reminder
 
-✅ Reporting waste violations is a **civic duty**. By promptly alerting your barangay or CENRO, you help protect your community’s health, prevent flooding, and keep Lapu-Lapu City sustainable.
+✅ Reporting waste violations is a **civic duty**. By promptly alerting your barangay or CENRO, you help protect your community's health, prevent flooding, and keep Dasmariñas City sustainable.

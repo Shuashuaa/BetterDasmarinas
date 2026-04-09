@@ -1,6 +1,6 @@
-# Check Garbage Collection Schedules and Request Pickup — Lapu-Lapu City
+# Check Garbage Collection Schedules and Request Pickup — Dasmariñas City
 
-The City Government of Lapu-Lapu manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
+The City Government of Dasmariñas manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
 
 ---
 
@@ -43,12 +43,13 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 
 ## 3) Contact Information
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: via **City Information Office** FB page
+- **City Environment and Natural Resources Office (CENRO)**
+  Dasmariñas City Hall Complex, Brgy. Poblacion I-A, Dasmariñas City, Cavite 4114
+  Phone: 0910-544-5731
+  Email: cenrodasma2020@gmail.com
+  Facebook: [CENRO Dasmariñas City](https://www.facebook.com/p/City-Environment-and-Natural-Resources-Office-CENRO-Dasmari%C3%B1as-City-100064588162660/)
 
-- **Barangay Halls** — each barangay has an Environment/ Solid Waste desk for local schedules and pickup requests.
+- **Barangay Halls** — each barangay has an Environment/Solid Waste desk for local schedules and pickup requests.
 
 ---
 
@@ -71,4 +72,4 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 
 ### Key Reminder
 
-Following your barangay’s **garbage collection schedule** and properly requesting **special pickups** keeps the city clean and prevents flooding, pests, and health risks.
+Following your barangay's **garbage collection schedule** and properly requesting **special pickups** keeps the city clean and prevents flooding, pests, and health risks.

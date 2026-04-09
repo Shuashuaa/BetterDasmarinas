@@ -1,6 +1,6 @@
-# Guidelines for Proper Waste Segregation and Disposal — Lapu-Lapu City
+# Guidelines for Proper Waste Segregation and Disposal — Dasmariñas City
 
-Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
+Proper waste segregation is **mandatory** in Dasmariñas City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
 
 ---
 
@@ -20,7 +20,7 @@ Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act
 - **Always use labeled bins** or color-coded plastic bags (green = biodegradable, blue = recyclable, black = residual).
 - **Rinse recyclables** to avoid pests and foul odor.
 - **Do not burn waste** — open burning is prohibited under RA 9003 and the Clean Air Act.
-- **Put garbage out only on your barangay’s collection day** to avoid clutter and flooding.
+- **Put garbage out only on your barangay's collection day** to avoid clutter and flooding.
 - For **bulk items (furniture, appliances)** → request a **special pickup** through your Barangay Hall or CENRO.
 - **Construction debris** must be hauled by accredited haulers; not allowed in household collection.
 
@@ -30,7 +30,7 @@ Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act
 
 - Each barangay is required to operate an **MRF** to handle recyclables and compostables.
 - Residents can bring segregated recyclables and kitchen/garden waste to the MRF.
-- Some barangays have **“exchange programs”** (e.g., recyclables for rice or grocery packs).
+- Some barangays have **"exchange programs"** (e.g., recyclables for rice or grocery packs).
 
 ---
 
@@ -61,13 +61,14 @@ Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act
 
 ## Contact for Support
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (ask for CENRO)  
-  Updates via: [Lapu-Lapu City Information Office Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+- **City Environment and Natural Resources Office (CENRO)**
+  Dasmariñas City Hall Complex, Brgy. Poblacion I-A, Dasmariñas City, Cavite 4114
+  Phone: 0910-544-5731
+  Email: cenrodasma2020@gmail.com
+  Facebook: [CENRO Dasmariñas City](https://www.facebook.com/p/City-Environment-and-Natural-Resources-Office-CENRO-Dasmari%C3%B1as-City-100064588162660/)
 
 ---
 
 ### Key Reminder
 
-✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Lapu-Lapu City safe and sustainable.
+✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Dasmariñas City safe and sustainable.
