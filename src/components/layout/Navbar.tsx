@@ -26,26 +26,26 @@ const HOTLINES = [
   {
     labelKey: 'hotlines.mdrrmo',
     label: 'CDRRMO',
-    number: '(046) 481-0579',
-    tel: '0464810579',
+    number: '046-513-1766',
+    tel: '0465131766',
   },
   {
     labelKey: 'hotlines.fire',
-    label: 'Fire',
-    number: '(046) 481-0040',
-    tel: '0464810040',
+    label: 'BFP',
+    number: '046-416-0875',
+    tel: '0464160875',
   },
   {
     labelKey: 'hotlines.police',
-    label: 'Police',
-    number: '(046) 481-0333',
-    tel: '0464810333',
+    label: 'PNP',
+    number: '046-416-0254',
+    tel: '0464160254',
   },
   {
     labelKey: 'hotlines.hospital',
-    label: 'Hospital',
-    number: '(046) 481-0575',
-    tel: '0464810575',
+    label: 'Pagamutan',
+    number: '046-481-4400',
+    tel: '0464814400',
   },
 ];
 
@@ -323,18 +323,24 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="shrink-0 flex items-center">
+            <Link to="/" className="shrink-0 flex items-center gap-2.5">
               <img
                 src="/logo.svg"
                 alt={import.meta.env.VITE_GOVERNMENT_NAME}
-                className="h-14 w-auto max-w-[200px] object-contain"
+                className="h-12 w-auto max-w-[48px] object-contain"
                 onError={e => {
                   (e.currentTarget as HTMLImageElement).style.display = 'none';
                 }}
               />
-              <span className="ml-2 font-bold text-gray-900 text-sm leading-tight">
-                {import.meta.env.VITE_GOVERNMENT_NAME}
-              </span>
+              <div className="leading-tight">
+                <div className="font-black text-primary-700 text-base tracking-tight">
+                  {import.meta.env.VITE_GOVERNMENT_NAME}
+                </div>
+                <div className="text-xs text-gray-500 font-medium">
+                  {import.meta.env.VITE_GOVERNMENT_FULL_NAME},{' '}
+                  {import.meta.env.VITE_PROVINCE}
+                </div>
+              </div>
             </Link>
 
             {/* Desktop Nav */}

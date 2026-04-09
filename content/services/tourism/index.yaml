@@ -1,0 +1,20 @@
+title: Tourism in Dasmariñas
+description: Explore the heritage, nature, festivals, and attractions that make Dasmariñas City a vibrant destination in Cavite.
+layout: list
+
+pages:
+  - name: Explore Tourist Spots & Landmarks
+    slug: explore-tourist-spots-and-landmarks
+    description: Parks, churches, historical markers, and other must-visit attractions in Dasmariñas City.
+
+  - name: Paru-Paro Festival & City Events
+    slug: paru-paro-festival-and-city-events
+    description: Learn about the annual Paru-Paro Festival, mass wedding, and other signature celebrations of Dasmariñas.
+
+  - name: City Profile & Facts
+    slug: city-profile-and-facts
+    description: Key facts, history, demographics, and economic highlights of Dasmariñas City, Cavite.
+
+  - name: Getting Around Dasmariñas
+    slug: getting-around-dasmarinas
+    description: Transportation options, major roads, and how to get to key destinations within the city.

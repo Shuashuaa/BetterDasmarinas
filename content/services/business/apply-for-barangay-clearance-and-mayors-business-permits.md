@@ -1,39 +1,44 @@
-# How to Set Up a Business Partnership
+# How to Register a Business in Dasmariñas City
 
-## Step 1: Register with SEC
+## Step 1: Register with SEC (for Partnerships/Corporations)
 
 **Prepare documents:**
 
-- Partnership name (check via [SEC eSPARC](https://espac.sec.gov.ph/))
-- Notarized Articles of Partnership
-- IDs/TINs of partners, office address, capital structure
+- Business/company name (check via [SEC eSPARC](https://espac.sec.gov.ph/))
+- Notarized Articles of Partnership or Incorporation
+- IDs/TINs of partners/incorporators, office address, capital structure
 
 **File online** through [SEC eSPARC](https://espac.sec.gov.ph/) and pay fees.
 
-**Output:** SEC Certificate of Recording + Approved Business Name
+**Output:** SEC Certificate of Registration + Approved Business Name
 
-## Step 2: Apply for Business Permit
+> For sole proprietors: register through the [DTI Business Name Registration System](https://bnrs.dti.gov.ph/) instead.
 
-Go to **Lapu-Lapu City BPLO** (Business Permit and Licensing Office).
+## Step 2: Apply for Mayor's Business Permit
+
+Go to the **Dasmariñas City Business Permits and Licensing Office (BPLO)** at City Hall.
 
 **Requirements:**
 
 - Unified Application Form
-- SEC Certificate of Registration + Articles of Partnership
+- DTI/SEC Certificate of Registration
 - Occupancy Permit (if owner) OR Lease Contract (if renting)
-- Community Tax Certificate (CTC)
+- Community Tax Certificate (CTC) / Cedula
+- Barangay Business Clearance (secure from your barangay hall first)
 
-Apply in person or online via [Lapu-Lapu Online Business Permit Portal](https://businesspermit.lapulapucity.gov.ph/).
+Apply in person at **City Hall, Dasmariñas City, Cavite 4114**.
 
-> Note: Inspections may include zoning, sanitary, and fire safety checks.
+> Note: Inspections may include zoning, sanitary, and fire safety checks. The BFP and CENRO may need to clear your establishment before the permit is issued.
+
+**City Hall Trunklines:** (046) 416-0095 / (046) 416-3941
 
 ## Step 3: Register with BIR
 
-File at the **BIR Revenue District Office (RDO)** where your office is located.
+File at the **BIR Revenue District Office (RDO 56 — Dasmariñas)** where your office is located.
 
-- Fill out [BIR Form 1903](https://www.bir.gov.ph/images/1903%20Jan%202024.pdf)
-- Submit SEC Certificate + Articles of Partnership + valid IDs
-- Pay registration fee + Documentary Stamp Tax (DST)
+- Fill out [BIR Form 1903](https://www.bir.gov.ph/images/1903%20Jan%202024.pdf) (for corporations/partnerships) or Form 1901 (for sole proprietors)
+- Submit registration documents + valid IDs
+- Pay registration fee (₱500) + Documentary Stamp Tax (DST)
 
 **Within 30 days of receiving BIR Certificate:**
 
@@ -50,16 +55,18 @@ Enroll with:
 
 ## Process Flow
 
-1. SEC name check + register via [SEC eSPARC](https://espac.sec.gov.ph/)
-2. Secure Barangay Certification + site/lease documents
-3. Apply for Business Permit at [Lapu-Lapu BPLO](https://businesspermit.lapulapucity.gov.ph/)
-4. File BIR Form 1903 → apply ATP → register books
+1. Get your **Barangay Business Clearance** from your barangay hall
+2. Register business name with DTI or SEC
+3. Apply for **Mayor's Business Permit** at Dasmariñas City BPLO
+4. File BIR registration → apply ATP → register books of accounts
+5. Enroll with SSS, PhilHealth, and Pag-IBIG if you have employees
 
 ## Document Checklist
 
-- [ ] SEC Articles of Partnership + SEC Certificate
-- [ ] Lease Contract OR Occupancy/Building docs
-- [ ] Lapu-Lapu BPLO Unified Application Form + CTC
-- [ ] BIR Form 1903, IDs, ATP/Books
+- [ ] DTI Certificate (sole prop) or SEC Certificate + Articles (partnership/corp)
+- [ ] Barangay Business Clearance
+- [ ] Lease Contract OR Occupancy/Building Permit
+- [ ] Dasmariñas BPLO Unified Application Form + Community Tax Certificate
+- [ ] BIR Form 1901/1903, IDs, ATP/Books of Accounts
 
-With these steps, your partnership in Lapu-Lapu City will be fully compliant and ready to operate!
+With these steps, your business in Dasmariñas City will be fully compliant and ready to operate!

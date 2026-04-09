@@ -1,23 +1,82 @@
 {
-  "site_name": "Lapu Lapu City Portal",
-  "site_description": "A community-run portal for the Lapu Lapu City",
+  "site_name": "BetterDasmarinas",
+  "site_description": "A free, open-source community portal for residents of Dasmariñas City, Cavite.",
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "A community-run portal to find information of the Lapu Lapu City Government",
+    "title": "Welcome to BetterDasmarinas",
+    "welcome": "WELCOME TO",
+    "subtitle": "Your community-powered portal for City of Dasmariñas, Cavite — access government services, public officials, and city information.",
+    "browseServices": "Browse Services",
+    "contactUs": "Contact Us",
+    "findService": "Search Services",
+    "searchPlaceholder": "Search for a service...",
+    "popular": "Popular Services",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
   },
   "services": {
-    "title": "Services & Information",
+    "title": "City Services",
     "governmentServices": "Government Services",
-    "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
+    "description": "Find the right service for your needs — from health and education to business permits and disaster preparedness.",
     "viewAll": "View All Services",
-    "viewAllCategory": "View All"
+    "viewAllCategory": "View All",
+    "categories": {
+      "health-services": {
+        "name": "Health Services",
+        "description": "Free check-ups, vaccines, and medicines through the City Health Office and barangay health centers."
+      },
+      "education": {
+        "name": "Education",
+        "description": "Daycare, preschool enrollment, scholarships, and LGU education support programs."
+      },
+      "business": {
+        "name": "Business & Livelihood",
+        "description": "Business permits, tax renewal, market stalls, and trade opportunities in Dasmariñas."
+      },
+      "social-welfare": {
+        "name": "Social Welfare",
+        "description": "Assistance for seniors, PWDs, solo parents, and indigent families."
+      },
+      "agriculture-fisheries": {
+        "name": "Agriculture & Fisheries",
+        "description": "Seeds, fertilizers, veterinary care, and farming support from the city."
+      },
+      "infrastructure-public-works": {
+        "name": "Infrastructure",
+        "description": "Report damaged roads, request water supply access, and use public facilities."
+      },
+      "garbage-waste-disposal": {
+        "name": "Waste Disposal",
+        "description": "Garbage collection schedules, waste segregation guidelines, and disposal requests."
+      },
+      "environment": {
+        "name": "Environment",
+        "description": "Clean-up drives, tree planting, and environmental conservation programs."
+      },
+      "disaster-preparedness": {
+        "name": "Disaster Preparedness",
+        "description": "Emergency response, evacuation routes, and CDRRMO programs for Dasmariñas."
+      },
+      "housing-land-use": {
+        "name": "Housing & Land Use",
+        "description": "Socialized housing, zoning permits, and relocation sites in the city."
+      },
+      "tourism": {
+        "name": "Tourism",
+        "description": "Tourist spots, the Paru-Paro Festival, city history, and travel guides."
+      }
+    }
   },
   "governmentActivity": {
-    "title": "Government Activity",
-    "description": "Stay updated with the latest government activities and announcements."
+    "title": "City Government",
+    "description": "Learn about the departments, officials, and activities of the City Government of Dasmariñas.",
+    "categories": {}
+  },
+  "hotlines": {
+    "mdrrmo": "CDRRMO",
+    "fire": "BFP",
+    "police": "PNP",
+    "hospital": "Pagamutan"
   },
   "weather": {
     "title": "Weather Updates"
@@ -29,21 +88,25 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 BetterGov. All content is public domain unless otherwise specified."
+    "copyright": "© 2025 BetterDasmarinas. All content is public domain unless otherwise specified."
   },
   "navbar": {
+    "home": "Home",
     "government": "Government",
     "services": "Services",
+    "transparency": "Transparency",
+    "statistics": "Statistics",
+    "contact": "Contact",
     "hotlines": "Hotlines",
     "holidays": "Holidays"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
-    "stripSubtitle": "Help build the future of the Philippines and governance through technology",
+    "stripSubtitle": "Help build the future of Dasmariñas through technology",
     "joinNow": "Join Now",
     "discord": "Discord",
     "bannerTitle": "Join the #CivicTech Revolution",
-    "bannerSubtitle": "Help build the future of the Philippines and governance through technology.",
+    "bannerSubtitle": "Help build a better Dasmariñas City through open-source civic technology.",
     "bannerHighlight": "Volunteer-led. Open source. Community-driven.",
     "joinMovement": "Join Our Movement",
     "or": "or",

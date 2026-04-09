@@ -7,7 +7,7 @@ import {
   Heart,
   GraduationCap,
   Trash2,
-  TreePine,
+  MapPin,
   Home,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -51,10 +51,10 @@ const POPULAR_CATEGORIES = [
     color: 'text-orange-500 bg-orange-50',
   },
   {
-    labelKey: 'services.categories.environment.name',
-    label: 'Environment',
-    slug: 'environment',
-    icon: TreePine,
+    labelKey: 'services.categories.tourism.name',
+    label: 'Tourism',
+    slug: 'tourism',
+    icon: MapPin,
     color: 'text-emerald-600 bg-emerald-50',
   },
   {
