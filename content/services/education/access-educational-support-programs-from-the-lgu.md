@@ -1,6 +1,6 @@
-# Access Educational Support Programs from the LGU — Lapu-Lapu City
+# Access Educational Support Programs from the LGU — Dasmariñas City
 
-Below are **city-led** or **LGU-facilitated** programs you can use for study support: free school supplies, e-library access, student employment (SPES) via PESO, scholarships, and cash/education assistance. Links point to official pages or recent announcements.
+Below are **city-led** or **LGU-facilitated** programs you can use for study support: free school supplies, city library access, student employment (SPES) via PESO, scholarships, and cash/education assistance.
 
 ---
 
@@ -12,37 +12,34 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Watch your school’s advisory and the **DepEd Lapu-Lapu** Division memos for **distribution schedules**.
+1. Watch your school's advisory and the **Schools Division of Dasmariñas City** memos for **distribution schedules**.
 2. Learners (with parent/guardian) claim supplies at the school on the announced date.
 
 **Links**
 
-- DepEd Lapu-Lapu memo: **Distribution of School Supplies (SEF)** (2025 schedule) — depedlapulapu.net.ph
-- News: **City to distribute free school supplies** — SunStar Cebu (June 7, 2025)
-- City info posts often echo the distribution dates via DepEd/City channels.
+- Schools Division of Dasmariñas City — follow their official Facebook page for SEF distribution announcements.
+- City Information Office — echoes distribution dates via official city channels.
 
 ---
 
-## 2) City e-Library (Free Study Space, Wi-Fi, Computers & Printing)
+## 2) City Library (Free Study Space, Wi-Fi & Learning Resources)
 
 **What it is**
 
-- A **government-run e-Library** offering **free internet, computer use, and printing** for students; open **daily 8:00 a.m.–12:00 midnight** at **Hoops Dome, Brgy. Gun-ob**.
+- The **Dasmariñas City Public Library** offers **free reading materials, internet access, and study space** for students and residents.
 
 **How to access**
 
-1. Go to the **Lapu-Lapu City e-Library (Hoops Dome)** during operating hours.
-2. Sign the logbook; follow usage limits (to give everyone a turn).
+1. Visit the **Dasmariñas City Public Library** during operating hours.
+2. Present a valid ID or school ID to register; follow usage guidelines.
 
-**Links**
+**Updates**
 
-- SunStar: **E-Library reopens; open daily 8 a.m.–12 midnight** (July 26, 2025)
-- The POST: **City library reopens, free digital access & printing** (July 28, 2025)
-- Background: **City launched first gov’t e-Library** (2019) — Cebu Daily News
+- Check the **Dasmariñas City Government** Facebook page for library hours, closures, and special programs.
 
 ---
 
-## 3) Student Employment (SPES) via PESO Lapu-Lapu
+## 3) Student Employment (SPES) via PESO Dasmariñas City
 
 **What it is**
 
@@ -51,14 +48,14 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Follow **PESO Lapu-Lapu City** on Facebook for **SPES application windows** and job fair advisories.
+1. Follow **PESO Dasmariñas City** on Facebook for **SPES application windows** and job fair advisories.
 2. Prepare IDs, school docs, and income/indigency proofs per announcement.
-3. Submit online or at the PESO office; attend orientation when shortlisted.
+3. Submit online or at the PESO office (Dasmariñas City Hall Complex); attend orientation when shortlisted.
 
 **Links**
 
-- **PESO Lapu-Lapu City** Facebook page (official announcements)
-- DepEd/BLSS-YFD: **SPES 2025 guidelines & timelines**
+- **PESO Dasmariñas City** Facebook page (official announcements)
+- DepEd/BLSS-YFD: **SPES guidelines & timelines** (current year)
 - City press: **PESO career fair / youth employment events** — City Information Office
 
 ---
@@ -67,18 +64,17 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **What it is**
 
-- The City (and Congressional office) **periodically opens scholarship calls** or **educational incentives** for local students, separate from school-based grants.
+- The City **periodically opens scholarship calls** or **educational incentives** for local students, separate from school-based grants.
 
 **How to access**
 
-1. Monitor the **Lapu-Lapu City Government / City Information Office** and the **Office of the Mayor / Congresswoman** for official **calls**.
+1. Monitor the **Dasmariñas City Government / City Information Office** and the **Office of the Mayor** for official **calls**.
 2. Prepare residency and academic documents; submit by deadline; attend screening/orientation.
 
 **Links (examples & history)**
 
-- News: **Lapu-Lapu City offers college scholarship to poor residents** — The Freeman/Philstar (program history)
-- Sample: **Cindi “Skwela” Scholarship** highlights via official pages (video updates)
-- Also check school-based options in-city (e.g., **LCIC scholarships**, **UC scholarships**) which can complement LGU aid.
+- Follow the **Dasmariñas City Government** Facebook page for scholarship announcements.
+- Also check school-based options in-city (e.g., **De La Salle University**, **Emilio Aguinaldo College**, **University of Perpetual Help**) which can complement LGU aid.
 
 ---
 
@@ -90,22 +86,23 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Watch announcements from **DSWD-7** and the **City Information Office** for **Lapu-Lapu payout schedules**.
+1. Watch announcements from **DSWD-IV-A** and the **City Information Office** for **Dasmariñas City payout schedules**.
 2. Bring student ID, enrollment proof, and required forms on your assigned date.
 
 **Links (context)**
 
-- SunStar Cebu: **Education assistance payout in Lapu-Lapu** (local coverage)
-- Cebu Daily News: **DSWD-7 educational assistance** (program overview & amounts)
+- DSWD CALABARZON (Region IV-A): official educational assistance program updates
+- Dasmariñas City Government Facebook page: local payout schedule announcements
 
 ---
 
 ## Quick Directory
 
-- **City Information Office (Lapu-Lapu City)** — city-wide program announcements
-- **PESO Lapu-Lapu City** — SPES, job fairs, recruitment & youth work programs
-- **DepEd Lapu-Lapu Division** — school memos (SEF supplies, schedules)
-- **Lapu-Lapu City e-Library (Hoops Dome, Gun-ob)** — free study space & digital access
+- **City Information Office** — (046) 501-2321 • pio.lgudasma@gmail.com • [Facebook](https://www.facebook.com/pio.lgudasma/)
+- **PESO Dasmariñas City** — [Facebook](https://www.facebook.com/pesodasma/)
+- **City Social Welfare and Development Office (CSWDO)** — [Facebook](https://www.facebook.com/p/City-Social-Welfare-and-Development-Office-CSWDO-Dasmari%C3%B1as-100084116032219/)
+- **Schools Division of Dasmariñas City** — asp.depeddasma.edu.ph
+- **Kolehiyo ng Lungsod ng Dasmariñas (KLD)** — information@kld.edu.ph • [Facebook](https://www.facebook.com/KLDOfficialFBPage) • kld.edu.ph
 
 ---
 
@@ -113,4 +110,4 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 - **Stack benefits** where allowed: e.g., SEF school supplies **+** SPES stipend **+** school-based scholarship.
 - Keep a folder with **PSA Birth Cert**, **Barangay Residency**, **School ID**, **Report Cards/COE**, and **2x2 photos** ready.
-- Turn on notifications for **PESO** and **City Information** pages so you don’t miss application windows.
+- Turn on notifications for **PESO** and **City Government** Facebook pages so you don't miss application windows.

@@ -1,12 +1,12 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Lapu-Lapu City
+# Enroll Children in LGU Daycare or Preschool Programs — Dasmariñas City
 
-The Lapu-Lapu City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+The Dasmariñas City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
 
 ---
 
 ## 1) LGU Daycare Programs
 
-**What’s offered**
+**What's offered**
 
 - Early childhood care and development for children aged **3–4 years old**.
 - Daily activities on socialization, basic learning skills, play-based lessons, and health/nutrition monitoring.
@@ -19,7 +19,7 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 
 **Requirements (typical)**
 
-- Child’s **birth certificate** (PSA copy or local civil registrar copy).
+- Child's **birth certificate** (PSA copy or local civil registrar copy).
 - **Barangay clearance** or proof of residency.
 - 1×1 ID photo of the child (for records).
 - Filled-out **Daycare Enrollment Form** (available at the center).
@@ -36,7 +36,7 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 
 ## 2) Public Preschool (Kindergarten)
 
-**What’s offered**
+**What's offered**
 
 - Department of Education (DepEd) **Kindergarten Program** for **5-year-old children**, implemented in public elementary schools.
 - Focus on school readiness: literacy, numeracy, and social skills.
@@ -44,11 +44,11 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 **Who can join**
 
 - Children aged **5 years old** by the opening of the school year.
-- Priority for residents within the school’s catchment area.
+- Priority for residents within the school's catchment area.
 
 **Requirements (typical DepEd)**
 
-- Child’s **birth certificate** (PSA).
+- Child's **birth certificate** (PSA).
 - Proof of residency (Barangay Certificate).
 - 2×2 ID photo of the child.
 - Accomplished **DepEd Kindergarten Registration Form** (given at school).
@@ -66,13 +66,13 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 ## Contact & Updates
 
 - **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
-- **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Lapu-Lapu City Division** — Manages public kindergarten enrollment.
+- **City Social Welfare and Development Office (CSWDO)** — Dasmariñas City Hall Complex, Brgy. Poblacion I-A, Dasmariñas City, Cavite 4114 • [Facebook](https://www.facebook.com/p/City-Social-Welfare-and-Development-Office-CSWDO-Dasmari%C3%B1as-100084116032219/). Oversees daycare programs citywide.
+- **Schools Division of Dasmariñas City** — asp.depeddasma.edu.ph. Manages public kindergarten enrollment. Follow their official Facebook page for enrollment period announcements.
 
 ---
 
 ### Quick Tips
 
 - Enroll early — daycare and preschool slots may be limited per barangay/school.
-- Keep copies of your child’s **birth certificate** and **barangay certificate** ready.
-- Attend parent orientations to understand your role in supporting your child’s early education.
+- Keep copies of your child's **birth certificate** and **barangay certificate** ready.
+- Attend parent orientations to understand your role in supporting your child's early education.
