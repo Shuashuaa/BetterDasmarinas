@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import {
   loadMarkdownContent,
   type MarkdownContent,
@@ -221,6 +222,7 @@ export default function Document({
             )}
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
               components={markdownComponents}
             >
               {markdownContent.content}
