@@ -1,4 +1,4 @@
-# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — Lapu-Lapu City
+# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — Dasmariñas City
 
 Showcase your products and services, meet buyers, and boost your brand by joining **city- and region-led trade fairs, business expos, and tourism promotions**.
 
@@ -11,16 +11,16 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 - **Cultural creators** (handicrafts, fashion, food, wellness, creative tech)
 - **LGU-accredited community groups** (livelihood associations, women/youth groups)
 
-**Priority is often given** to registered local businesses, OTOP-branded products, startups with export potential, and tourism enterprises aligned with the city’s events calendar.
+**Priority is often given** to registered local businesses, OTOP-branded products, startups with export potential, and tourism enterprises aligned with the city's events calendar.
 
 ---
 
-## Event Types You’ll See
+## Event Types You'll See
 
 - **City/Barangay Trade Fairs** – usually tied to festivals, holidays, and civic celebrations
-- **Business Expos & Startup Showcases** – buyers’ meets, B2B networking, product launches
+- **Business Expos & Startup Showcases** – buyers' meets, B2B networking, product launches
 - **Tourism Promotion Activities** – travel marts, familiarization (Fam) tours, festivals, MICE activations
-- **Sector-Specific Bazaars** – food & beverage, fashion & crafts, wellness & health, marine/leisure
+- **Sector-Specific Bazaars** – food & beverage, fashion & crafts, wellness & health
 
 ---
 
@@ -28,7 +28,7 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 1. **Prepare eligibility documents**
    - DTI/SEC/CDA registration, BIR 2303
-   - Mayor’s/Business Permit (current year)
+   - Mayor's/Business Permit (current year)
    - Tourism accreditation/registration (if applicable)
    - Product compliance (FDA/LTO/CPR for food & cosmetics; IPOPHL for trademarks if any)
 
@@ -59,7 +59,7 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 ## Typical Requirements Checklist
 
 - [ ] Government IDs of owner/representative
-- [ ] DTI/SEC/CDA, BIR 2303, current **Mayor’s/Business Permit**
+- [ ] DTI/SEC/CDA, BIR 2303, current **Mayor's/Business Permit**
 - [ ] Barangay/City clearance (if requested)
 - [ ] **Product compliance** (FDA for food/cosmetics; HALAL/organic if claimed)
 - [ ] Tourism accreditation/registration (if a tourism enterprise)
@@ -110,44 +110,43 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 ---
 
-## Where to Watch for Calls & Schedules (Lapu-Lapu / Cebu)
+## Where to Watch for Calls & Schedules (Dasmariñas / Cavite)
 
-- **Lapu-Lapu City**: City Information Office, Business Permits & Licensing Office (BOSS announcements), City Tourism & Cultural Affairs
+- **Dasmariñas City**: City Information Office, Business Permits & Licensing Office (BOSS announcements), City Tourism Office
 - **Negosyo Center / MSME Office**: product dev, fairs, OTOP activities
-- **Tourism Bodies**: city/regional tourism offices for travel marts, festivals, Fam tours, MICE events
-- **Chambers & Associations**: local chamber of commerce, hotel/resort associations, exporters’ groups
-- **Schools & Malls**: seasonal bazaars, startup fairs, internship & career expos
+- **Tourism Bodies**: city/provincial tourism offices for travel marts, festivals, Fam tours, MICE events
+- **Chambers & Associations**: local chamber of commerce, hotel/resort associations, exporters' groups
+- **Schools & Malls**: SM City Dasmariñas, Robinsons Dasmariñas — seasonal bazaars, startup fairs, career expos
 
 ---
 
-# Key Local Contacts — Lapu-Lapu City
+# Key Local Contacts — Dasmariñas City
 
 Use these offices when coordinating for **trade fairs, business expos, permits, and tourism promotion activities**.
 
 ---
 
-| Office / Role                                                                 | Address / Location                                    | Contact Number  | Email / Other Contact Info                                                                                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, Lapu-Lapu Government Complex | (032) 340-0004  | —                                                                                                                                                            |
-| **PESO Lapu-Lapu City** (Student Employment, Local Promotions)                | Pajo, Lapu-Lapu City, Cebu 6015                       | (032) 340-8264  | Facebook: [PESO Lapu-Lapu City](https://ph.locale.online/peso-lapu-lapu-city-47947610.html)                                                                  |
-| **City Information Office / Treasurer’s Office**                              | Lapu-Lapu City Hall / Hoops Dome during events        | (032) 340-1615  | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979)                     |
-| **Lapu-Lapu City Tourism Office**                                             | City Government / Tourism Department                  | +63 32 495-5593 | Email: llctourism.inquiry@gmail.com • [Instagram Location Page](https://www.instagram.com/explore/locations/2149053888682923/lapu-lapu-city-tourism-office/) |
-| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | Hoops Dome, Barangay Gun-ob                           | —               | News: [SunStar — Biz Permit Renewals at Hoops Dome](https://www.sunstar.com.ph/cebu/lapu-launches-new-system-for-biz-permit-renewals)                        |
+| Office / Role                                                   | Address / Location                                            | Contact Number | Email / Other Contact Info                                                                                     |
+| --------------------------------------------------------------- | ------------------------------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Business Permit & Licensing Office (BPLO)**                   | Dasmariñas City Hall, Brgy. Poblacion I-A, Dasmariñas, Cavite | 0977-169-4323  | license_divisiondasma@yahoo.com • [Facebook](https://www.facebook.com/p/BPLO-Dasmari%C3%B1as-100070048426539/) |
+| **PESO Dasmariñas City** (Student Employment, Local Promotions) | Dasmariñas City Hall Complex, Dasmariñas City, Cavite 4114    | —              | [Facebook](https://www.facebook.com/pesodasma/)                                                                |
+| **City Information Office**                                     | Dasmariñas City Hall, Brgy. Poblacion I-A                     | (046) 501-2321 | pio.lgudasma@gmail.com • [Facebook](https://www.facebook.com/pio.lgudasma/)                                    |
+| **City Tourism Office**                                         | Dasmariñas City Hall Complex                                  | —              | citytourismofdc@gmail.com • [Facebook](https://www.facebook.com/DCParuparoFestival/)                           |
 
 ---
 
-✅ Tip: Save these contacts and follow their **Facebook pages** — most trade fair and expo announcements in Lapu-Lapu are posted there first.
+✅ Tip: Follow the **Dasmariñas City Government** Facebook page — most trade fair and expo announcements are posted there first.
 
 ---
 
 ## Sample Email to Join an Event
 
-> **Subject:** Participation Inquiry – [Your Brand] for [Event Name/Date]  
-> Hello [Organizer Name],  
-> We’re a Lapu-Lapu–based [business type] offering [brief product/service]. We’d like to apply for a booth at **[Event Name]** on **[Date]**.  
-> **Attachments:** Business registration, product list/prices, photos, compliance (FDA/accreditation).  
-> **Needs:** [table + 1 outlet + 500W], ingress day-before preferred.  
-> Thank you and we look forward to promoting Lapu-Lapu products/tourism at your event.  
+> **Subject:** Participation Inquiry – [Your Brand] for [Event Name/Date]
+> Hello [Organizer Name],
+> We're a Dasmariñas-based [business type] offering [brief product/service]. We'd like to apply for a booth at **[Event Name]** on **[Date]**.
+> **Attachments:** Business registration, product list/prices, photos, compliance (FDA/accreditation).
+> **Needs:** [table + 1 outlet + 500W], ingress day-before preferred.
+> Thank you and we look forward to promoting Dasmariñas City products and tourism at your event.
 > **Contact:** [Name, Mobile, Email, Links]
 
 ---
@@ -156,4 +155,4 @@ Use these offices when coordinating for **trade fairs, business expos, permits, 
 
 - Follow **fire safety**, **ingress/egress**, and **electrical load** limits.
 - For food: secure **permits**, maintain **temperature control**, and practice **safe sampling**.
-- Respect IP: don’t use copyrighted music/images without permission; avoid counterfeit or misbranded goods.
+- Respect IP: don't use copyrighted music/images without permission; avoid counterfeit or misbranded goods.
