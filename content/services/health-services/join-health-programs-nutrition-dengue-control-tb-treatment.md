@@ -1,4 +1,4 @@
-# Join Health Programs — Lapu-Lapu City (Nutrition, Dengue Control, TB Treatment)
+# Join Health Programs — Dasmariñas City (Nutrition, Dengue Control, TB Treatment)
 
 Below are city-led and national programs you can join through your **Barangay Health Center** and the **City Health Office (CHO)**.
 
@@ -6,7 +6,7 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 1) Nutrition Programs
 
-**What’s offered**
+**What's offered**
 
 - Supplementary feeding for day-care children.
 - Community nutrition activities such as breastfeeding promotion, growth monitoring, and health education.
@@ -14,7 +14,7 @@ Below are city-led and national programs you can join through your **Barangay He
 
 **Who can join**
 
-- Day-care children and families identified by barangays or CSWD.
+- Day-care children and families identified by barangays or CSWDO.
 - Residents may also take part in open city nutrition events.
 
 **How to join**
@@ -28,10 +28,10 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 2) Dengue Control Programs
 
-**What’s offered**
+**What's offered**
 
 - Community clean-up drives under the **ABKD (Aksyon Barangay Kontra Dengue)** program.
-- Daily “4 o’clock habit” — searching and destroying mosquito breeding sites.
+- Daily "4 o'clock habit" — searching and destroying mosquito breeding sites.
 - Misting, fogging, and entomological surveys led by the CHO.
 - Information campaigns during Dengue Awareness Month and rainy season.
 
@@ -46,14 +46,14 @@ Below are city-led and national programs you can join through your **Barangay He
 
 ## 3) TB Treatment (NTP TB-DOTS)
 
-**What’s offered**
+**What's offered**
 
 - Free consultations, diagnostic tests, and full course of anti-TB medicines under the **National Tuberculosis Program (NTP)**.
 - Supervised treatment through the **Directly Observed Therapy Short-course (DOTS)** approach.
 
 **Where**
 
-- Lapu-Lapu City Health Office (DOTS facility) and affiliated barangay health centers.
+- Dasmariñas City Health Office (DOTS facility) and affiliated barangay health centers.
 
 **How to join**
 
@@ -68,8 +68,10 @@ Below are city-led and national programs you can join through your **Barangay He
 ## Contact & Updates
 
 - **Barangay Health Centers** — First point of contact for nutrition, dengue, and TB programs.
-- **Lapu-Lapu City Health Office (CHO)** — Main office for program schedules and services.
-- **City Information Office** — Posts updates on city-wide campaigns and health events.
+- **City Health Office I** — Phone: (046) 416-0809 • [Facebook](https://www.facebook.com/p/Dasmari%C3%B1as-City-Health-Office-1-100090386325916/)
+- **City Health Office III** — Phone: 0945-269-4260 • Email: cho3.salawag@gmail.com • [Facebook](https://www.facebook.com/Cho3dasmarinas/)
+- **City Health Office IV** — Phone: 0970-937-5820
+- **City Information Office** — (046) 501-2321 • pio.lgudasma@gmail.com • [Facebook](https://www.facebook.com/pio.lgudasma/)
 
 ---
 
@@ -77,5 +79,5 @@ Below are city-led and national programs you can join through your **Barangay He
 
 - Bring a **valid ID** and your **barangay health record** (if you already have one).
 - For TB symptoms (cough for 2 weeks or more, weight loss, night sweats), seek screening immediately.
-- Join community clean-up drives and practice the 4 o’clock habit to prevent dengue.
-- Attend barangay nutrition events and feeding programs for your children’s growth and wellness.
+- Join community clean-up drives and practice the 4 o'clock habit to prevent dengue.
+- Attend barangay nutrition events and feeding programs for your children's growth and wellness.
