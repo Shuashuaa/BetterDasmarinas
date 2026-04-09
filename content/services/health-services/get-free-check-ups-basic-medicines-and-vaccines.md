@@ -39,3 +39,11 @@ The City of Dasmariñas Government offers free **check-ups, medicines, and vacci
 4. **Pregnancy services** → Attend prenatal visits at the barangay health center for free vaccine and supplements.
 5. **Anti-rabies** → Report to the Animal Bite Treatment Center; bring proof of residency.
 6. **Senior citizen medicines** → Visit participating partner pharmacies; follow MAIFIPP guidelines.
+
+---
+
+## Contact Information
+
+- **City Health Office I** — Phone: (046) 416-0809 • [Facebook](https://www.facebook.com/p/Dasmari%C3%B1as-City-Health-Office-1-100090386325916/)
+- **City Health Office III** — Phone: 0945-269-4260 • Email: cho3.salawag@gmail.com • [Facebook](https://www.facebook.com/Cho3dasmarinas/)
+- **City Health Office IV** — Phone: 0970-937-5820

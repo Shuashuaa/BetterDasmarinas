@@ -88,11 +88,12 @@ The **Pagamutan ng Dasmariñas** is the primary government-run hospital serving 
 
 ## F) Emergency Hotlines
 
-- **CDRRMO (Disaster Risk Reduction):** 0908-818-5555 / (046) 481-0555
-- **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598
+- **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598 / 0929-665-9533
 - **Bureau of Fire Protection (BFP):** 0995-336-9534 / 0992-448-7857
-- **City Health Office I:** (046) 416-0809
-- **City Health Office III:** 0945-269-4260
+- **CDRRMO:** 0908-818-5555 / (046) 481-0555
+- **Meralco:** 0929-971-6211
+- **Ambulance Center:** 0998-566-5555
+- **Operations Center:** 0917-721-8825 / 0998-843-5477 / 0908-818-5555
 
 ---
 
