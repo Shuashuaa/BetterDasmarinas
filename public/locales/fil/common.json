@@ -1,0 +1,158 @@
+{
+  "site_name": "BetterDasmariñas",
+  "site_description": "Isang libreng, open-source na portal ng komunidad para sa mga residente ng Lungsod ng Dasmariñas, Cavite.",
+  "hero": {
+    "title": "Maligayang Pagdating sa BetterDasmariñas",
+    "welcome": "MALIGAYANG PAGDATING SA",
+    "subtitle": "Ang inyong portal ng komunidad para sa Lungsod ng Dasmariñas, Cavite — ma-access ang mga serbisyong pang-gobyerno, mga opisyal ng lungsod, at impormasyon.",
+    "browseServices": "Tingnan ang mga Serbisyo",
+    "contactUs": "Makipag-ugnayan",
+    "findService": "Maghanap ng Serbisyo",
+    "searchPlaceholder": "Maghanap ng serbisyo...",
+    "popular": "Mga Sikat na Serbisyo",
+    "nationalId": "National ID",
+    "birthCertificate": "Sertipiko ng Kapanganakan",
+    "businessRegistration": "Pagpaparehistro ng Negosyo"
+  },
+  "services": {
+    "title": "Mga Serbisyo ng Lungsod",
+    "governmentServices": "Mga Serbisyong Pang-gobyerno",
+    "description": "Hanapin ang tamang serbisyo para sa inyong pangangailangan — mula sa kalusugan at edukasyon hanggang sa mga permit sa negosyo at paghahanda sa sakuna.",
+    "viewAll": "Tingnan Lahat ng Serbisyo",
+    "viewAllCategory": "Tingnan Lahat",
+    "categories": {
+      "health-services": {
+        "name": "Mga Serbisyong Pangkalusugan",
+        "description": "Libreng check-up, bakuna, at gamot sa pamamagitan ng City Health Office at mga health center ng barangay."
+      },
+      "education": {
+        "name": "Edukasyon",
+        "description": "Pagpapatala sa daycare at preschool, scholarship, at mga programang suporta sa edukasyon ng LGU."
+      },
+      "business": {
+        "name": "Negosyo at Kabuhayan",
+        "description": "Mga permit sa negosyo, pagpapanibago ng buwis, stalls sa palengke, at mga oportunidad sa kalakalan sa Dasmariñas."
+      },
+      "social-welfare": {
+        "name": "Kapakanan ng Lipunan",
+        "description": "Tulong para sa mga matatanda, PWD, solo parents, at mga indigent na pamilya."
+      },
+      "agriculture-fisheries": {
+        "name": "Agrikultura at Pangisdaan",
+        "description": "Binhi, pataba, veterinary care, at suporta sa pagsasaka mula sa lungsod."
+      },
+      "infrastructure-public-works": {
+        "name": "Imprastraktura",
+        "description": "Mag-ulat ng sirang kalsada, humiling ng access sa suplay ng tubig, at gumamit ng mga pampublikong pasilidad."
+      },
+      "garbage-waste-disposal": {
+        "name": "Pagtatapon ng Basura",
+        "description": "Mga iskedyul ng koleksyon ng basura, mga alituntunin sa paghihiwalay ng basura, at mga kahilingan sa pagtatapon."
+      },
+      "environment": {
+        "name": "Kapaligiran",
+        "description": "Mga linis-linis, pagtatanim ng puno, at mga programang pangkalikasan."
+      },
+      "disaster-preparedness": {
+        "name": "Paghahanda sa Sakuna",
+        "description": "Tugon sa emergency, mga ruta ng paglikas, at mga programang CDRRMO para sa Dasmariñas."
+      },
+      "housing-land-use": {
+        "name": "Pabahay at Paggamit ng Lupa",
+        "description": "Subsidized na pabahay, mga permit sa zoning, at mga relokasyon sa lungsod."
+      },
+      "tourism": {
+        "name": "Turismo",
+        "description": "Mga tourist spot, Paru-Paro Festival, kasaysayan ng lungsod, at mga gabay sa paglalakbay."
+      }
+    }
+  },
+  "governmentActivity": {
+    "title": "Pamahalaan ng Lungsod",
+    "description": "Alamin ang tungkol sa mga departamento, opisyal, at aktibidad ng Pamahalaan ng Lungsod ng Dasmariñas.",
+    "categories": {
+      "departments": {
+        "name": "Mga Departamento",
+        "description": "Tuklasin ang mga departamento, ahensya, at opisina ng lokal na pamahalaan kasama ang kanilang mga mandato, serbisyo, at impormasyon sa pakikipag-ugnayan."
+      },
+      "news": {
+        "name": "Balita",
+        "description": "Manatiling updated sa pinakabagong balita, anunsyo, at mga pagbabago sa patakaran ng lokal na pamahalaan."
+      },
+      "guides-and-regulations": {
+        "name": "Mga Gabay at Regulasyon",
+        "description": "I-access ang mga alituntunin, patakaran, regulasyon, at mga hakbang-hakbang na instruksyon para sa mga proseso ng lokal na pamahalaan."
+      },
+      "reports-and-statistics": {
+        "name": "Mga Ulat at Istatistika",
+        "description": "I-access ang mga ulat ng lokal na pamahalaan, datos na pang-istatistika, at mga sukatan ng pagganap."
+      },
+      "public-consultations": {
+        "name": "Mga Pampublikong Konsultasyon",
+        "description": "Lumahok sa mga pampublikong konsultasyon at magbigay ng puna sa mga desisyon ng lokal na pamahalaan."
+      },
+      "transparency-documents": {
+        "name": "Mga Dokumento ng Transparency",
+        "description": "I-access ang mga pahayag ng Freedom of Information at mga dokumento ng transparency para sa pananagutan ng lokal na pamahalaan."
+      }
+    }
+  },
+  "hotlines": {
+    "mdrrmo": "CDRRMO",
+    "fire": "BFP",
+    "police": "PNP",
+    "hospital": "Pagamutan",
+    "ambulance": "Ambulansya"
+  },
+  "weather": {
+    "title": "Mga Update sa Panahon"
+  },
+  "forex": {
+    "title": "Mga Rate ng Palitan ng Pera"
+  },
+  "news": {
+    "title": "Pinakabagong Balita at Mga Update"
+  },
+  "footer": {
+    "copyright": "© 2025 BetterDasmariñas. Ang lahat ng nilalaman ay pampublikong domain maliban kung tinukoy."
+  },
+  "navbar": {
+    "home": "Tahanan",
+    "government": "Pamahalaan",
+    "services": "Mga Serbisyo",
+    "transparency": "Transparency",
+    "statistics": "Istatistika",
+    "contact": "Makipag-ugnayan",
+    "hotlines": "Mga Hotline",
+    "holidays": "Mga Pista Opisyal"
+  },
+  "glance": {
+    "title": "Dasmariñas sa Isang Tingin",
+    "viewProfile": "Tingnan ang Profile ng Lungsod",
+    "residents": "Mga Residente",
+    "census2020": "Populasyon ayon sa sensus ng 2020",
+    "barangays": "Mga Barangay",
+    "adminVillages": "Mga administratibong nayon",
+    "incomeClass": "Lungsod ng Unang Klase",
+    "incomeClassSub": "Klasipikasyon ng kita",
+    "landArea": "km²",
+    "totalLandArea": "Kabuuang lugar ng lupa",
+    "weatherLocation": "Panahon at Lokasyon",
+    "weather": "Panahon",
+    "location": "Lokasyon",
+    "caviteProvince": "Lalawigan ng Cavite"
+  },
+  "joinUs": {
+    "stripTitle": "🚀 Sumali sa #CivicTech Revolution",
+    "stripSubtitle": "Tumulong sa pagbuo ng kinabukasan ng Dasmariñas sa pamamagitan ng teknolohiya",
+    "joinNow": "Sumali Na",
+    "discord": "Discord",
+    "bannerTitle": "Sumali sa #CivicTech Revolution",
+    "bannerSubtitle": "Tumulong sa pagtatayo ng mas mabuting Lungsod ng Dasmariñas sa pamamagitan ng open-source civic technology.",
+    "bannerHighlight": "Pinamumunuan ng mga boluntaryo. Open source. Pinapatakbo ng komunidad.",
+    "joinMovement": "Sumali sa Aming Kilusan",
+    "or": "o",
+    "joinDiscord": "Sumali sa Discord",
+    "features": "🚀 Imprastraktura • 💡 Mentorship • 🤝 Komunidad • 🏢 Espasyo sa Opisina"
+  }
+}

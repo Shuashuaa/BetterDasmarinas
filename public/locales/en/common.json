@@ -70,13 +70,39 @@
   "governmentActivity": {
     "title": "City Government",
     "description": "Learn about the departments, officials, and activities of the City Government of Dasmariñas.",
-    "categories": {}
+    "categories": {
+      "departments": {
+        "name": "Departments",
+        "description": "Explore local government departments, agencies, and offices with their mandates, services, and contact details."
+      },
+      "news": {
+        "name": "News",
+        "description": "Stay informed with the latest local government news, announcements, and policy updates."
+      },
+      "guides-and-regulations": {
+        "name": "Guides and Regulations",
+        "description": "Access guidelines, rules, regulations, and step-by-step instructions for local government processes."
+      },
+      "reports-and-statistics": {
+        "name": "Reports and Statistics",
+        "description": "Access local government reports, statistical data, and performance metrics."
+      },
+      "public-consultations": {
+        "name": "Public Consultations",
+        "description": "Participate in public consultations and provide feedback on local government decisions."
+      },
+      "transparency-documents": {
+        "name": "Transparency Documents",
+        "description": "Access Freedom of Information releases and transparency documents for local government accountability."
+      }
+    }
   },
   "hotlines": {
     "mdrrmo": "CDRRMO",
     "fire": "BFP",
     "police": "PNP",
-    "hospital": "Pagamutan"
+    "hospital": "Pagamutan",
+    "ambulance": "Ambulance"
   },
   "weather": {
     "title": "Weather Updates"
@@ -99,6 +125,22 @@
     "contact": "Contact",
     "hotlines": "Hotlines",
     "holidays": "Holidays"
+  },
+  "glance": {
+    "title": "Dasmariñas at a Glance",
+    "viewProfile": "View City Profile",
+    "residents": "Residents",
+    "census2020": "2020 census population",
+    "barangays": "Barangays",
+    "adminVillages": "Administrative villages",
+    "incomeClass": "1st Class City",
+    "incomeClassSub": "Income classification",
+    "landArea": "km²",
+    "totalLandArea": "Total land area",
+    "weatherLocation": "Weather & Location",
+    "weather": "Weather",
+    "location": "Location",
+    "caviteProvince": "Province of Cavite"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",

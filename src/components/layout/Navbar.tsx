@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Menu, ChevronDown, Phone, Thermometer, Clock } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
@@ -24,28 +25,32 @@ function formatDatetime(): string {
 
 const HOTLINES = [
   {
-    labelKey: 'hotlines.mdrrmo',
-    label: 'CDRRMO',
-    number: '046-513-1766',
-    tel: '0465131766',
+    labelKey: 'hotlines.police',
+    label: 'PNP',
+    number: '0956-800-3329',
+    tel: '09568003329',
+    allNumbers: ['0956-800-3329', '0998-598-5598', '0929-665-9533'],
   },
   {
     labelKey: 'hotlines.fire',
     label: 'BFP',
-    number: '046-416-0875',
-    tel: '0464160875',
+    number: '0995-336-9534',
+    tel: '09953369534',
+    allNumbers: ['0995-336-9534', '0992-448-7857'],
   },
   {
-    labelKey: 'hotlines.police',
-    label: 'PNP',
-    number: '046-416-0254',
-    tel: '0464160254',
+    labelKey: 'hotlines.mdrrmo',
+    label: 'CDRRMO',
+    number: '0908-818-5555',
+    tel: '09088185555',
+    allNumbers: ['0908-818-5555', '(046) 481-0555'],
   },
   {
-    labelKey: 'hotlines.hospital',
-    label: 'Pagamutan',
-    number: '046-481-4400',
-    tel: '0464814400',
+    labelKey: 'hotlines.ambulance',
+    label: 'Ambulance',
+    number: '0998-566-5555',
+    tel: '09985665555',
+    allNumbers: ['0998-566-5555'],
   },
 ];
 
@@ -61,6 +66,10 @@ const CURRENCY_SYMBOLS: Record<string, string> = {
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hotlineTooltip, setHotlineTooltip] = useState<{
+    label: string;
+    rect: DOMRect;
+  } | null>(null);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
@@ -278,13 +287,31 @@ const Navbar: React.FC = () => {
           </span>
           {HOTLINES.map((h, i) => (
             <React.Fragment key={h.label}>
-              <a
-                href={`tel:${h.tel}`}
-                className="hover:underline transition-opacity hover:opacity-80 px-4 py-1 text-xs"
+              <div
+                className="relative px-4 py-1"
+                onMouseEnter={e => {
+                  if (h.allNumbers.length > 1) {
+                    const rect = (
+                      e.currentTarget as HTMLElement
+                    ).getBoundingClientRect();
+                    setHotlineTooltip({ label: h.label, rect });
+                  }
+                }}
+                onMouseLeave={() => setHotlineTooltip(null)}
               >
-                <span className="font-bold">{t(h.labelKey, h.label)}:</span>{' '}
-                <span className="opacity-90">{h.number}</span>
-              </a>
+                <a
+                  href={`tel:${h.tel}`}
+                  className="hover:underline transition-opacity hover:opacity-80 text-xs"
+                >
+                  <span className="font-bold">{t(h.labelKey, h.label)}:</span>{' '}
+                  <span className="opacity-90">{h.number}</span>
+                  {h.allNumbers.length > 1 && (
+                    <span className="ml-1 opacity-60 text-[10px]">
+                      +{h.allNumbers.length - 1}
+                    </span>
+                  )}
+                </a>
+              </div>
               {i < HOTLINES.length - 1 && (
                 <span className="opacity-30 select-none mx-0.5">|</span>
               )}
@@ -325,22 +352,13 @@ const Navbar: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="shrink-0 flex items-center gap-2.5">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt={import.meta.env.VITE_GOVERNMENT_NAME}
-                className="h-12 w-auto max-w-[48px] object-contain"
+                className="h-18 w-auto max-w-[240px] object-contain"
                 onError={e => {
                   (e.currentTarget as HTMLImageElement).style.display = 'none';
                 }}
               />
-              <div className="leading-tight">
-                <div className="font-black text-primary-700 text-base tracking-tight">
-                  {import.meta.env.VITE_GOVERNMENT_NAME}
-                </div>
-                <div className="text-xs text-gray-500 font-medium">
-                  {import.meta.env.VITE_GOVERNMENT_FULL_NAME},{' '}
-                  {import.meta.env.VITE_PROVINCE}
-                </div>
-              </div>
             </Link>
 
             {/* Desktop Nav */}
@@ -557,6 +575,53 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
+      {/* Fixed tooltip portal — escapes overflow-x-auto */}
+      {hotlineTooltip &&
+        (() => {
+          const h = HOTLINES.find(x => x.label === hotlineTooltip.label)!;
+          const { rect } = hotlineTooltip;
+          return createPortal(
+            <div
+              style={{
+                position: 'fixed',
+                top: rect.bottom + 6,
+                left: rect.left + rect.width / 2,
+                transform: 'translateX(-50%)',
+                zIndex: 9999,
+              }}
+              onMouseEnter={() => setHotlineTooltip(hotlineTooltip)}
+              onMouseLeave={() => setHotlineTooltip(null)}
+            >
+              <div
+                style={{
+                  width: 0,
+                  height: 0,
+                  borderLeft: '6px solid transparent',
+                  borderRight: '6px solid transparent',
+                  borderBottom: '6px solid #111827',
+                  margin: '0 auto',
+                  marginBottom: '-1px',
+                }}
+              />
+              <div className="bg-gray-900 text-white text-xs rounded-lg shadow-2xl p-3 min-w-max">
+                <p className="font-bold mb-2 text-red-300 uppercase tracking-wide text-[10px]">
+                  {t(h.labelKey, h.label)} Hotlines
+                </p>
+                {h.allNumbers.map(num => (
+                  <a
+                    key={num}
+                    href={`tel:${num.replace(/[^0-9+]/g, '')}`}
+                    className="flex items-center gap-2 py-1 hover:text-red-300 transition-colors"
+                  >
+                    <Phone className="h-3 w-3 opacity-60 shrink-0" />
+                    {num}
+                  </a>
+                ))}
+              </div>
+            </div>,
+            document.body
+          );
+        })()}
     </nav>
   );
 };
