@@ -150,8 +150,7 @@ City Hall Compound, Dasmariñas City, Cavite 4114
 
 **Trunklines:**
 
-- (046) 416-0095
-- (046) 416-3941
+- 0995 068 4326
 
 **Facebook:**
 [Office of the City Mayor — Dasmariñas](https://www.facebook.com/officeofthecitymayordc/)
