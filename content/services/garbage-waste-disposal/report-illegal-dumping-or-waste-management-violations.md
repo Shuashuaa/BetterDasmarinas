@@ -31,7 +31,11 @@ Illegal dumping, open burning, and improper waste practices are violations of **
 
 3. **Other Hotlines**
    - **City Information Office (CIO):** (046) 501-2321 / pio.lgudasma@gmail.com
-   - **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598
+   - **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598 / 0929-665-9533
+   - **Bureau of Fire Protection (BFP):** 0995-336-9534 / 0992-448-7857
+   - **CDRRMO:** 0908-818-5555 / (046) 481-0555
+   - **Ambulance Center:** 0998-566-5555
+   - **Operations Center:** 0917-721-8825 / 0998-843-5477 / 0908-818-5555
 
 ---
 
