@@ -146,11 +146,9 @@ Updates are posted regularly on the **official Facebook page of the Office of th
 City Hall, City of Dasmariñas, Cavite
 
 **Address:**
-City Hall Compound, Dasmariñas City, Cavite 4114
+Rm 503, New Socioeconomic Building, Brgy. Burol Main, Dasmariñas, Philippines, 4114
 
-**Trunklines:**
-
-- 0995 068 4326
+**Phone:** 0995 068 4326
 
 **Facebook:**
 [Office of the City Mayor — Dasmariñas](https://www.facebook.com/officeofthecitymayordc/)
