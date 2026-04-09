@@ -103,20 +103,17 @@ Dasmariñas is a major educational hub in CALABARZON, home to several universiti
 ## Contact City Hall
 
 **City Hall of Dasmariñas**
-City Hall Compound, Dasmariñas City, Cavite 4114
+Rm 503, New Socioeconomic Building, Brgy. Burol Main, Dasmariñas, Philippines, 4114
 
-**Trunklines:**
-
-- (046) 416-0095
-- (046) 416-3941
-- (046) 416-3942
+**Phone:** 0995 068 4326
 
 **Emergency Hotlines:**
 
-- CDRRMO: 046-513-1766
-- BFP (Fire): 046-416-0875
-- PNP (Police): 046-416-0254
-- Pagamutan ng Dasmariñas: 046-481-4400
-- Ambulance: (046) 686-3339
+- **PNP Dasmariñas City Police Station:** 0956-800-3329 / 0998-598-5598 / 0929-665-9533
+- **Bureau of Fire Protection (BFP):** 0995-336-9534 / 0992-448-7857
+- **CDRRMO:** 0908-818-5555 / (046) 481-0555
+- **Meralco:** 0929-971-6211
+- **Ambulance Center:** 0998-566-5555
+- **Operations Center:** 0917-721-8825 / 0998-843-5477 / 0908-818-5555
 
 **Facebook:** [Office of the City Mayor — Dasmariñas](https://www.facebook.com/officeofthecitymayordc/)

@@ -74,12 +74,4 @@ Religious processions and Stations of the Cross are held in various barangays du
 
 ## Contact
 
-**City Tourism Office**
-City Hall, Dasmariñas City, Cavite 4114
-
-**City Hall Trunklines:**
-
-- (046) 416-0095
-- (046) 416-3941
-
-**Facebook:** [Office of the City Mayor — Dasmariñas](https://www.facebook.com/officeofthecitymayordc/)
+- **City Tourism Office** — Email: citytourismofdc@gmail.com • [Facebook](https://www.facebook.com/DCParuparoFestival/)
