@@ -30,8 +30,6 @@ Apply in person at **City Hall, Dasmariñas City, Cavite 4114**.
 
 > Note: Inspections may include zoning, sanitary, and fire safety checks. The BFP and CENRO may need to clear your establishment before the permit is issued.
 
-**City Hall Trunklines:** (046) 416-0095 / (046) 416-3941
-
 ## Step 3: Register with BIR
 
 File at the **BIR Revenue District Office (RDO 56 — Dasmariñas)** where your office is located.
@@ -70,3 +68,10 @@ Enroll with:
 - [ ] BIR Form 1901/1903, IDs, ATP/Books of Accounts
 
 With these steps, your business in Dasmariñas City will be fully compliant and ready to operate!
+
+---
+
+## Contact Information
+
+- **City Mayor's Office** — Phone: 0995 068 4326 • Email: officeofthecitymayordc@gmail.com • [Facebook](https://www.facebook.com/officeofthecitymayordc)
+- **Business Permits & Licensing Office (BPLO)** — Phone: 0977 169 4323 • Email: license_divisiondasma@yahoo.com • [Facebook](https://www.facebook.com/p/BPLO-Dasmari%C3%B1as-100070048426539/)
