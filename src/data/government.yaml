@@ -3,6 +3,10 @@
 # Non-technical users can easily edit this file to add, remove, or modify local government activity
 
 categories:
+  - category: 'Legislative'
+    slug: 'legislative'
+    description: 'The Sangguniang Panlungsod (City Council) of Dasmariñas City — the legislative body responsible for passing ordinances and resolutions for the benefit of the city.'
+    icon: 'Landmark'
   - category: 'Departments'
     slug: 'departments'
     description: 'Explore local government departments, agencies, and offices with their mandates, services, and contact details.'

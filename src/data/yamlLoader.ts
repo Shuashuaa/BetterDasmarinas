@@ -45,6 +45,9 @@ import housingLandUseIndex from '../../content/services/housing-land-use/index.y
 import tourismIndex from '../../content/services/tourism/index.yaml?raw';
 import governmentDepartmentsIndex from '../../content/government/departments/index.yaml?raw';
 import governmentDepartmentsLegislativeIndex from '../../content/government/departments/legislative/index.yaml?raw';
+import governmentReportsAndStatisticsIndex from '../../content/government/reports-and-statistics/index.yaml?raw';
+import governmentTransparencyDocumentsIndex from '../../content/government/transparency-documents/index.yaml?raw';
+import governmentGuidesAndRegulationsIndex from '../../content/government/guides-and-regulations/index.yaml?raw';
 
 // Create a mapping of category slugs to their YAML content
 const categoryIndexMap: { [key: string]: string } = {
@@ -61,6 +64,9 @@ const categoryIndexMap: { [key: string]: string } = {
   tourism: tourismIndex,
   departments: governmentDepartmentsIndex,
   legislative: governmentDepartmentsLegislativeIndex,
+  'reports-and-statistics': governmentReportsAndStatisticsIndex,
+  'transparency-documents': governmentTransparencyDocumentsIndex,
+  'guides-and-regulations': governmentGuidesAndRegulationsIndex,
 };
 
 // Parse the YAML content

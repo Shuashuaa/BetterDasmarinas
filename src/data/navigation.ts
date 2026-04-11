@@ -48,24 +48,34 @@ export const mainNavigation: NavigationItem[] = [
         label: 'Transparency Documents',
         href: '/government/transparency-documents',
       },
-      {
-        label: 'Reports & Statistics',
-        href: '/government/reports-and-statistics',
-      },
       { label: 'Annual Budget', href: '/government/transparency-documents' },
+      {
+        label: 'SALN',
+        href: '/government/transparency-documents/saln',
+      },
       { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
     ],
   },
   {
     label: 'Statistics',
-    href: '/statistics',
+    href: '/government/reports-and-statistics',
     children: [
-      { label: 'City Profile', href: '/statistics' },
+      {
+        label: 'City Profile',
+        href: '/government/reports-and-statistics/city-profile',
+      },
       {
         label: 'DTI CMCI Profile',
-        href: 'https://cmci.dti.gov.ph/lgu-profile.php?lgu=Dasmarinas',
+        href: '/government/reports-and-statistics/dti-cmci-profile',
       },
-      { label: 'Barangay Data', href: '/statistics' },
+      {
+        label: 'Annual Report',
+        href: '/government/reports-and-statistics/annual-report',
+      },
+      {
+        label: 'Infrastructure Projects',
+        href: '/government/reports-and-statistics/infrastructure-projects',
+      },
       { label: 'Open Data PH', href: 'https://data.gov.ph' },
     ],
   },
