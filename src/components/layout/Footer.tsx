@@ -1,238 +1,218 @@
-import React from 'react';
-import {
-  Facebook,
-  Github,
-  MessageCircle,
-  Mail,
-  ExternalLink,
-  Box,
-  Heart,
-} from 'lucide-react';
+import { Facebook, Github, Heart, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const QUICK_LINKS = [
-  { label: 'About the Portal', href: '/about' },
-  { label: 'Sitemap', href: '/sitemap' },
-  { label: 'Accessibility', href: '/accessibility' },
-  { label: 'Community Discord', href: 'https://discord.gg/', external: true },
-  { label: 'Contact Us', href: '/about' },
+  { labelKey: 'navbar.services', href: '/services' },
+  { labelKey: 'navbar.government', href: '/government/departments' },
+  {
+    labelKey: 'navbar.transparency',
+    href: '/government/transparency-documents',
+  },
+  {
+    labelKey: 'footer.fullDisclosure',
+    href: '/government/transparency-documents/full-disclosure',
+  },
+  {
+    labelKey: 'footer.foiReleases',
+    href: '/government/transparency-documents/foi-releases',
+  },
+  { labelKey: 'contact.title', href: '#contact' },
 ];
 
-const RESOURCE_LINKS = [
-  { label: 'Open Data', href: 'https://data.gov.ph', external: true },
+const RESOURCES = [
+  { label: 'Open Data Philippines', href: 'https://data.gov.ph' },
+  { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
   {
-    label: 'Freedom of Information',
-    href: 'https://www.foi.gov.ph',
-    external: true,
+    label: 'Dasmariñas City Hall',
+    href: 'https://www.facebook.com/officeofthecitymayordc',
   },
-  {
-    label: 'LGU Dasmariñas Facebook',
-    href: import.meta.env.VITE_FACEBOOK_URL || 'https://facebook.com',
-    external: true,
-  },
-  { label: 'Sangguniang Panlungsod', href: '/legislative' },
-  {
-    label: 'DILG Full Disclosure',
-    href: 'https://fdp.dilg.gov.ph',
-    external: true,
-  },
-  { label: 'DTI CMCI', href: 'https://cmci.dti.gov.ph', external: true },
-  { label: 'BLGF', href: 'https://blgf.gov.ph', external: true },
+  { label: 'DILG FDP Portal', href: 'https://fdpp.blgs.gov.ph' },
+  { label: 'PhilGEPS', href: 'https://www.philgeps.gov.ph' },
+  { label: 'Official Gov.ph', href: 'https://www.gov.ph' },
 ];
 
-const Footer: React.FC = () => {
+export default function Footer() {
   const { t } = useTranslation('common');
-  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 pt-12 pb-8">
-        {/* 4-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Col 1 — Brand */}
+    <footer className="bg-gray-950 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+          {/* Brand */}
           <div>
-            <img
-              src="/logo-clear.svg"
-              alt={t('site_name')}
-              className="h-12 w-auto max-w-[180px] object-contain mb-4"
-              onError={e => {
-                (e.currentTarget as HTMLImageElement).style.display = 'none';
-              }}
-            />
-            <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              A free, open-source community portal for residents of Dasmariñas,
-              Cavite. Access government services, officials, and public
-              information.
+            <div className="mb-3">
+              <img
+                src="/logo.png"
+                alt="BetterDasmariñas"
+                className="h-20 w-auto"
+                onError={e => {
+                  (e.currentTarget as HTMLImageElement).style.display = 'none';
+                }}
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              {t('footer.mission')}
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex gap-3 mb-6">
               <a
-                href={
-                  import.meta.env.VITE_FACEBOOK_URL || 'https://facebook.com'
-                }
+                href="https://www.facebook.com/betterdasmarinas"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
                 aria-label="Facebook"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-800 text-gray-400 hover:bg-blue-600 hover:text-white transition-colors"
               >
-                <Facebook className="h-4 w-4" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/bettergovph/bettergov"
+                href="https://github.com/Shuashuaa/betterdasmarinas"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
                 aria-label="GitHub"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-600 hover:text-white transition-colors"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+              <a
+                href="https://discord.gg/bettergovph"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                aria-label="Discord"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </div>
+            {/* BetterGov.ph logo */}
+            <a
+              href="https://bettergov.ph"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block opacity-50 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="https://bettersolano.org/assets/images/logo/bettergov-footer.svg"
+                alt="BetterGov.ph"
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </a>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+              {t('footer.quickLinks')}
+            </h3>
+            <ul className="space-y-2.5">
+              {QUICK_LINKS.map(link => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {t(link.labelKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+              {t('footer.resources')}
+            </h3>
+            <ul className="space-y-2.5">
+              {RESOURCES.map(link => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Cost + CTAs */}
+          <div>
+            <div className="inline-flex items-center gap-2 bg-green-900/40 text-green-400 border border-green-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
+              {t('footer.costLabel')}{' '}
+              <span className="text-yellow-300">₱0</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://github.com/Shuashuaa/betterdasmarinas"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold text-white bg-primary-700 hover:bg-primary-600 px-4 py-2.5 rounded-lg transition-colors"
+              >
+                <Heart className="h-4 w-4" />
+                {t('footer.volunteer')}
+              </a>
+              <a
+                href="https://github.com/Shuashuaa/betterdasmarinas"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold text-gray-300 bg-gray-800 hover:bg-gray-700 px-4 py-2.5 rounded-lg transition-colors"
               >
                 <Github className="h-4 w-4" />
-              </a>
-              <a
-                href="https://discord.gg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discord"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-800 text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
-              >
-                <MessageCircle className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-
-          {/* Col 2 — Quick Links */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest text-gray-300 mb-4">
-              Quick Links
-            </h4>
-            <ul className="space-y-2.5">
-              {QUICK_LINKS.map(link =>
-                link.external ? (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                      <ExternalLink className="h-3 w-3 opacity-50" />
-                    </a>
-                  </li>
-                ) : (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Col 3 — Resources */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest text-gray-300 mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-2.5">
-              {RESOURCE_LINKS.map(link =>
-                link.external ? (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                      <ExternalLink className="h-3 w-3 opacity-50" />
-                    </a>
-                  </li>
-                ) : (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Col 4 — Cost / Contribute */}
-          <div>
-            <div
-              className="inline-flex items-baseline gap-2 bg-green-900/40 border border-green-700/50 rounded-xl px-4 py-3 mb-5"
-              role="status"
-              aria-label="Cost to the People of Dasmariñas: Zero Pesos"
-            >
-              <span className="text-sm text-green-300 font-medium">
-                Cost to the People of Dasmariñas
-              </span>
-              <span className="text-2xl font-black text-green-400">₱0</span>
-            </div>
-
-            <div className="flex flex-col gap-2.5">
-              <a
-                href="https://bettergov.ph/join-us"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-primary-700 hover:text-white text-sm font-semibold transition-colors"
-              >
-                <Mail className="h-4 w-4 shrink-0" />
-                Volunteer with Us
-              </a>
-              <a
-                href="https://github.com/bettergovph/bettergov"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white text-sm font-semibold transition-colors"
-              >
-                <Github className="h-4 w-4 shrink-0" />
-                Contribute at GitHub
+                {t('footer.contribute')}
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 mt-10 pt-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-gray-500">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>&copy; {currentYear} BetterDasmariñas</span>
-              <span className="hidden sm:inline text-gray-700">·</span>
-              <span className="bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono">
-                <a
-                  href="https://creativecommons.org/publicdomain/zero/1.0/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  CC0 1.0 Universal License
-                </a>
+        <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+          <span>
+            © {new Date().getFullYear()} BetterDasmariñas.org
+            <span className="mx-2 opacity-40">|</span>
+            MIT | CC BY 4.0
+            <span className="mx-2 opacity-40">|</span>
+            {t('footer.attribution')}
+          </span>
+          <a
+            href="https://github.com/Shuashuaa"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 text-gray-600 hover:text-gray-300 transition-colors group"
+          >
+            <Heart className="h-3 w-3 text-gray-600 group-hover:text-red-400 group-hover:fill-red-400 transition-colors" />
+            <span>
+              {t('footer.builtBy')}{' '}
+              <span className="text-gray-400 group-hover:text-white transition-colors font-medium">
+                Shuashuaa
               </span>
-              <span className="hidden sm:inline text-gray-700">·</span>
-              <span className="text-gray-600">
-                Not an official government website.
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5 shrink-0 text-gray-600">
-              <Heart className="h-3.5 w-3.5" />
-              <span className="font-mono">Built by the community</span>
-            </div>
-            <div className="flex items-center gap-1.5 shrink-0 text-gray-600">
-              <Box className="h-3.5 w-3.5" />
-              <span className="font-mono">v0.3.1</span>
-            </div>
-          </div>
+            </span>
+          </a>
+          <span className="flex items-center gap-1.5 opacity-60">
+            <svg
+              className="h-3.5 w-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+            Ver. 1.0.0
+          </span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

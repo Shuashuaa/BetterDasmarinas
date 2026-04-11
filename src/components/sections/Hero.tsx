@@ -90,6 +90,11 @@ export default function Hero() {
   const navigate = useNavigate();
   const { t } = useTranslation('common');
   const [scrollY, setScrollY] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    requestAnimationFrame(() => setMounted(true));
+  }, []);
 
   const handleScroll = useCallback(() => {
     setScrollY(window.scrollY);
@@ -182,16 +187,327 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left — headline + CTAs */}
           <div>
-            <p className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1">
+            <p
+              className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'none' : 'translateX(-20px)',
+                transition: 'opacity 0.6s ease, transform 0.6s ease',
+              }}
+            >
               {t('hero.welcome', 'WELCOME TO')}
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4">
-              {import.meta.env.VITE_GOVERNMENT_NAME}
-            </h1>
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+            {/* Title + clinging butterflies — wrapper is the positioning context */}
+            <div
+              className="relative mb-4"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'none' : 'translateX(-24px)',
+                transition:
+                  'opacity 0.6s ease 100ms, transform 0.6s ease 100ms',
+              }}
+            >
+              <h1 className="text-4xl sm:text-5xl md:text-[54px] font-black leading-tight">
+                {import.meta.env.VITE_GOVERNMENT_NAME}
+              </h1>
+
+              {/* Hero butterflies — toggle with VITE_BUTTERFLIES_ENABLED=true in .env */}
+              {import.meta.env.VITE_BUTTERFLIES_ENABLED === 'true' && (
+                <>
+                  {/* Butterfly 1 — orange, resting on the "B" */}
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 64 52"
+                    width="48"
+                    height="38"
+                    className="hero-butterfly hero-butterfly--1"
+                    style={{ top: '-4px', left: '-8px' }}
+                  >
+                    <g className="hero-butterfly__wing-l">
+                      <path
+                        d="M32,27 C28,18 10,10 6,18 C2,26 16,32 32,31 Z"
+                        fill="#E8801A"
+                      />
+                      <ellipse
+                        cx="17"
+                        cy="18"
+                        rx="4.5"
+                        ry="3"
+                        fill="rgba(255,200,80,0.45)"
+                      />
+                      <path
+                        d="M32,31 C24,34 8,40 10,46 C12,50 26,44 32,38 Z"
+                        fill="#C96010"
+                      />
+                    </g>
+                    <g className="hero-butterfly__wing-r">
+                      <path
+                        d="M32,27 C36,18 54,10 58,18 C62,26 48,32 32,31 Z"
+                        fill="#E8801A"
+                      />
+                      <ellipse
+                        cx="47"
+                        cy="18"
+                        rx="4.5"
+                        ry="3"
+                        fill="rgba(255,200,80,0.45)"
+                      />
+                      <path
+                        d="M32,31 C40,34 56,40 54,46 C52,50 38,44 32,38 Z"
+                        fill="#C96010"
+                      />
+                    </g>
+                    <ellipse cx="32" cy="31" rx="2.8" ry="9" fill="#2D1400" />
+                    <circle cx="32" cy="21" r="2.8" fill="#2D1400" />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="26"
+                      y2="9"
+                      stroke="#2D1400"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="38"
+                      y2="9"
+                      stroke="#2D1400"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="25.5" cy="8.5" r="1.8" fill="#2D1400" />
+                    <circle cx="38.5" cy="8.5" r="1.8" fill="#2D1400" />
+                  </svg>
+
+                  {/* Butterfly 2 — blue-violet, resting near the "D" in Dasmariñas */}
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 64 52"
+                    width="40"
+                    height="32"
+                    className="hero-butterfly hero-butterfly--2"
+                    style={{ top: '-8px', left: '44%' }}
+                  >
+                    <g className="hero-butterfly__wing-l">
+                      <path
+                        d="M32,27 C28,18 10,10 6,18 C2,26 16,32 32,31 Z"
+                        fill="#6A72D8"
+                      />
+                      <ellipse
+                        cx="16"
+                        cy="18"
+                        rx="4"
+                        ry="2.8"
+                        fill="rgba(200,220,255,0.4)"
+                      />
+                      <path
+                        d="M32,31 C24,34 8,40 10,46 C12,50 26,44 32,38 Z"
+                        fill="#4A50B8"
+                      />
+                    </g>
+                    <g className="hero-butterfly__wing-r">
+                      <path
+                        d="M32,27 C36,18 54,10 58,18 C62,26 48,32 32,31 Z"
+                        fill="#6A72D8"
+                      />
+                      <ellipse
+                        cx="48"
+                        cy="18"
+                        rx="4"
+                        ry="2.8"
+                        fill="rgba(200,220,255,0.4)"
+                      />
+                      <path
+                        d="M32,31 C40,34 56,40 54,46 C52,50 38,44 32,38 Z"
+                        fill="#4A50B8"
+                      />
+                    </g>
+                    <ellipse cx="32" cy="31" rx="2.6" ry="8.5" fill="#0D1440" />
+                    <circle cx="32" cy="21" r="2.6" fill="#0D1440" />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="26"
+                      y2="9"
+                      stroke="#0D1440"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="38"
+                      y2="9"
+                      stroke="#0D1440"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="25.5" cy="8.5" r="1.6" fill="#0D1440" />
+                    <circle cx="38.5" cy="8.5" r="1.6" fill="#0D1440" />
+                  </svg>
+
+                  {/* Butterfly 3 — teal-green, resting below the title near the center */}
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 64 52"
+                    width="44"
+                    height="35"
+                    className="hero-butterfly hero-butterfly--3"
+                    style={{ top: '55%', left: '24%' }}
+                  >
+                    <g className="hero-butterfly__wing-l">
+                      <path
+                        d="M32,27 C28,18 10,10 6,18 C2,26 16,32 32,31 Z"
+                        fill="#269C8A"
+                      />
+                      <ellipse
+                        cx="16"
+                        cy="18"
+                        rx="4"
+                        ry="2.8"
+                        fill="rgba(180,255,230,0.35)"
+                      />
+                      <path
+                        d="M32,31 C24,34 8,40 10,46 C12,50 26,44 32,38 Z"
+                        fill="#1A7565"
+                      />
+                    </g>
+                    <g className="hero-butterfly__wing-r">
+                      <path
+                        d="M32,27 C36,18 54,10 58,18 C62,26 48,32 32,31 Z"
+                        fill="#269C8A"
+                      />
+                      <ellipse
+                        cx="48"
+                        cy="18"
+                        rx="4"
+                        ry="2.8"
+                        fill="rgba(180,255,230,0.35)"
+                      />
+                      <path
+                        d="M32,31 C40,34 56,40 54,46 C52,50 38,44 32,38 Z"
+                        fill="#1A7565"
+                      />
+                    </g>
+                    <ellipse cx="32" cy="31" rx="2.6" ry="8.5" fill="#082520" />
+                    <circle cx="32" cy="21" r="2.6" fill="#082520" />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="26"
+                      y2="9"
+                      stroke="#082520"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="38"
+                      y2="9"
+                      stroke="#082520"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="25.5" cy="8.5" r="1.6" fill="#082520" />
+                    <circle cx="38.5" cy="8.5" r="1.6" fill="#082520" />
+                  </svg>
+
+                  {/* Butterfly 4 — rose-pink, resting near the "ñ" */}
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 64 52"
+                    width="36"
+                    height="28"
+                    className="hero-butterfly hero-butterfly--4"
+                    style={{ top: '-2px', left: '78%' }}
+                  >
+                    <g className="hero-butterfly__wing-l">
+                      <path
+                        d="M32,27 C28,18 10,10 6,18 C2,26 16,32 32,31 Z"
+                        fill="#D45F7A"
+                      />
+                      <ellipse
+                        cx="16"
+                        cy="18"
+                        rx="3.5"
+                        ry="2.5"
+                        fill="rgba(255,200,220,0.4)"
+                      />
+                      <path
+                        d="M32,31 C24,34 8,40 10,46 C12,50 26,44 32,38 Z"
+                        fill="#B04060"
+                      />
+                    </g>
+                    <g className="hero-butterfly__wing-r">
+                      <path
+                        d="M32,27 C36,18 54,10 58,18 C62,26 48,32 32,31 Z"
+                        fill="#D45F7A"
+                      />
+                      <ellipse
+                        cx="48"
+                        cy="18"
+                        rx="3.5"
+                        ry="2.5"
+                        fill="rgba(255,200,220,0.4)"
+                      />
+                      <path
+                        d="M32,31 C40,34 56,40 54,46 C52,50 38,44 32,38 Z"
+                        fill="#B04060"
+                      />
+                    </g>
+                    <ellipse cx="32" cy="31" rx="2.4" ry="8" fill="#3D0A18" />
+                    <circle cx="32" cy="21" r="2.4" fill="#3D0A18" />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="26"
+                      y2="9"
+                      stroke="#3D0A18"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="32"
+                      y1="18"
+                      x2="38"
+                      y2="9"
+                      stroke="#3D0A18"
+                      strokeWidth="1.1"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="25.5" cy="8.5" r="1.5" fill="#3D0A18" />
+                    <circle cx="38.5" cy="8.5" r="1.5" fill="#3D0A18" />
+                  </svg>
+                </>
+              )}
+            </div>
+            <p
+              className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'none' : 'translateY(16px)',
+                transition:
+                  'opacity 0.6s ease 200ms, transform 0.6s ease 200ms',
+              }}
+            >
               {t('hero.subtitle')}
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div
+              className="flex flex-wrap gap-3"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'none' : 'translateY(16px)',
+                transition:
+                  'opacity 0.6s ease 320ms, transform 0.6s ease 320ms',
+              }}
+            >
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-blue-50 transition-colors"
@@ -210,7 +526,13 @@ export default function Hero() {
           </div>
 
           {/* Right — search card */}
-          <div>
+          <div
+            style={{
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'none' : 'translateX(32px)',
+              transition: 'opacity 0.7s ease 150ms, transform 0.7s ease 150ms',
+            }}
+          >
             <div className="bg-white rounded-2xl p-6 shadow-2xl">
               <p className="text-gray-800 font-bold text-base mb-3">
                 {t('hero.findService', 'Search Services')}
