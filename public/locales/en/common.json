@@ -4,7 +4,7 @@
   "hero": {
     "title": "Welcome to BetterDasmariñas",
     "welcome": "WELCOME TO",
-    "subtitle": "Your community-powered portal for City of Dasmariñas, Cavite — access government services, public officials, and city information.",
+    "subtitle": "A community-powered portal for City of Dasmariñas, Cavite — access government services and city information.",
     "browseServices": "Browse Services",
     "contactUs": "Contact Us",
     "findService": "Search Services",
@@ -114,7 +114,16 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 BetterDasmariñas. All content is public domain unless otherwise specified."
+    "mission": "A free, open-source community portal for residents of Dasmariñas City, Cavite.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "fullDisclosure": "Full Disclosure",
+    "foiReleases": "FOI Releases",
+    "costLabel": "Cost to the People of Dasmariñas:",
+    "volunteer": "Volunteer with Us",
+    "contribute": "Contribute on GitHub",
+    "attribution": "This website is a community resource and is not an official government website",
+    "builtBy": "Built by"
   },
   "navbar": {
     "home": "Home",
@@ -141,6 +150,77 @@
     "weather": "Weather",
     "location": "Location",
     "caviteProvince": "Province of Cavite"
+  },
+  "history": {
+    "title": "Brief History of Dasmariñas City",
+    "cityhoodYear": "2009",
+    "cityhoodLabel": "Year Converted to a City",
+    "cityhoodDesc": "On November 25, 2009, residents overwhelmingly voted \"Yes\" in a plebiscite ratifying Republic Act No. 9723, officially inaugurating Dasmariñas as a component city of Cavite.",
+    "foundedYear": "1864",
+    "foundedLabel": "Year Founded as a Town",
+    "foundedDesc": "Originally part of the Hacienda de Imus, Dasmariñas was formally established as a separate town on May 12, 1864, named in honor of Gómez Pérez Dasmariñas, the 7th Spanish Governor-General of the Philippines.",
+    "events": {
+      "precolonial": {
+        "year": "Pre-colonial",
+        "title": "Tagalog Settlements",
+        "text": "The area was home to Tagalog communities who settled along the river basins and lowlands of what is now Cavite, living through farming, fishing, and trade."
+      },
+      "spanish": {
+        "year": "1864",
+        "title": "Spanish Era — Pueblo Established",
+        "text": "Originally part of the Hacienda de Imus, Dasmariñas was formally founded as a separate town on May 12, 1864. It was named in honor of Gómez Pérez Dasmariñas, the 7th Spanish Governor-General of the Philippines."
+      },
+      "revolution": {
+        "year": "1896",
+        "title": "Philippine Revolution",
+        "text": "Residents of Dasmariñas joined the Katipunan-led revolution against Spanish colonial rule. The town became a strategic battleground, most notably during the fierce Battle of Perez Dasmariñas in early 1897."
+      },
+      "american": {
+        "year": "1903–1907",
+        "title": "American Administration & Reorganization",
+        "text": "In 1903, the American civil government temporarily merged Dasmariñas with Imus to streamline administration. Following local petition, it regained its independent municipal status on October 15, 1907, through Act No. 1716."
+      },
+      "industrial": {
+        "year": "1960s–1980s",
+        "title": "Rise as an Industrial Hub",
+        "text": "Dasmariñas transitioned from an agricultural town to an industrial powerhouse. The establishment of the First Cavite Industrial Estate (FCIE) and other economic zones earned it the title \"Industrial Giant of CALABARZON.\""
+      },
+      "cityhood": {
+        "year": "1998",
+        "title": "The Failed Cityhood Bid",
+        "text": "Republic Act No. 8506 was passed to convert the town into a city. However, in a plebiscite held on December 1, 1998, residents rejected the conversion and Dasmariñas remained a municipality for another decade."
+      },
+      "conversion": {
+        "year": "2009",
+        "title": "Official Conversion to a Component City",
+        "text": "On November 25, 2009, residents overwhelmingly voted \"Yes\" in a plebiscite ratifying Republic Act No. 9723, officially inaugurating Dasmariñas as a component city of Cavite."
+      },
+      "present": {
+        "year": "2010s–Present",
+        "title": "Economic and Population Growth",
+        "text": "The city has since evolved into the \"University Capital of Cavite\" and a major residential hub. As a first-class Component City, its population of over 703,000 (2020 Census) makes it one of the most economically significant urban centers in the Philippines."
+      }
+    }
+  },
+  "leadership": {
+    "title": "City Leadership",
+    "viewAll": "View All Officials",
+    "viewProfile": "View profile",
+    "electedMayor": "Elected Mayor",
+    "electedViceMayor": "Elected Vice Mayor",
+    "cityMayor": "City Mayor",
+    "cityViceMayor": "City Vice Mayor"
+  },
+  "contact": {
+    "title": "Contact Information",
+    "viewAll": "View All Contacts",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "phoneHours": "Mon–Fri, 8:00 AM – 5:00 PM",
+    "emailResponse": "Official city government email",
+    "addressLine1": "Rm 503, New Socioeconomic Building, Brgy. Burol Main",
+    "addressLine2": "City of Dasmariñas, Cavite 4114"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
