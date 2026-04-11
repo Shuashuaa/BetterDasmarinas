@@ -1,0 +1,16 @@
+layout: grid
+title: 'Reports and Statistics'
+description: 'Annual accomplishment reports, city profile data, infrastructure project updates, DTI CMCI rankings, and performance metrics.'
+pages:
+  - name: 'Annual Accomplishment Report'
+    slug: 'annual-report'
+    description: 'Year-end report on the programs, projects, and activities completed by the City Government of Dasmariñas.'
+  - name: 'City Profile and Statistics'
+    slug: 'city-profile'
+    description: 'Demographic data, economic indicators, land area, barangay information, and key statistics for Dasmariñas City.'
+  - name: 'Infrastructure Projects'
+    slug: 'infrastructure-projects'
+    description: 'Status and details of ongoing and completed infrastructure projects funded by the city government.'
+  - name: 'DTI CMCI Profile'
+    slug: 'dti-cmci-profile'
+    description: 'Cities and Municipalities Competitiveness Index (CMCI) rankings and competitiveness profile of Dasmariñas City.'
