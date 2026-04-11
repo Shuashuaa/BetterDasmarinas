@@ -7,7 +7,12 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 
 function App() {
   return (
@@ -27,6 +32,12 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
+              <Route
+                path="/transparency"
+                element={
+                  <Navigate to="/government/transparency-documents" replace />
+                }
+              />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}

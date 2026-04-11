@@ -41,14 +41,20 @@ export const mainNavigation: NavigationItem[] = [
   },
   {
     label: 'Transparency',
-    href: '/transparency',
+    href: '/government/transparency-documents',
     children: [
-      { label: 'Full Disclosure Policy', href: '/transparency' },
+      {
+        label: 'Full Disclosure Policy',
+        href: '/government/transparency-documents/full-disclosure',
+      },
       {
         label: 'Transparency Documents',
         href: '/government/transparency-documents',
       },
-      { label: 'Annual Budget', href: '/government/transparency-documents' },
+      {
+        label: 'Annual Budget',
+        href: '/government/transparency-documents/annual-budget',
+      },
       {
         label: 'SALN',
         href: '/government/transparency-documents/saln',
