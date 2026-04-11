@@ -1,0 +1,16 @@
+layout: grid
+title: 'Guides and Regulations'
+description: 'City ordinances, Sangguniang Panlungsod resolutions, and regulatory guides for residents and businesses of Dasmariñas City.'
+pages:
+  - name: 'City Ordinances'
+    slug: 'ordinances'
+    description: 'Local laws enacted by the Sangguniang Panlungsod of Dasmariñas City.'
+  - name: 'Sangguniang Panlungsod Resolutions'
+    slug: 'resolutions'
+    description: 'Official resolutions adopted by the Dasmariñas City Council.'
+  - name: "Citizen's Charter"
+    slug: 'citizens-charter'
+    description: "The city government's service standards, processing times, and fees for all public-facing transactions."
+  - name: 'Downloadable Forms and Documents'
+    slug: 'downloadable-forms'
+    description: 'Official forms from Dasmariñas City Hall — business permits, building permits, planning documents, and more.'
