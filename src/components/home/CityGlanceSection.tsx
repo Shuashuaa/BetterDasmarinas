@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ArrowRight,
-  MapPin,
   Wind,
   Droplets,
   Eye,
@@ -60,7 +59,7 @@ function getWeatherTheme(code: number): WeatherTheme {
   if (code <= 2)
     return {
       label: 'Partly Cloudy',
-      bg: 'linear-gradient(135deg, #3b82f6 0%, #93c5fd 60%, #e2e8f0 100%)',
+      bg: 'linear-gradient(135deg, #3b82f6 0%, #93c5fd 150%, #e2e8f0 100%)',
       icon: Cloud,
       iconClass: 'text-white',
       textClass: 'text-white',
@@ -173,6 +172,11 @@ const STATS = [
 export default function CityGlanceSection() {
   const { t } = useTranslation('common');
   const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    requestAnimationFrame(() => setMounted(true));
+  }, []);
 
   useEffect(() => {
     const cachedTemp = localStorage.getItem('bd_weather_full');
@@ -211,7 +215,14 @@ export default function CityGlanceSection() {
     <section className="bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div
+          className="flex items-center justify-between mb-6"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'none' : 'translateX(-20px)',
+            transition: 'opacity 0.6s ease, transform 0.6s ease',
+          }}
+        >
           <h2 className="text-xl font-black text-gray-900">
             {t('glance.title', 'Dasmariñas at a Glance')}
           </h2>
@@ -226,10 +237,16 @@ export default function CityGlanceSection() {
 
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-          {STATS.map(stat => (
+          {STATS.map((stat, idx) => (
             <div
               key={stat.labelKey}
               className="bg-gray-50 rounded-xl p-4 border border-gray-100"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'none' : 'translateY(16px)',
+                transition: 'opacity 0.6s ease, transform 0.6s ease',
+                transitionDelay: `${100 + idx * 80}ms`,
+              }}
             >
               <div className="text-2xl font-black text-primary-700 leading-none mb-1">
                 {stat.value}
@@ -253,6 +270,10 @@ export default function CityGlanceSection() {
               background:
                 theme?.bg ??
                 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)',
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'none' : 'translateX(-28px)',
+              transition:
+                'background 0.7s ease, opacity 0.6s ease 420ms, transform 0.6s ease 420ms',
             }}
           >
             {/* Decorative icon — right half only */}
@@ -314,34 +335,39 @@ export default function CityGlanceSection() {
           {/* Map */}
           <div
             className="lg:col-span-2 rounded-xl overflow-hidden border border-gray-200 shadow-sm h-64 lg:h-auto"
-            style={{ isolation: 'isolate' }}
+            style={{
+              isolation: 'isolate',
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'none' : 'translateX(32px)',
+              transition: 'opacity 0.7s ease 500ms, transform 0.7s ease 500ms',
+            }}
           >
-            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 border-b border-gray-200">
+            {/* <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 border-b border-gray-200">
               <MapPin className="h-4 w-4 text-primary-600" />
               <span className="text-sm font-semibold text-gray-700">
                 {t('glance.location', 'Location')}
               </span>
             </div>
-            <div className="h-56 lg:h-[calc(100%-36px)] relative z-0">
-              <MapContainer
-                center={DASMARINAS_COORDS}
-                zoom={12}
-                scrollWheelZoom={false}
-                className="h-full w-full"
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={DASMARINAS_COORDS}>
-                  <Popup>
-                    <strong>Dasmariñas City</strong>
-                    <br />
-                    Cavite, Philippines
-                  </Popup>
-                </Marker>
-              </MapContainer>
-            </div>
+            <div className="h-56 lg:h-[calc(100%-36px)] relative z-0"> */}
+            <MapContainer
+              center={DASMARINAS_COORDS}
+              zoom={12}
+              scrollWheelZoom={false}
+              className="h-full w-full"
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={DASMARINAS_COORDS}>
+                <Popup>
+                  <strong>Dasmariñas City</strong>
+                  <br />
+                  Cavite, Philippines
+                </Popup>
+              </Marker>
+            </MapContainer>
+            {/* </div> */}
           </div>
         </div>
       </div>

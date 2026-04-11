@@ -4,6 +4,7 @@ import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 import { governmentCategories } from '../../data/yamlLoader';
 
@@ -33,15 +34,22 @@ export default function GovernmentActivitySection({
   };
 
   const displayedCategories = governmentCategories.categories as Category[];
+  const headingRef = useScrollReveal<HTMLDivElement>();
+  const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <Section id="#government">
-      <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
-      <Text className="text-gray-600 mb-6">
-        {description || t('governmentActivity.description')}
-      </Text>
+      <div ref={headingRef} className="reveal">
+        <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
+        <Text className="text-gray-600 mb-6">
+          {description || t('governmentActivity.description')}
+        </Text>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div
+        ref={gridRef}
+        className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
         {displayedCategories.map(category => (
           <Link
             key={category.slug}
