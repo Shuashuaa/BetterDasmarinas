@@ -81,6 +81,39 @@ function highlight(text: string, query: string) {
   );
 }
 
+function HeroButterfly({
+  n,
+  width,
+  height,
+  style,
+  children,
+}: {
+  n: number;
+  width: number;
+  height: number;
+  style: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  const [flying, setFlying] = useState(false);
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 64 52"
+      width={width}
+      height={height}
+      className={`hero-butterfly hero-butterfly--${n}${flying ? ' hero-butterfly--flyaway' : ''}`}
+      style={style}
+      onMouseEnter={() => setFlying(true)}
+      onAnimationEnd={e => {
+        if (e.animationName.startsWith('hero-flyaway')) setFlying(false);
+      }}
+    >
+      {children}
+    </svg>
+  );
+}
+
 export default function Hero() {
   const [query, setQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -215,13 +248,10 @@ export default function Hero() {
               {import.meta.env.VITE_BUTTERFLIES_ENABLED === 'true' && (
                 <>
                   {/* Butterfly 1 — orange, resting on the "B" */}
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    viewBox="0 0 64 52"
-                    width="48"
-                    height="38"
-                    className="hero-butterfly hero-butterfly--1"
+                  <HeroButterfly
+                    n={1}
+                    width={48}
+                    height={38}
                     style={{ top: '-4px', left: '-8px' }}
                   >
                     <g className="hero-butterfly__wing-l">
@@ -280,16 +310,13 @@ export default function Hero() {
                     />
                     <circle cx="25.5" cy="8.5" r="1.8" fill="#2D1400" />
                     <circle cx="38.5" cy="8.5" r="1.8" fill="#2D1400" />
-                  </svg>
+                  </HeroButterfly>
 
                   {/* Butterfly 2 — blue-violet, resting near the "D" in Dasmariñas */}
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    viewBox="0 0 64 52"
-                    width="40"
-                    height="32"
-                    className="hero-butterfly hero-butterfly--2"
+                  <HeroButterfly
+                    n={2}
+                    width={40}
+                    height={32}
                     style={{ top: '-8px', left: '44%' }}
                   >
                     <g className="hero-butterfly__wing-l">
@@ -348,16 +375,13 @@ export default function Hero() {
                     />
                     <circle cx="25.5" cy="8.5" r="1.6" fill="#0D1440" />
                     <circle cx="38.5" cy="8.5" r="1.6" fill="#0D1440" />
-                  </svg>
+                  </HeroButterfly>
 
                   {/* Butterfly 3 — teal-green, resting below the title near the center */}
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    viewBox="0 0 64 52"
-                    width="44"
-                    height="35"
-                    className="hero-butterfly hero-butterfly--3"
+                  <HeroButterfly
+                    n={3}
+                    width={44}
+                    height={35}
                     style={{ top: '55%', left: '24%' }}
                   >
                     <g className="hero-butterfly__wing-l">
@@ -416,16 +440,13 @@ export default function Hero() {
                     />
                     <circle cx="25.5" cy="8.5" r="1.6" fill="#082520" />
                     <circle cx="38.5" cy="8.5" r="1.6" fill="#082520" />
-                  </svg>
+                  </HeroButterfly>
 
                   {/* Butterfly 4 — rose-pink, resting near the "ñ" */}
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    viewBox="0 0 64 52"
-                    width="36"
-                    height="28"
-                    className="hero-butterfly hero-butterfly--4"
+                  <HeroButterfly
+                    n={4}
+                    width={36}
+                    height={28}
                     style={{ top: '-2px', left: '78%' }}
                   >
                     <g className="hero-butterfly__wing-l">
@@ -484,7 +505,7 @@ export default function Hero() {
                     />
                     <circle cx="25.5" cy="8.5" r="1.5" fill="#3D0A18" />
                     <circle cx="38.5" cy="8.5" r="1.5" fill="#3D0A18" />
-                  </svg>
+                  </HeroButterfly>
                 </>
               )}
             </div>
