@@ -154,4 +154,3 @@ Rm 503, New Socioeconomic Building, Brgy. Burol Main, Dasmariñas, Philippines, 
 [Office of the City Mayor — Dasmariñas](https://www.facebook.com/officeofthecitymayordc/)
 
 **Website:**
-[dasmarinas.gov.ph](http://www.dasmarinas.gov.ph)

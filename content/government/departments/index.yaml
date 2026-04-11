@@ -8,3 +8,6 @@ pages:
   - name: 'Legislative'
     slug: 'legislative'
     description: 'As of the 2025–2028 term, the Sangguniang Panlungsod (City Council) of Dasmariñas City has 12 elected councilors, with the Vice Mayor as the presiding officer of the council.'
+  - name: 'Local Officials Directory'
+    slug: 'officials'
+    description: 'Full directory of elected officials, city councilors, and department contacts for Dasmariñas City.'

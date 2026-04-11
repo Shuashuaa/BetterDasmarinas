@@ -1,9 +1,19 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
 layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+title: 'Sangguniang Panlungsod'
+description: 'The City Council of Dasmariñas City — the legislative body responsible for passing ordinances and resolutions for the benefit of the city.'
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: 'City Council Members'
+    slug: 'city-council'
+    description: 'Current members of the Sangguniang Panlungsod, including the Vice Mayor and 12 elected councilors.'
+  - name: 'Standing Committees'
+    slug: 'committees'
+    description: 'The legislative committees of the Sangguniang Panlungsod, covering health, tourism, public works, and more.'
+  - name: 'City Ordinances'
+    slug: 'ordinances'
+    description: 'Local laws and ordinances enacted by the Sangguniang Panlungsod of Dasmariñas City.'
+  - name: 'City Council Resolutions'
+    slug: 'resolutions'
+    description: 'Official resolutions adopted by the Dasmariñas City Council on matters of public concern.'
+  - name: 'Public Sessions'
+    slug: 'public-sessions'
+    description: 'Schedule and information on public City Council sessions open to Dasmariñas City residents.'
