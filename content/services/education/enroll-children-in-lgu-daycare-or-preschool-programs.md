@@ -66,7 +66,7 @@ The Dasmariñas City Government, through the **City Social Welfare and Developme
 ## Contact & Updates
 
 - **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
-- **City Social Welfare and Development Office (CSWDO)** — Dasmariñas City Hall Complex, Brgy. Poblacion I-A, Dasmariñas City, Cavite 4114 • [Facebook](https://www.facebook.com/p/City-Social-Welfare-and-Development-Office-CSWDO-Dasmari%C3%B1as-100084116032219/). Oversees daycare programs citywide.
+- **City Social Welfare and Development Office (CSWDO)** — Rm 503, New Socioeconomic Building, Brgy. Burol Main, Dasmariñas, Philippines, 4114 • [Facebook](https://www.facebook.com/p/City-Social-Welfare-and-Development-Office-CSWDO-Dasmari%C3%B1as-100084116032219/). Oversees daycare programs citywide.
 - **Schools Division of Dasmariñas City** — asp.depeddasma.edu.ph. Manages public kindergarten enrollment. Follow their official Facebook page for enrollment period announcements.
 
 ---

@@ -2,6 +2,10 @@
 # This file contains all the pages/services available under the Education category
 
 pages:
+  - name: 'Find public schools in Dasmariñas'
+    slug: 'find-public-schools-in-dasmarinas'
+    description: 'Directory and enrollment guide for public elementary, secondary, and tertiary schools in Dasmariñas City.'
+
   - name: 'Enroll children in LGU daycare or preschool programs'
     slug: 'enroll-children-in-lgu-daycare-or-preschool-programs'
     description: 'Information about enrolling your children in local government daycare and preschool programs.'

@@ -91,11 +91,11 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 ## Where to Watch for Announcements
 
-- **City of Dasmariñas Official Facebook** – [Office of the City Mayor](https://www.facebook.com/officeofthecitymayordc/)
+- **City Mayor's Office** — Phone: 0995 068 4326 • Email: officeofthecitymayordc@gmail.com • [Facebook](https://www.facebook.com/officeofthecitymayordc)
 - **DLSU-D scholarship page** – dlsud.edu.ph
 - **CHED regional announcements** – ched.gov.ph
 - **DOST-SEI** – sei.dost.gov.ph
-- **City Hall Notice Boards** – City Hall compound, Dasmariñas City, Cavite 4114
+- **City Hall Notice Boards** – Rm 503, New Socioeconomic Building, Brgy. Burol Main, Dasmariñas, Philippines, 4114
 
 ---
 
