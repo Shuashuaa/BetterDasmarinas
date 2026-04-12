@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mb-6">
               <a
-                href="https://www.facebook.com/betterdasmarinas"
+                href="https://www.facebook.com/1023346407535869"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"
@@ -142,7 +142,7 @@ export default function Footer() {
           <div>
             <div className="inline-flex items-center gap-2 bg-green-900/40 text-green-400 border border-green-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
               {t('footer.costLabel')}{' '}
-              <span className="text-yellow-300">₱0</span>
+              <span className="text-xl text-yellow-300">₱0</span>
             </div>
             <div className="flex flex-col gap-2">
               <a
