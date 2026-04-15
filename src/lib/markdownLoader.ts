@@ -41,11 +41,23 @@ export async function loadMarkdownContent(
 
     // Try to load companion JSON for template data
     let data: Record<string, unknown> = {};
+
+    // Load global data first if it's a government document
+    if (categoryType === 'government') {
+      try {
+        const globalModule =
+          await import('../../content/government/global.json');
+        data = { ...globalModule.default };
+      } catch {
+        // No global JSON — that's fine
+      }
+    }
+
     try {
       const jsonModule = await import(
         `../../content/${dir}/${categorySlug}/${documentSlug}.json`
       );
-      data = jsonModule.default;
+      data = { ...data, ...jsonModule.default };
     } catch {
       // No companion JSON — that's fine
     }
