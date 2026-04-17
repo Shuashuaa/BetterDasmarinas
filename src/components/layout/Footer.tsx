@@ -1,6 +1,32 @@
-import { Facebook, Github, Heart, MessageCircle } from 'lucide-react';
+import { Facebook, Github, Heart, MessageCircle, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+
+function useVisitCount() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const SESSION_KEY = 'bdas_visited';
+    const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
+    const url = alreadyCounted
+      ? 'https://api.counterapi.dev/v1/betterdasmarinas-org/pageviews'
+      : 'https://api.counterapi.dev/v1/betterdasmarinas-org/pageviews/up';
+
+    fetch(url, { mode: 'cors' })
+      .then(r => r.json())
+      .then(data => {
+        const n = data?.count ?? data?.value ?? null;
+        if (n != null) {
+          setCount(Number(n));
+          if (!alreadyCounted) sessionStorage.setItem(SESSION_KEY, '1');
+        }
+      })
+      .catch(() => setCount(0));
+  }, []);
+
+  return count;
+}
 
 const QUICK_LINKS = [
   { labelKey: 'navbar.services', href: '/services' },
@@ -34,10 +60,19 @@ const RESOURCES = [
 
 export default function Footer() {
   const { t } = useTranslation('common');
+  const visitCount = useVisitCount();
 
   return (
     <footer className="bg-gray-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-6">
+        {/* Cost banner — full width top row */}
+        <div className="flex items-center justify-center gap-3 w-full border border-green-800 bg-green-900/20 rounded-xl px-6 py-4 mb-10">
+          <span className="text-green-400 text-sm font-semibold">
+            {t('footer.costLabel')}
+          </span>
+          <span className="text-3xl font-black text-yellow-300">₱0</span>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div>
@@ -138,12 +173,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cost + CTAs */}
+          {/* CTAs */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-green-900/40 text-green-400 border border-green-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
-              {t('footer.costLabel')}{' '}
-              <span className="text-xl text-yellow-300">₱0</span>
-            </div>
             <div className="flex flex-col gap-2">
               <a
                 href="https://github.com/Shuashuaa/betterdasmarinas"
@@ -176,6 +207,12 @@ export default function Footer() {
             <span className="mx-2 opacity-40">|</span>
             {t('footer.attribution')}
           </span>
+          <span className="flex items-center gap-1.5 text-gray-500">
+            <Eye className="h-3 w-3" />
+            <span>
+              {visitCount != null ? visitCount.toLocaleString() : '—'} visits
+            </span>
+          </span>
           <a
             href="https://github.com/Shuashuaa"
             target="_blank"
@@ -186,7 +223,7 @@ export default function Footer() {
             <span>
               {t('footer.builtBy')}{' '}
               <span className="text-gray-400 group-hover:text-white transition-colors font-medium">
-                Shuashuaa
+                Joshua Tania
               </span>
             </span>
           </a>
