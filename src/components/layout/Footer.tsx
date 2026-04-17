@@ -9,14 +9,12 @@ function useVisitCount() {
   useEffect(() => {
     const SESSION_KEY = 'bdas_visited';
     const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
-    const url = alreadyCounted
-      ? 'https://api.counterapi.dev/v1/betterdasmarinas-org/pageviews'
-      : 'https://api.counterapi.dev/v1/betterdasmarinas-org/pageviews/up';
+    const url = alreadyCounted ? '/api/visits' : '/api/visits?up=1';
 
-    fetch(url, { mode: 'cors' })
+    fetch(url)
       .then(r => r.json())
       .then(data => {
-        const n = data?.count ?? data?.value ?? null;
+        const n = data?.count ?? null;
         if (n != null) {
           setCount(Number(n));
           if (!alreadyCounted) sessionStorage.setItem(SESSION_KEY, '1');
