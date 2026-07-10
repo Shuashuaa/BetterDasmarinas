@@ -251,10 +251,16 @@ const Navbar: React.FC = () => {
     i18n.changeLanguage(lang);
   };
 
-  const isActive = (href: string) =>
-    href === '/'
-      ? location.pathname === '/'
-      : location.pathname.startsWith(href);
+  const isActive = (href: string) => {
+    if (href === '/') return location.pathname === '/';
+    if (!location.pathname.startsWith(href)) return false;
+    return !mainNavigation.some(
+      item =>
+        item.href !== href &&
+        item.href.startsWith(href) &&
+        location.pathname.startsWith(item.href)
+    );
+  };
 
   const handleContactClick = (e: React.MouseEvent, href: string) => {
     if (href === '/#contact') {

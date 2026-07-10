@@ -9,6 +9,10 @@ import {
   Trash2,
   MapPin,
   Home,
+  TrendingUp,
+  Construction,
+  Train,
+  Trophy,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -63,6 +67,67 @@ const POPULAR_CATEGORIES = [
     slug: 'housing-land-use',
     icon: Home,
     color: 'text-purple-600 bg-purple-50',
+  },
+];
+
+const STATUS_BORDER: Record<string, string> = {
+  'Finishing Stages': 'border-anim-finishing',
+  'Under Construction': 'border-anim-construction',
+  'Fully Operational': 'border-anim-operational',
+};
+
+const RISING_TOPICS = [
+  {
+    Icon: Construction,
+    iconBg: 'bg-orange-50',
+    iconColor: 'text-orange-600',
+    label: 'CALAX Subsection 3',
+    sub: 'Silang–Dasmariñas (7.9 km)',
+    status: 'Finishing Stages',
+    dot: 'bg-green-400',
+    href: '/government/reports-and-statistics/infrastructure-projects',
+    desc: "Connects the Silang (Aguinaldo) Interchange to the Governor's Drive Interchange. As of 2026, lane markings and road signage are nearing completion. This section completes a key expressway link between Cavite's interior municipalities and Metro Manila via CAVITEX.",
+    agency: 'DPWH / MPCALA',
+    source: '2026 General Appropriations Act, MPCALA Project Updates',
+  },
+  {
+    Icon: Train,
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    label: 'LRT Line 6',
+    sub: 'Niyog to Dasmariñas (19 km)',
+    status: 'Under Construction',
+    dot: 'bg-yellow-400',
+    href: '/government/reports-and-statistics/infrastructure-projects',
+    desc: "Extends LRT-1 from Bacoor (Niyog Station) southward to Dasmariñas City. The Governor's Drive Station is a key logistics hub for 2026. Right-of-way (ROW) acquisition is the current focus, with full operations targeted by 2028–2029.",
+    agency: 'DOTr / LRTA',
+    source: 'DOTr Infrastructure Updates, 2026 GAA',
+  },
+  {
+    Icon: GraduationCap,
+    iconBg: 'bg-purple-50',
+    iconColor: 'text-purple-600',
+    label: 'University of the Philippines - Dasmariñas Tech Campus',
+    sub: '6-Story R&D Facility',
+    status: 'Under Construction',
+    dot: 'bg-yellow-400',
+    href: '/government/reports-and-statistics/infrastructure-projects',
+    desc: 'A specialized 6-story research and development facility within the University of the Philippines Dasmariñas campus. Expected to complete structural work by late 2026, it will house technology innovation labs and collaborative research spaces for CALABARZON.',
+    agency: 'UP / DPWH',
+    source: 'UP Dasmariñas Announcements, DPWH Region IV-A',
+  },
+  {
+    Icon: Trophy,
+    iconBg: 'bg-primary-50',
+    iconColor: 'text-primary-600',
+    label: 'Dasmariñas Arena & Sports Complex',
+    sub: '4,500–5,000 Seat Capacity',
+    status: 'Fully Operational',
+    dot: 'bg-green-400',
+    href: '/government/reports-and-statistics/infrastructure-projects',
+    desc: "A world-class indoor arena hosting 16 sports disciplines. Now fully operational and serving as a venue for major collegiate leagues including NCRAA. The complex supports Dasmariñas' goal of becoming a regional sports hub in CALABARZON.",
+    agency: 'City Government of Dasmariñas',
+    source: 'City Government Official Announcements, NCRAA 2026',
   },
 ];
 
@@ -124,6 +189,9 @@ export default function Hero() {
   const { t } = useTranslation('common');
   const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [activeProject, setActiveProject] = useState<
+    (typeof RISING_TOPICS)[number] | null
+  >(null);
 
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
@@ -216,6 +284,13 @@ export default function Hero() {
         backgroundPositionY: `${scrollY * 0.35}px`,
       }}
     >
+      {/* Decorative background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.03]" />
+        <div className="absolute top-1/2 -right-20 w-[300px] h-[300px] rounded-full bg-blue-400/[0.05]" />
+        <div className="absolute -bottom-32 -left-20 w-[400px] h-[400px] rounded-full bg-white/[0.02]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left — headline + CTAs */}
@@ -635,7 +710,155 @@ export default function Hero() {
             </div>
           </div>
         </div>
+
+        {/* What's Rising — horizontal card strip */}
+        <div
+          className="mt-8 pt-6 border-t border-white/10"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'none' : 'translateY(16px)',
+            transition: 'opacity 0.6s ease 500ms, transform 0.6s ease 500ms',
+          }}
+        >
+          {/* Strip header */}
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="h-3.5 w-3.5 text-blue-300" />
+              <span className="text-blue-300 text-xs font-bold uppercase tracking-widest">
+                What&apos;s Rising in Dasmariñas:
+              </span>
+            </div>
+            <Link
+              to="/government/reports-and-statistics/infrastructure-projects"
+              className="text-blue-300 hover:text-white text-xs font-medium transition-colors flex items-center gap-1"
+            >
+              View all <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+          {/* Scrollable cards */}
+          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+            {RISING_TOPICS.map((topic, i) => (
+              <button
+                key={topic.label}
+                onClick={() => setActiveProject(topic)}
+                className={`flex-none w-[148px] rounded-lg p-3 flex flex-col gap-2.5 text-left cursor-pointer transition-colors ${STATUS_BORDER[topic.status] ?? 'border border-white/10'} ${
+                  activeProject?.label === topic.label
+                    ? 'bg-white/15'
+                    : 'bg-white/5 hover:bg-white/10'
+                }`}
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transition: `opacity 0.5s ease ${600 + i * 120}ms`,
+                }}
+              >
+                <topic.Icon className="h-4.5 w-4.5 text-white/50" />
+                <span className="text-white/90 text-xs font-medium leading-snug">
+                  {topic.label}
+                </span>
+                <div className="flex items-center gap-1.5 mt-auto">
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full shrink-0 ${topic.dot}`}
+                  />
+                  <span className="text-[11px] text-white/40">
+                    {topic.status}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Curved bottom divider */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none overflow-hidden leading-0">
+        <svg
+          viewBox="0 0 1440 56"
+          preserveAspectRatio="none"
+          className="w-full h-10 sm:h-14"
+          fill="white"
+        >
+          <path d="M0,56 C360,0 1080,56 1440,0 L1440,56 Z" />
+        </svg>
+      </div>
+
+      {/* Project detail modal */}
+      {activeProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
+          onClick={() => setActiveProject(null)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${activeProject.iconBg}`}
+                >
+                  <activeProject.Icon
+                    className={`h-5 w-5 ${activeProject.iconColor}`}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-gray-900 leading-snug">
+                    {activeProject.label}
+                  </h3>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    {activeProject.sub}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setActiveProject(null)}
+                className="text-gray-400 hover:text-gray-600 transition-colors ml-2 shrink-0"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Status */}
+            <div className="flex items-center gap-2 mb-4">
+              <span
+                className={`w-2 h-2 rounded-full shrink-0 ${activeProject.dot}`}
+              />
+              <span className="text-xs font-semibold text-gray-600">
+                {activeProject.status}
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-gray-600 leading-relaxed mb-5">
+              {activeProject.desc}
+            </p>
+
+            {/* Agency + Source */}
+            <div className="border-t border-gray-100 pt-4 space-y-1.5">
+              <p className="text-xs text-gray-400">
+                <span className="font-semibold text-gray-600">Agency: </span>
+                {activeProject.agency}
+              </p>
+              <p className="text-xs text-gray-400">
+                <span className="font-semibold text-gray-600">Source: </span>
+                {activeProject.source}
+              </p>
+            </div>
+
+            {/* CTA */}
+            <Link
+              to={activeProject.href}
+              onClick={() => setActiveProject(null)}
+              className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+            >
+              See all infrastructure projects
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

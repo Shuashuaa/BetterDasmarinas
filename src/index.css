@@ -532,6 +532,111 @@
   transform: translateY(0) scale(1);
 }
 
+/* ── Rising tile border animations ───────────────────────────── */
+
+/* Under Construction — slow marching ants encircling clockwise */
+@keyframes marching-ants {
+  to {
+    background-position:
+      12px 0,
+      /* top:    move right */ 100% 12px,
+      /* right:  move down  */ calc(100% - 12px) 100%,
+      /* bottom: move left  */ 0 calc(100% - 12px); /* left:   move up    */
+  }
+}
+
+.border-anim-construction {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(250, 204, 21, 0.4) 0,
+      rgba(250, 204, 21, 0.4) 5px,
+      transparent 5px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(250, 204, 21, 0.4) 0,
+      rgba(250, 204, 21, 0.4) 5px,
+      transparent 5px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(250, 204, 21, 0.4) 0,
+      rgba(250, 204, 21, 0.4) 5px,
+      transparent 5px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(250, 204, 21, 0.4) 0,
+      rgba(250, 204, 21, 0.4) 5px,
+      transparent 5px,
+      transparent 12px
+    );
+  background-size:
+    12px 1px,
+    1px 12px,
+    12px 1px,
+    1px 12px;
+  background-position:
+    0 0,
+    /* top:    starts at left  */ 100% 0,
+    /* right:  starts at top   */ 100% 100%,
+    /* bottom: starts at right */ 0 100%; /* left:   starts at bottom */
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  animation: marching-ants 8s infinite linear;
+  border: none !important;
+}
+
+/* Finishing Stages — slow spinning conic sweep */
+@keyframes finishing-spin {
+  from {
+    --finishing-angle: 270deg;
+  }
+  to {
+    --finishing-angle: 630deg;
+  }
+}
+
+@property --finishing-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 270deg;
+}
+
+.border-anim-finishing {
+  background:
+    linear-gradient(#001f5c, #001f5c) padding-box,
+    conic-gradient(
+        from var(--finishing-angle),
+        rgba(74, 222, 128, 0.6) 0%,
+        rgba(74, 222, 128, 0.6) 80%,
+        rgba(255, 255, 255, 0.08) 80%,
+        rgba(255, 255, 255, 0.08) 100%
+      )
+      border-box;
+  border: 1px solid transparent !important;
+  animation: finishing-spin 16s linear infinite;
+}
+
+/* Fully Operational — very soft green glow pulse */
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(74, 222, 128, 0.2);
+  }
+}
+
+.border-anim-operational {
+  border: 1px solid rgba(74, 222, 128, 0.3) !important;
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

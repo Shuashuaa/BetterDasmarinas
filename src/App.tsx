@@ -7,6 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import RisingDasmarinas from './pages/RisingDasmarinas';
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,6 +33,7 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
+              <Route path="/rising-dasmarinas" element={<RisingDasmarinas />} />
               <Route
                 path="/transparency"
                 element={
