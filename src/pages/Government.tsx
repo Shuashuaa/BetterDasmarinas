@@ -84,7 +84,9 @@ const Government: React.FC = () => {
         <Breadcrumbs className="mb-8" />
         <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
         <Heading>{categoryData.category || category}</Heading>
-        <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
+        <Text className="text-gray-600 mb-6 max-w-lg">
+          {categoryData.description}
+        </Text>
 
         {loading ? (
           <div className="flex justify-center items-center p-8">
@@ -96,7 +98,7 @@ const Government: React.FC = () => {
               <Heading level={3}>{categoryIndex.title}</Heading>
             )}
             {categoryIndex.description && (
-              <Text className="text-gray-600 mb-4">
+              <Text className="text-gray-600 mb-4 max-w-lg">
                 {categoryIndex.description}
               </Text>
             )}

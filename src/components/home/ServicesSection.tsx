@@ -39,7 +39,7 @@ export default function ServicesSection({
     <Section>
       <div ref={headingRef} className="reveal">
         <Heading level={2}>{title || t('services.title')}</Heading>
-        <Text className="text-gray-600 mb-6">
+        <Text className="text-gray-600 mb-6 max-w-lg">
           {description || t('services.description')}
         </Text>
       </div>

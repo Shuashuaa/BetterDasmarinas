@@ -155,7 +155,7 @@ export default function Document({
             <Heading level={2}>{nestedIndex.title}</Heading>
           )}
           {nestedIndex.description && (
-            <Text className="text-gray-600 mb-4">
+            <Text className="text-gray-600 mb-4 max-w-lg">
               {nestedIndex.description}
             </Text>
           )}

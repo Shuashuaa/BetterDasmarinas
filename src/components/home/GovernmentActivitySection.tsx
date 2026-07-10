@@ -41,7 +41,7 @@ export default function GovernmentActivitySection({
     <Section id="#government">
       <div ref={headingRef} className="reveal">
         <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
-        <Text className="text-gray-600 mb-6">
+        <Text className="text-gray-600 mb-6 max-w-lg">
           {description || t('governmentActivity.description')}
         </Text>
       </div>
