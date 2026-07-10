@@ -85,6 +85,25 @@
   --color-gray-800: #343a40;
   --color-gray-900: #212529;
 
+  /* Elevation — soft, layered, low-alpha */
+  --shadow-soft-sm:
+    0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-soft-md:
+    0 2px 4px rgba(16, 24, 40, 0.04), 0 6px 16px rgba(16, 24, 40, 0.08);
+  --shadow-soft-lg:
+    0 4px 8px rgba(16, 24, 40, 0.04), 0 16px 32px rgba(16, 24, 40, 0.1);
+
+  /* Radius scale */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  /* Motion */
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
   --animate-fade-in: fadeIn 0.5s ease-in-out;
   --animate-slide-in: slideIn 0.5s ease-out;
 
@@ -112,6 +131,24 @@
 @theme inline {
   --font-sans: var(--font-kapwa-sans);
   --font-mono: var(--font-kapwa-mono);
+}
+
+/* ── Elevation utilities ─────────────────────────────────────── */
+.shadow-soft-sm {
+  box-shadow: var(--shadow-soft-sm);
+}
+.shadow-soft-md {
+  box-shadow: var(--shadow-soft-md);
+}
+.shadow-soft-lg {
+  box-shadow: var(--shadow-soft-lg);
+}
+
+/* Standard card surface — white bg, hairline border, soft elevation */
+.card-surface {
+  background-color: #ffffff;
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-soft-md);
 }
 
 /* ── History card butterfly & cocoon decorations ─────────────── */
