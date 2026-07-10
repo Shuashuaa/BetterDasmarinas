@@ -17,6 +17,9 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { serviceCategories, loadCategoryIndex } from '../../data/yamlLoader';
+import { Badge } from '../ui/Badge';
+import { buttonClasses } from '../ui/Button';
+import { cn } from '../../lib/utils';
 
 interface ServicePage {
   name: string;
@@ -130,6 +133,12 @@ const RISING_TOPICS = [
     source: 'City Government Official Announcements, NCRAA 2026',
   },
 ];
+
+function statusTone(dot: string): 'success' | 'warning' | 'neutral' {
+  if (dot.includes('green')) return 'success';
+  if (dot.includes('yellow')) return 'warning';
+  return 'neutral';
+}
 
 function highlight(text: string, query: string) {
   if (!query.trim()) return <>{text}</>;
@@ -606,14 +615,14 @@ export default function Hero() {
             >
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-[var(--radius-md)] hover:bg-blue-50 transition-colors"
               >
                 <ArrowRight className="h-4 w-4" />
                 {t('hero.browseServices', 'Browse Services')}
               </Link>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white font-bold text-sm rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white font-bold text-sm rounded-[var(--radius-md)] hover:bg-white/10 transition-colors"
               >
                 <Users className="h-4 w-4" />
                 {t('hero.contactUs', 'Contact Us')}
@@ -629,7 +638,7 @@ export default function Hero() {
               transition: 'opacity 0.7s ease 150ms, transform 0.7s ease 150ms',
             }}
           >
-            <div className="bg-white rounded-2xl p-6 shadow-2xl">
+            <div className="bg-white rounded-[var(--radius-lg)] p-6 shadow-soft-lg">
               <p className="text-gray-800 font-bold text-base mb-3">
                 {t('hero.findService', 'Search Services')}
               </p>
@@ -693,7 +702,7 @@ export default function Hero() {
                     <Link
                       key={cat.slug}
                       to={`/services/${cat.slug}`}
-                      className="flex flex-col items-center gap-1.5 p-3 rounded-xl border border-gray-100 hover:border-primary-200 hover:bg-primary-50 transition-all text-center group"
+                      className="flex flex-col items-center gap-1.5 p-3 rounded-[var(--radius-md)] border border-gray-100 hover:border-primary-200 hover:bg-primary-50 transition-all text-center group"
                     >
                       <div
                         className={`p-2 rounded-lg ${cat.color} group-hover:scale-110 transition-transform`}
@@ -790,7 +799,7 @@ export default function Hero() {
           onClick={() => setActiveProject(null)}
         >
           <div
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6"
+            className="bg-white rounded-[var(--radius-lg)] shadow-soft-lg max-w-md w-full p-6"
             onClick={e => e.stopPropagation()}
           >
             {/* Header */}
@@ -821,13 +830,10 @@ export default function Hero() {
             </div>
 
             {/* Status */}
-            <div className="flex items-center gap-2 mb-4">
-              <span
-                className={`w-2 h-2 rounded-full shrink-0 ${activeProject.dot}`}
-              />
-              <span className="text-xs font-semibold text-gray-600">
+            <div className="mb-4">
+              <Badge tone={statusTone(activeProject.dot)} dot>
                 {activeProject.status}
-              </span>
+              </Badge>
             </div>
 
             {/* Description */}
@@ -851,7 +857,7 @@ export default function Hero() {
             <Link
               to={activeProject.href}
               onClick={() => setActiveProject(null)}
-              className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+              className={cn(buttonClasses('primary', 'md'), 'mt-4 w-full')}
             >
               See all infrastructure projects
               <ArrowRight className="h-4 w-4" />
