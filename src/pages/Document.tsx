@@ -121,7 +121,7 @@ export default function Document({
 
   if (loading) {
     return (
-      <Section className="p-3 mb-12">
+      <Section className="mb-12" innerClassName="p-3">
         <Banner type="info" description="Loading document..." />
       </Section>
     );
@@ -129,7 +129,7 @@ export default function Document({
 
   if (error) {
     return (
-      <Section className="p-3 mb-12">
+      <Section className="mb-12" innerClassName="p-3">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
         <Banner
           type="error"
@@ -149,7 +149,7 @@ export default function Document({
           title={documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
-        <Section className="p-3 mb-12">
+        <Section className="mb-12" innerClassName="p-3">
           <Breadcrumbs className="mb-8" items={breadcrumbs} />
           {nestedIndex.title && (
             <Heading level={2}>{nestedIndex.title}</Heading>
@@ -213,7 +213,7 @@ export default function Document({
         }
         keywords={`${documentSlug}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section className="mb-12" innerClassName="p-3">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
         <Card className="mb-8 markdown-content">
           <CardHeader>

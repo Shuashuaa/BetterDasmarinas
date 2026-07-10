@@ -61,7 +61,7 @@ const Government: React.FC = () => {
   }
   if (!categoryData) {
     return (
-      <Section className="p-3 mb-12">
+      <Section className="mb-12" innerClassName="p-3">
         <Breadcrumbs className="mb-8" />
         <Banner
           type="error"
@@ -80,7 +80,7 @@ const Government: React.FC = () => {
         description={categoryData.description}
         keywords={`${categoryData.category}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section className="mb-12" innerClassName="p-3">
         <Breadcrumbs className="mb-8" />
         <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
         <Heading>{categoryData.category || category}</Heading>
