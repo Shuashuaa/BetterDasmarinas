@@ -352,7 +352,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* ── Main Navbar ───────────────────────────────────── */}
-      <div className="bg-white shadow-sm border-b border-gray-100">
+      <div className="bg-white shadow-soft-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -388,7 +388,7 @@ const Navbar: React.FC = () => {
                         )}
                         <ChevronDown className="h-3.5 w-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200" />
                       </button>
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-[var(--radius-lg)] shadow-soft-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                         <div className="py-1">
                           {item.children.map(child =>
                             child.href.startsWith('http') ? (
@@ -609,7 +609,7 @@ const Navbar: React.FC = () => {
                   marginBottom: '-1px',
                 }}
               />
-              <div className="bg-gray-900 text-white text-xs rounded-lg shadow-2xl p-3 min-w-max">
+              <div className="bg-gray-900 text-white text-xs rounded-[var(--radius-lg)] shadow-soft-lg p-3 min-w-max">
                 <p className="font-bold mb-2 text-red-300 uppercase tracking-wide text-[10px]">
                   {t(h.labelKey, h.label)} Hotlines
                 </p>

@@ -64,7 +64,7 @@ export default function Footer() {
     <footer className="bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-6">
         {/* Cost banner — full width top row */}
-        <div className="flex items-center justify-center gap-3 w-full border border-green-800 bg-green-900/20 rounded-xl px-6 py-4 mb-10">
+        <div className="flex items-center justify-center gap-3 w-full border border-green-800 bg-green-900/20 rounded-[var(--radius-lg)] px-6 py-4 mb-10">
           <span className="text-green-400 text-sm font-semibold">
             {t('footer.costLabel')}
           </span>
@@ -178,7 +178,7 @@ export default function Footer() {
                 href="https://github.com/Shuashuaa/betterdasmarinas"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 text-sm font-semibold text-white bg-primary-700 hover:bg-primary-600 px-4 py-2.5 rounded-lg transition-colors"
+                className="flex items-center gap-2 text-sm font-semibold text-white bg-primary-700 hover:bg-primary-600 px-4 py-2.5 rounded-[var(--radius-md)] transition-colors"
               >
                 <Heart className="h-4 w-4" />
                 {t('footer.volunteer')}
@@ -187,7 +187,7 @@ export default function Footer() {
                 href="https://github.com/Shuashuaa/betterdasmarinas"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 text-sm font-semibold text-gray-300 bg-gray-800 hover:bg-gray-700 px-4 py-2.5 rounded-lg transition-colors"
+                className="flex items-center gap-2 text-sm font-semibold text-gray-300 bg-gray-800 hover:bg-gray-700 px-4 py-2.5 rounded-[var(--radius-md)] transition-colors"
               >
                 <Github className="h-4 w-4" />
                 {t('footer.contribute')}
