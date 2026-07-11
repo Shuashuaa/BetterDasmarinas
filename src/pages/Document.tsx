@@ -220,7 +220,7 @@ export default function Document({
             {markdownContent.description && (
               <CardContent>{markdownContent.description}</CardContent>
             )}
-            <div className="prose prose-gray max-w-none prose-headings:tracking-tight prose-a:text-primary-600">
+            <div className="prose prose-gray max-w-none prose-headings:tracking-tight prose-a:text-primary-600 prose-a:hover:text-primary-700">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
