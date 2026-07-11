@@ -73,12 +73,6 @@ const POPULAR_CATEGORIES = [
   },
 ];
 
-const STATUS_BORDER: Record<string, string> = {
-  'Finishing Stages': 'border-anim-finishing',
-  'Under Construction': 'border-anim-construction',
-  'Fully Operational': 'border-anim-operational',
-};
-
 const RISING_TOPICS = [
   {
     Icon: Construction,
@@ -284,20 +278,17 @@ export default function Hero() {
 
   return (
     <div
-      className="relative text-white overflow-hidden"
+      className="civic-hero relative overflow-hidden border-b border-[color:var(--color-rule)]"
       style={{
-        backgroundColor: '#003087',
-        backgroundImage:
-          'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
-        backgroundSize: '24px 24px',
+        color: 'var(--color-ink)',
         backgroundPositionY: `${scrollY * 0.35}px`,
       }}
     >
-      {/* Decorative background shapes */}
+      {/* Decorative civic blooms */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.03]" />
-        <div className="absolute top-1/2 -right-20 w-[300px] h-[300px] rounded-full bg-blue-400/[0.05]" />
-        <div className="absolute -bottom-32 -left-20 w-[400px] h-[400px] rounded-full bg-white/[0.02]" />
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-500/[0.05]" />
+        <div className="absolute top-1/2 -right-20 w-[320px] h-[320px] rounded-full bg-primary-400/[0.06]" />
+        <div className="absolute -bottom-32 -left-24 w-[440px] h-[440px] rounded-full bg-secondary-400/[0.05]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
@@ -305,7 +296,7 @@ export default function Hero() {
           {/* Left — headline + CTAs */}
           <div>
             <p
-              className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1"
+              className="civic-eyebrow mb-3"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateX(-20px)',
@@ -324,7 +315,7 @@ export default function Hero() {
                   'opacity 0.6s ease 100ms, transform 0.6s ease 100ms',
               }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-[54px] font-black leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-[64px] font-black leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
                 {import.meta.env.VITE_GOVERNMENT_NAME}
               </h1>
 
@@ -594,7 +585,7 @@ export default function Hero() {
               )}
             </div>
             <p
-              className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+              className="text-[color:var(--color-ink-soft)] text-base md:text-lg leading-relaxed mb-8 max-w-md"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateY(16px)',
@@ -615,14 +606,14 @@ export default function Hero() {
             >
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-[var(--radius-md)] hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[color:var(--color-civic)] text-white font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm hover:bg-primary-700 transition-colors"
               >
                 <ArrowRight className="h-4 w-4" />
                 {t('hero.browseServices', 'Browse Services')}
               </Link>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white font-bold text-sm rounded-[var(--radius-md)] hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-[color:var(--color-rule)] text-primary-700 font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm hover:border-primary-300 hover:bg-primary-50 transition-colors"
               >
                 <Users className="h-4 w-4" />
                 {t('hero.contactUs', 'Contact Us')}
@@ -638,8 +629,8 @@ export default function Hero() {
               transition: 'opacity 0.7s ease 150ms, transform 0.7s ease 150ms',
             }}
           >
-            <div className="bg-white rounded-[var(--radius-lg)] p-6 shadow-soft-lg">
-              <p className="text-gray-800 font-bold text-base mb-3">
+            <div className="civic-card civic-card--rule p-6 pt-7 shadow-soft-lg">
+              <p className="text-[color:var(--color-ink)] font-bold text-base mb-3">
                 {t('hero.findService', 'Search Services')}
               </p>
 
@@ -722,7 +713,7 @@ export default function Hero() {
 
         {/* What's Rising — horizontal card strip */}
         <div
-          className="mt-8 pt-6 border-t border-white/10"
+          className="mt-10 pt-6 border-t border-[color:var(--color-rule)]"
           style={{
             opacity: mounted ? 1 : 0,
             transform: mounted ? 'none' : 'translateY(16px)',
@@ -731,45 +722,43 @@ export default function Hero() {
         >
           {/* Strip header */}
           <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-3.5 w-3.5 text-blue-300" />
-              <span className="text-blue-300 text-xs font-bold uppercase tracking-widest">
-                What&apos;s Rising in Dasmariñas:
-              </span>
-            </div>
+            <span className="civic-eyebrow">
+              <TrendingUp className="h-3.5 w-3.5" />
+              What&apos;s Rising in Dasmariñas
+            </span>
             <Link
               to="/government/reports-and-statistics/infrastructure-projects"
-              className="text-blue-300 hover:text-white text-xs font-medium transition-colors flex items-center gap-1"
+              className="text-[color:var(--color-civic)] hover:text-primary-800 text-xs font-semibold transition-colors flex items-center gap-1"
             >
               View all <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
 
           {/* Scrollable cards */}
-          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+          <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
             {RISING_TOPICS.map((topic, i) => (
               <button
                 key={topic.label}
                 onClick={() => setActiveProject(topic)}
-                className={`flex-none w-[148px] rounded-lg p-3 flex flex-col gap-2.5 text-left cursor-pointer transition-colors ${STATUS_BORDER[topic.status] ?? 'border border-white/10'} ${
+                className={`civic-card civic-card--interactive flex-none w-[156px] p-3.5 flex flex-col gap-2.5 text-left cursor-pointer ${
                   activeProject?.label === topic.label
-                    ? 'bg-white/15'
-                    : 'bg-white/5 hover:bg-white/10'
+                    ? 'ring-2 ring-primary-400 border-primary-300'
+                    : ''
                 }`}
                 style={{
                   opacity: mounted ? 1 : 0,
                   transition: `opacity 0.5s ease ${600 + i * 120}ms`,
                 }}
               >
-                <topic.Icon className="h-4.5 w-4.5 text-white/50" />
-                <span className="text-white/90 text-xs font-medium leading-snug">
+                <topic.Icon className="h-5 w-5 text-[color:var(--color-civic)]" />
+                <span className="text-[color:var(--color-ink)] text-xs font-semibold leading-snug">
                   {topic.label}
                 </span>
                 <div className="flex items-center gap-1.5 mt-auto">
                   <span
                     className={`w-1.5 h-1.5 rounded-full shrink-0 ${topic.dot}`}
                   />
-                  <span className="text-[11px] text-white/40">
+                  <span className="text-[11px] text-gray-500">
                     {topic.status}
                   </span>
                 </div>
@@ -777,18 +766,6 @@ export default function Hero() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Curved bottom divider */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none overflow-hidden leading-0">
-        <svg
-          viewBox="0 0 1440 56"
-          preserveAspectRatio="none"
-          className="w-full h-10 sm:h-14"
-          fill="white"
-        >
-          <path d="M0,56 C360,0 1080,56 1440,0 L1440,56 Z" />
-        </svg>
       </div>
 
       {/* Project detail modal */}

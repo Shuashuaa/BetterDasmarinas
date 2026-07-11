@@ -152,10 +152,15 @@ export default function Document({
         <Section className="mb-12" innerClassName="p-3">
           <Breadcrumbs className="mb-8" items={breadcrumbs} />
           {nestedIndex.title && (
-            <Heading level={2}>{nestedIndex.title}</Heading>
+            <Heading
+              level={2}
+              className="accent-heading text-[color:var(--color-ink)]"
+            >
+              {nestedIndex.title}
+            </Heading>
           )}
           {nestedIndex.description && (
-            <Text className="text-gray-600 mb-4 max-w-lg">
+            <Text className="text-[color:var(--color-ink-soft)] mb-4 max-w-lg">
               {nestedIndex.description}
             </Text>
           )}

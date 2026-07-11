@@ -39,9 +39,18 @@ export default function GovernmentActivitySection({
   const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <Section id="#government" surface="muted">
+    <Section
+      id="#government"
+      surface="muted"
+      className="bg-[color:var(--color-surface-muted)]"
+    >
       <div ref={headingRef} className="reveal">
-        <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
+        <Heading
+          level={2}
+          className="accent-heading text-[color:var(--color-ink)]"
+        >
+          {title || t('governmentActivity.title')}
+        </Heading>
         <Text className="text-gray-600 mb-6 max-w-lg">
           {description || t('governmentActivity.description')}
         </Text>
@@ -55,9 +64,9 @@ export default function GovernmentActivitySection({
           <Link
             key={category.slug}
             to={`/government/${category.slug}`}
-            className="group block bg-white rounded-[var(--radius-lg)] border border-gray-100 hover:border-primary-200 hover:shadow-soft-md transition-all duration-200 p-5"
+            className="group block civic-card civic-card--interactive p-5"
           >
-            <div className="bg-primary-50 text-primary-700 w-10 h-10 rounded-[var(--radius-md)] flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+            <div className="bg-primary-50 text-[color:var(--color-civic)] w-10 h-10 rounded-[var(--radius-md)] flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               {getIcon(category.icon)}
             </div>
             <h3 className="text-sm font-bold mb-2 text-gray-900">

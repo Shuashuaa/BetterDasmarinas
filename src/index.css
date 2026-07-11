@@ -93,16 +93,29 @@
   --shadow-soft-lg:
     0 4px 8px rgba(16, 24, 40, 0.04), 0 16px 32px rgba(16, 24, 40, 0.1);
 
-  /* Radius scale */
+  /* Radius scale (monotonic across the Tailwind --radius-* namespace) */
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
 
   /* Motion */
   --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 150ms;
   --duration-base: 250ms;
   --duration-slow: 400ms;
+
+  /* ── Civic palette (Bright Civic Clarity) ─────────────────────
+     Light-forward city-portal system: white canvas, navy ink,
+     blue structure/hairlines, butterfly-orange kept as the spark. */
+  --color-canvas: #ffffff;
+  --color-surface-muted: #eef4fb;
+  --color-ink: #0a2350;
+  --color-ink-soft: #3a4a6b;
+  --color-rule: #d8e4f3;
+  --color-civic: #0052bc;
+  --color-civic-bright: #0066eb;
 
   --animate-fade-in: fadeIn 0.5s ease-in-out;
   --animate-slide-in: slideIn 0.5s ease-out;
@@ -149,6 +162,93 @@
   background-color: #ffffff;
   border: 1px solid var(--color-gray-200);
   box-shadow: var(--shadow-soft-md);
+}
+
+/* ── Civic design system (Bright Civic Clarity) ───────────────── */
+
+/* Section eyebrow — uppercase tracked label with a leading rule */
+.civic-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-civic);
+}
+.civic-eyebrow::before {
+  content: '';
+  width: 1.5rem;
+  height: 2px;
+  background: var(--color-civic);
+  border-radius: 1px;
+}
+
+/* Civic card — white, blue hairline, soft elevation; optional top-rule + hover lift */
+.civic-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft-sm);
+  transition:
+    box-shadow var(--duration-base) var(--ease-emphasized),
+    transform var(--duration-base) var(--ease-emphasized),
+    border-color var(--duration-base) var(--ease-emphasized);
+}
+.civic-card--rule::before {
+  content: '';
+  position: absolute;
+  inset: -1px -1px auto -1px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-civic-bright),
+    var(--color-civic)
+  );
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.civic-card--interactive:hover {
+  box-shadow: var(--shadow-soft-lg);
+  transform: translateY(-3px);
+  border-color: #b9d2f0;
+}
+
+/* Muted civic band background */
+.section-band {
+  background-color: var(--color-surface-muted);
+}
+
+/* Heading accent bar (left rule) */
+.accent-heading {
+  position: relative;
+  padding-left: 1rem;
+}
+.accent-heading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--color-civic-bright),
+    var(--color-civic)
+  );
+}
+
+/* Light civic hero canvas — pale-blue wash + faint navy dot grid */
+.civic-hero {
+  background-color: #f4f8fd;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(10, 45, 110, 0.06) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
 }
 
 /* ── History card butterfly & cocoon decorations ─────────────── */

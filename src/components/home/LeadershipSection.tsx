@@ -54,7 +54,7 @@ function OfficialCard({ official, index }: OfficialCardProps) {
   return (
     <div
       ref={ref}
-      className="bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm overflow-hidden hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-200"
+      className="civic-card civic-card--interactive overflow-hidden"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -105,7 +105,7 @@ function OfficialCard({ official, index }: OfficialCardProps) {
         {/* External link */}
         <Link
           to="/government/departments/executive"
-          className="shrink-0 self-start text-primary-400 hover:text-primary-700 transition-colors"
+          className="shrink-0 self-start text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
           aria-label={t('leadership.viewProfile')}
         >
           <ExternalLink className="h-4 w-4" />
@@ -137,7 +137,7 @@ export default function LeadershipSection() {
   }, []);
 
   return (
-    <section className="bg-white py-12 border-b border-gray-100">
+    <section className="bg-white py-12 border-b border-[color:var(--color-rule)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div
@@ -150,12 +150,12 @@ export default function LeadershipSection() {
               'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <h2 className="text-xl font-black text-gray-900">
+          <h2 className="accent-heading text-xl font-black text-[color:var(--color-ink)]">
             {t('leadership.title')}
           </h2>
           <Link
             to="/government/departments/executive"
-            className="text-sm font-semibold text-primary-700 hover:text-primary-800 transition-colors"
+            className="text-sm font-semibold text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
           >
             {t('leadership.viewAll')}
           </Link>

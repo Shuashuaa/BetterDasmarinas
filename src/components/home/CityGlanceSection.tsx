@@ -212,23 +212,28 @@ export default function CityGlanceSection() {
   const WeatherIcon = theme?.icon ?? Cloud;
 
   return (
-    <section className="bg-white border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <section className="bg-white border-b border-[color:var(--color-rule)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         {/* Header */}
         <div
-          className="flex items-center justify-between mb-6"
+          className="flex items-end justify-between mb-8 gap-4"
           style={{
             opacity: mounted ? 1 : 0,
             transform: mounted ? 'none' : 'translateX(-20px)',
             transition: 'opacity 0.6s ease, transform 0.6s ease',
           }}
         >
-          <h2 className="text-xl font-black text-gray-900">
-            {t('glance.title', 'Dasmariñas at a Glance')}
-          </h2>
+          <div>
+            <span className="civic-eyebrow mb-2">
+              {t('glance.eyebrow', 'City Profile')}
+            </span>
+            <h2 className="text-2xl md:text-3xl font-black text-[color:var(--color-ink)] tracking-tight">
+              {t('glance.title', 'Dasmariñas at a Glance')}
+            </h2>
+          </div>
           <Link
             to="/government/departments/executive"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:text-primary-900 transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-[color:var(--color-civic)] hover:text-primary-900 transition-colors shrink-0"
           >
             {t('glance.viewProfile', 'View City Profile')}
             <ArrowRight className="h-4 w-4" />
@@ -240,7 +245,7 @@ export default function CityGlanceSection() {
           {STATS.map((stat, idx) => (
             <div
               key={stat.labelKey}
-              className="bg-gray-50 rounded-[var(--radius-md)] p-4 border border-gray-100"
+              className="civic-card civic-card--rule p-4"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateY(16px)',
@@ -248,7 +253,7 @@ export default function CityGlanceSection() {
                 transitionDelay: `${100 + idx * 80}ms`,
               }}
             >
-              <div className="text-2xl font-black text-primary-700 leading-none mb-1">
+              <div className="text-2xl md:text-3xl font-black text-[color:var(--color-civic)] leading-none mb-1 mt-1">
                 {stat.value}
               </div>
               <div className="text-sm font-semibold text-gray-800">

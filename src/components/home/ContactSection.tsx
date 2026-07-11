@@ -68,7 +68,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
       ref={ref}
       href={contact.href}
       {...(contact.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-      className="group bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm p-5 flex gap-4 hover:shadow-soft-md hover:-translate-y-1 transition-all duration-200"
+      className="group civic-card civic-card--interactive p-5 flex gap-4"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -124,7 +124,10 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section id="contact" className="bg-gray-50 py-12 border-b border-gray-100">
+    <section
+      id="contact"
+      className="section-band py-12 border-b border-[color:var(--color-rule)]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div
@@ -137,12 +140,12 @@ export default function ContactSection() {
               'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <h2 className="text-xl font-black text-gray-900">
+          <h2 className="accent-heading text-xl font-black text-[color:var(--color-ink)]">
             {t('contact.title')}
           </h2>
           <Link
             to="/government/departments"
-            className="text-sm font-semibold text-primary-700 hover:text-primary-800 transition-colors"
+            className="text-sm font-semibold text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
           >
             {t('contact.viewAll')}
           </Link>

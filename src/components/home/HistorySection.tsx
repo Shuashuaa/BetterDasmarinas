@@ -60,7 +60,7 @@ function TimelineItem({ year, title, text, isLast, index }: TimelineItemProps) {
       </div>
 
       {/* Card */}
-      <div className="bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm p-4 mb-4 flex-1 hover:shadow-soft-md transition-shadow">
+      <div className="civic-card p-4 mb-4 flex-1 hover:shadow-soft-md transition-shadow">
         <Badge
           tone="primary"
           className="border border-primary-100 font-black mb-2"
@@ -110,7 +110,7 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-12 border-b border-gray-100">
+    <section className="section-band py-12 border-b border-[color:var(--color-rule)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div
@@ -122,7 +122,7 @@ export default function HistorySection() {
               'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <h2 className="text-xl font-black text-gray-900 mb-8">
+          <h2 className="accent-heading text-xl font-black text-[color:var(--color-ink)] mb-8">
             {t('history.title', 'Brief History of Dasmariñas City')}
           </h2>
         </div>
@@ -239,8 +239,8 @@ export default function HistorySection() {
             </div>
 
             {/* Founded card — chrysalis hanging at bottom-right */}
-            <div className="bg-white rounded-[var(--radius-lg)] border border-gray-200 p-8 shadow-soft-sm relative overflow-visible">
-              <div className="text-5xl font-black text-primary-700 mb-1">
+            <div className="civic-card civic-card--rule p-8 pt-9 relative overflow-visible">
+              <div className="text-5xl font-black text-[color:var(--color-civic)] mb-1">
                 {t('history.foundedYear', '1742')}
               </div>
               <div className="text-lg font-semibold text-gray-800 mb-3">

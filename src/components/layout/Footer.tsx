@@ -61,7 +61,7 @@ export default function Footer() {
   const visitCount = useVisitCount();
 
   return (
-    <footer className="bg-gray-950 text-white">
+    <footer className="bg-[color:var(--color-ink)] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-6">
         {/* Cost banner — full width top row */}
         <div className="flex items-center justify-center gap-3 w-full border border-green-800 bg-green-900/20 rounded-[var(--radius-lg)] px-6 py-4 mb-10">
@@ -92,7 +92,7 @@ export default function Footer() {
                 href="https://www.facebook.com/1023346407535869"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
+                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -101,7 +101,7 @@ export default function Footer() {
                 href="https://github.com/Shuashuaa/betterdasmarinas"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
+                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -110,7 +110,7 @@ export default function Footer() {
                 href="https://discord.gg/bettergovph"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
+                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
                 aria-label="Discord"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -141,7 +141,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-400 hover:text-[color:var(--color-civic-bright)] text-sm transition-colors"
                   >
                     {t(link.labelKey)}
                   </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-400 hover:text-[color:var(--color-civic-bright)] text-sm transition-colors"
                   >
                     {link.label}
                   </a>
@@ -197,7 +197,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+        <div className="border-t border-[color:var(--color-rule)] mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
           <span>
             © {new Date().getFullYear()} BetterDasmariñas.org
             <span className="mx-2 opacity-40">|</span>
