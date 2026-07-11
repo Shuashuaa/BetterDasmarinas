@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Phone, Mail, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '../ui/Badge';
 
 const OFFICIALS = [
   {
@@ -53,7 +54,7 @@ function OfficialCard({ official, index }: OfficialCardProps) {
   return (
     <div
       ref={ref}
-      className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+      className="bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm overflow-hidden hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-200"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -73,9 +74,9 @@ function OfficialCard({ official, index }: OfficialCardProps) {
 
         {/* Info */}
         <div className="flex-1 min-w-0">
-          <span className="inline-block text-xs font-semibold text-primary-700 bg-primary-50 border border-primary-100 rounded-full px-2 py-0.5 mb-1.5">
+          <Badge tone="primary" className="border border-primary-100 mb-1.5">
             {t(official.badgeKey)}
-          </span>
+          </Badge>
           <h3 className="font-black text-sm text-gray-900 leading-snug truncate mb-0.5">
             {official.name}
           </h3>

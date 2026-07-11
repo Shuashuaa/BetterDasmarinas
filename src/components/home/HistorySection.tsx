@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '../ui/Badge';
 
 const EVENT_KEYS = [
   'precolonial',
@@ -59,10 +60,13 @@ function TimelineItem({ year, title, text, isLast, index }: TimelineItemProps) {
       </div>
 
       {/* Card */}
-      <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 mb-4 flex-1 hover:shadow-md transition-shadow">
-        <span className="inline-block text-xs font-black text-primary-700 bg-primary-50 border border-primary-100 rounded-full px-2.5 py-0.5 mb-2">
+      <div className="bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm p-4 mb-4 flex-1 hover:shadow-soft-md transition-shadow">
+        <Badge
+          tone="primary"
+          className="border border-primary-100 font-black mb-2"
+        >
           {year}
-        </span>
+        </Badge>
         <h3 className="font-bold text-gray-900 text-sm mb-1">{title}</h3>
         <p className="text-gray-500 text-sm leading-relaxed">{text}</p>
       </div>
@@ -150,7 +154,7 @@ export default function HistorySection() {
             }}
           >
             {/* Cityhood card — butterfly resting at top-right */}
-            <div className="bg-primary-700 text-white rounded-2xl p-8 shadow-lg relative overflow-visible">
+            <div className="bg-primary-700 text-white rounded-[var(--radius-lg)] p-8 shadow-soft-lg relative overflow-visible">
               {/* Butterfly — toggle with VITE_BUTTERFLIES_ENABLED */}
               {import.meta.env.VITE_BUTTERFLIES_ENABLED === 'true' && (
                 <svg
@@ -235,7 +239,7 @@ export default function HistorySection() {
             </div>
 
             {/* Founded card — chrysalis hanging at bottom-right */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm relative overflow-visible">
+            <div className="bg-white rounded-[var(--radius-lg)] border border-gray-200 p-8 shadow-soft-sm relative overflow-visible">
               <div className="text-5xl font-black text-primary-700 mb-1">
                 {t('history.foundedYear', '1742')}
               </div>

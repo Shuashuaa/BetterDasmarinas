@@ -240,7 +240,7 @@ export default function CityGlanceSection() {
           {STATS.map((stat, idx) => (
             <div
               key={stat.labelKey}
-              className="bg-gray-50 rounded-xl p-4 border border-gray-100"
+              className="bg-gray-50 rounded-[var(--radius-md)] p-4 border border-gray-100"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateY(16px)',
@@ -265,7 +265,7 @@ export default function CityGlanceSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Weather */}
           <div
-            className="rounded-xl p-5 flex flex-col justify-between min-h-48 relative overflow-hidden transition-all duration-700"
+            className="rounded-[var(--radius-lg)] p-5 flex flex-col justify-between min-h-48 relative overflow-hidden transition-all duration-700"
             style={{
               background:
                 theme?.bg ??
@@ -334,7 +334,7 @@ export default function CityGlanceSection() {
 
           {/* Map */}
           <div
-            className="lg:col-span-2 rounded-xl overflow-hidden border border-gray-200 shadow-sm h-64 lg:h-auto"
+            className="lg:col-span-2 rounded-[var(--radius-lg)] overflow-hidden border border-gray-200 shadow-soft-sm h-64 lg:h-auto"
             style={{
               isolation: 'isolate',
               opacity: mounted ? 1 : 0,

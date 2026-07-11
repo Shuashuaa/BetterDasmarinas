@@ -68,7 +68,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
       ref={ref}
       href={contact.href}
       {...(contact.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-      className="group bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex gap-4 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+      className="group bg-white rounded-[var(--radius-lg)] border border-gray-100 shadow-soft-sm p-5 flex gap-4 hover:shadow-soft-md hover:-translate-y-1 transition-all duration-200"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -79,7 +79,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
     >
       {/* Icon box */}
       <div
-        className={`w-11 h-11 rounded-xl ${contact.bg} ${contact.color} flex items-center justify-center shrink-0`}
+        className={`w-11 h-11 rounded-[var(--radius-md)] ${contact.bg} ${contact.color} flex items-center justify-center shrink-0`}
       >
         <Icon className="h-5 w-5" />
       </div>
