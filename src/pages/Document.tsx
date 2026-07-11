@@ -220,13 +220,15 @@ export default function Document({
             {markdownContent.description && (
               <CardContent>{markdownContent.description}</CardContent>
             )}
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]}
-              components={markdownComponents}
-            >
-              {markdownContent.content}
-            </ReactMarkdown>
+            <div className="prose prose-gray max-w-none prose-headings:tracking-tight prose-a:text-primary-600">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={markdownComponents}
+              >
+                {markdownContent.content}
+              </ReactMarkdown>
+            </div>
           </CardHeader>
         </Card>
       </Section>
