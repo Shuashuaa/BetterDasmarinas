@@ -2,6 +2,7 @@ import Section from '../components/ui/Section';
 import { useParams, Link } from 'react-router-dom';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
+import { Badge } from '../components/ui/Badge';
 import {
   governmentCategories,
   getCategorySubcategories,
@@ -122,9 +123,9 @@ const Government: React.FC = () => {
                             {subcategory.description}
                           </p>
                         )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
+                        <Badge tone="neutral" className="mt-2">
                           {categoryData.category || category}
-                        </span>
+                        </Badge>
                       </CardContent>
                     </Card>
                   </Link>
@@ -147,9 +148,9 @@ const Government: React.FC = () => {
                             {subcategory.description}
                           </p>
                         )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
+                        <Badge tone="neutral" className="mt-2">
                           {categoryData.category || category}
-                        </span>
+                        </Badge>
                       </CardContent>
                     </Card>
                   </Link>
