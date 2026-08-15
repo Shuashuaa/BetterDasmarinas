@@ -39,11 +39,7 @@ export default function GovernmentActivitySection({
   const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <Section
-      id="#government"
-      surface="muted"
-      className="bg-[color:var(--color-surface-muted)]"
-    >
+    <Section id="government" surface="muted">
       <div ref={headingRef} className="reveal">
         <Heading
           level={2}
@@ -64,7 +60,7 @@ export default function GovernmentActivitySection({
           <Link
             key={category.slug}
             to={`/government/${category.slug}`}
-            className="group block civic-card civic-card--interactive p-5"
+            className="group flex h-full flex-col civic-card civic-card--interactive p-5"
           >
             <div className="bg-primary-50 text-[color:var(--color-civic)] w-10 h-10 rounded-[var(--radius-md)] flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               {getIcon(category.icon)}
@@ -75,13 +71,17 @@ export default function GovernmentActivitySection({
                 category.category
               )}
             </h3>
-            <p className="text-xs text-gray-500 leading-relaxed mb-3">
+            <p className="text-xs text-gray-500 leading-relaxed mb-4">
               {t(
                 `governmentActivity.categories.${category.slug}.description`,
                 category.description
               )}
             </p>
-            <Badge tone="primary">Government</Badge>
+            {/* mt-auto pins the badge to the card floor so it lines up across
+                the row regardless of description length. */}
+            <div className="mt-auto">
+              <Badge tone="primary">Government</Badge>
+            </div>
           </Link>
         ))}
       </div>

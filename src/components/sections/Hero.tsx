@@ -13,6 +13,7 @@ import {
   Construction,
   Train,
   Trophy,
+  X,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -141,7 +142,7 @@ function highlight(text: string, query: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <mark className="bg-yellow-200 text-gray-900 rounded px-0.5">
+      <mark className="rounded bg-accent-100 px-0.5 text-[color:var(--color-ink)]">
         {text.slice(idx, idx + query.length)}
       </mark>
       {text.slice(idx + query.length)}
@@ -199,6 +200,21 @@ export default function Hero() {
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
   }, []);
+
+  // Project modal — close on Escape and hold the page still while it's open.
+  useEffect(() => {
+    if (!activeProject) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveProject(null);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [activeProject]);
 
   const handleScroll = useCallback(() => {
     setScrollY(window.scrollY);
@@ -291,8 +307,8 @@ export default function Hero() {
         <div className="absolute -bottom-32 -left-24 w-[440px] h-[440px] rounded-full bg-secondary-400/[0.05]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left — headline + CTAs */}
           <div>
             <p
@@ -315,7 +331,11 @@ export default function Hero() {
                   'opacity 0.6s ease 100ms, transform 0.6s ease 100ms',
               }}
             >
-              <h1 className="text-5xl sm:text-6xl md:text-[64px] font-black leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
+              {/* The city name is one unbreakable token, so at lg — where the
+                  hero splits into two columns — the size is driven by the
+                  viewport rather than fixed, or it runs under the search card.
+                  overflow-wrap is the backstop for very long names. */}
+              <h1 className="text-[clamp(1.75rem,7.6vw,4rem)] lg:text-[clamp(2.25rem,3.85vw,3.1rem)] font-black leading-[1.05] tracking-tight text-[color:var(--color-ink)] [overflow-wrap:anywhere]">
                 {import.meta.env.VITE_GOVERNMENT_NAME}
               </h1>
 
@@ -585,7 +605,7 @@ export default function Hero() {
               )}
             </div>
             <p
-              className="text-[color:var(--color-ink-soft)] text-base md:text-lg leading-relaxed mb-8 max-w-md"
+              className="text-[color:var(--color-ink-soft)] text-base md:text-lg leading-relaxed mb-7 sm:mb-8 max-w-md"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateY(16px)',
@@ -595,8 +615,10 @@ export default function Hero() {
             >
               {t('hero.subtitle')}
             </p>
+            {/* Side by side and equal width on phones: left to wrap they
+                stacked at two different widths, which read as an accident. */}
             <div
-              className="flex flex-wrap gap-3"
+              className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'none' : 'translateY(16px)',
@@ -606,14 +628,14 @@ export default function Hero() {
             >
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[color:var(--color-civic)] text-white font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm hover:bg-primary-700 transition-colors"
+                className="group inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 min-h-[48px] bg-[color:var(--color-civic)] text-white font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm transition-[background-color,box-shadow,transform] duration-[var(--duration-fast)] hover:bg-primary-700 hover:shadow-soft-md active:translate-y-px active:duration-75"
               >
-                <ArrowRight className="h-4 w-4" />
                 {t('hero.browseServices', 'Browse Services')}
+                <ArrowRight className="h-4 w-4 transition-transform duration-[var(--duration-base)] ease-[var(--ease-emphasized)] group-hover:translate-x-1" />
               </Link>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-[color:var(--color-rule)] text-primary-700 font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm hover:border-primary-300 hover:bg-primary-50 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 min-h-[48px] bg-white border border-[color:var(--color-rule)] text-primary-700 font-bold text-sm rounded-[var(--radius-md)] shadow-soft-sm transition-[background-color,border-color,transform] duration-[var(--duration-fast)] hover:border-primary-300 hover:bg-primary-50 active:translate-y-px active:duration-75"
               >
                 <Users className="h-4 w-4" />
                 {t('hero.contactUs', 'Contact Us')}
@@ -629,7 +651,7 @@ export default function Hero() {
               transition: 'opacity 0.7s ease 150ms, transform 0.7s ease 150ms',
             }}
           >
-            <div className="civic-card civic-card--rule p-6 pt-7 shadow-soft-lg">
+            <div className="civic-card civic-card--rule p-5 pt-6 sm:p-6 sm:pt-7 shadow-soft-lg">
               <p className="text-[color:var(--color-ink)] font-bold text-base mb-3">
                 {t('hero.findService', 'Search Services')}
               </p>
@@ -637,7 +659,7 @@ export default function Hero() {
               <div className="relative mb-5">
                 <form onSubmit={handleSearch}>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                    <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
                     <input
                       ref={inputRef}
                       type="text"
@@ -651,7 +673,7 @@ export default function Hero() {
                         'hero.searchPlaceholder',
                         'Search for a service...'
                       )}
-                      className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full border border-[color:var(--color-rule)] rounded-[var(--radius-md)] pl-10 pr-4 py-3 sm:py-2.5 text-base sm:text-sm text-gray-800 placeholder-gray-500 transition-colors duration-[var(--duration-fast)] hover:border-primary-300 focus:border-[color:var(--color-civic-bright)]"
                     />
                   </div>
                 </form>
@@ -659,7 +681,7 @@ export default function Hero() {
                 {showDropdown && results.length > 0 && (
                   <div
                     ref={dropdownRef}
-                    className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-100 rounded-lg shadow-lg z-50 overflow-hidden"
+                    className="absolute top-full left-0 right-0 mt-1 bg-white border border-[color:var(--color-rule)] rounded-[var(--radius-md)] shadow-soft-lg z-[var(--z-dropdown)] overflow-hidden"
                   >
                     {results.map(page => (
                       <button
@@ -674,7 +696,7 @@ export default function Hero() {
                         <span className="text-gray-800 flex-1">
                           {highlight(page.name, query)}
                         </span>
-                        <span className="text-xs text-gray-400 shrink-0">
+                        <span className="text-xs text-gray-500 shrink-0">
                           {page.categoryName}
                         </span>
                       </button>
@@ -693,10 +715,10 @@ export default function Hero() {
                     <Link
                       key={cat.slug}
                       to={`/services/${cat.slug}`}
-                      className="flex flex-col items-center gap-1.5 p-3 rounded-[var(--radius-md)] border border-gray-100 hover:border-primary-200 hover:bg-primary-50 transition-all text-center group"
+                      className="flex min-h-[88px] flex-col items-center justify-center gap-1.5 p-2.5 sm:p-3 rounded-[var(--radius-md)] border border-[color:var(--color-rule)] transition-colors text-center group hover:border-primary-200 hover:bg-primary-50 active:bg-primary-50"
                     >
                       <div
-                        className={`p-2 rounded-lg ${cat.color} group-hover:scale-110 transition-transform`}
+                        className={`p-2 rounded-[var(--radius-sm)] ${cat.color} transition-transform group-hover:scale-110`}
                       >
                         <Icon className="h-5 w-5" />
                       </div>
@@ -713,7 +735,7 @@ export default function Hero() {
 
         {/* What's Rising — horizontal card strip */}
         <div
-          className="mt-10 pt-6 border-t border-[color:var(--color-rule)]"
+          className="mt-8 sm:mt-10 pt-6 border-t border-[color:var(--color-rule)]"
           style={{
             opacity: mounted ? 1 : 0,
             transform: mounted ? 'none' : 'translateY(16px)',
@@ -721,26 +743,29 @@ export default function Hero() {
           }}
         >
           {/* Strip header */}
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between gap-3 mb-3">
             <span className="civic-eyebrow">
               <TrendingUp className="h-3.5 w-3.5" />
               What&apos;s Rising in Dasmariñas
             </span>
             <Link
               to="/government/reports-and-statistics/infrastructure-projects"
-              className="text-[color:var(--color-civic)] hover:text-primary-800 text-xs font-semibold transition-colors flex items-center gap-1"
+              className="shrink-0 -mr-2 flex items-center gap-1 rounded-[var(--radius-sm)] px-2 py-2.5 text-xs font-semibold text-[color:var(--color-civic)] transition-colors hover:text-primary-800 active:bg-primary-50"
             >
               View all <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
 
-          {/* Scrollable cards */}
-          <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
+          {/* Card rail. On phones it bleeds into the page gutter so a card is
+              visibly cut by the screen edge — that overhang is what says
+              "swipe", and snap points stop a flick landing mid-card. */}
+          <div className="snap-rail rail-bleed scrollbar-hide flex gap-3 overflow-x-auto pb-1">
             {RISING_TOPICS.map((topic, i) => (
               <button
                 key={topic.label}
                 onClick={() => setActiveProject(topic)}
-                className={`civic-card civic-card--interactive flex-none w-[156px] p-3.5 flex flex-col gap-2.5 text-left cursor-pointer ${
+                aria-haspopup="dialog"
+                className={`civic-card civic-card--interactive flex-none w-[168px] sm:w-[156px] p-3.5 flex flex-col gap-2.5 text-left cursor-pointer ${
                   activeProject?.label === topic.label
                     ? 'ring-2 ring-primary-400 border-primary-300'
                     : ''
@@ -754,11 +779,11 @@ export default function Hero() {
                 <span className="text-[color:var(--color-ink)] text-xs font-semibold leading-snug">
                   {topic.label}
                 </span>
-                <div className="flex items-center gap-1.5 mt-auto">
+                <div className="flex items-center gap-1.5 mt-auto pt-1">
                   <span
                     className={`w-1.5 h-1.5 rounded-full shrink-0 ${topic.dot}`}
                   />
-                  <span className="text-[11px] text-gray-500">
+                  <span className="text-xs lg:text-[11px] text-gray-500">
                     {topic.status}
                   </span>
                 </div>
@@ -771,38 +796,57 @@ export default function Hero() {
       {/* Project detail modal */}
       {activeProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
+          className="fixed inset-0 z-[var(--z-modal)] flex items-end justify-center sm:items-center sm:p-4"
+          style={{ backgroundColor: 'rgba(10, 35, 80, 0.55)' }}
           onClick={() => setActiveProject(null)}
         >
+          {/* Bottom sheet on phones, centered dialog from sm up. A sheet keeps
+              the close control and the CTA inside thumb reach, and caps its
+              own height so a long description scrolls instead of pushing the
+              actions off-screen. */}
           <div
-            className="bg-white rounded-[var(--radius-lg)] shadow-soft-lg max-w-md w-full p-6"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="rising-project-title"
+            className="flex max-h-[88dvh] w-full flex-col overflow-y-auto overscroll-contain rounded-t-[var(--radius-xl)] bg-white p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-soft-lg sm:max-h-[85dvh] sm:max-w-md sm:rounded-[var(--radius-lg)] sm:p-6"
             onClick={e => e.stopPropagation()}
           >
+            {/* Grab handle — sheet affordance, phones only */}
+            <div
+              className="mx-auto mb-4 h-1 w-10 shrink-0 rounded-full bg-gray-300 sm:hidden"
+              aria-hidden="true"
+            />
+
             {/* Header */}
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
+            <div className="flex items-start justify-between gap-3 mb-4">
+              <div className="flex items-center gap-3 min-w-0">
                 <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${activeProject.iconBg}`}
+                  className={`w-10 h-10 rounded-[var(--radius-md)] flex items-center justify-center shrink-0 ${activeProject.iconBg}`}
                 >
                   <activeProject.Icon
                     className={`h-5 w-5 ${activeProject.iconColor}`}
                   />
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-gray-900 leading-snug">
+                <div className="min-w-0">
+                  <h3
+                    id="rising-project-title"
+                    className="text-base font-bold text-gray-900 leading-snug text-balance"
+                  >
                     {activeProject.label}
                   </h3>
-                  <p className="text-xs text-gray-400 mt-0.5">
+                  <p className="text-xs text-gray-500 mt-0.5">
                     {activeProject.sub}
                   </p>
                 </div>
               </div>
               <button
+                type="button"
+                autoFocus
                 onClick={() => setActiveProject(null)}
-                className="text-gray-400 hover:text-gray-600 transition-colors ml-2 shrink-0"
+                aria-label="Close project details"
+                className="-m-1 grid h-11 w-11 shrink-0 place-items-center rounded-[var(--radius-md)] text-gray-500 transition-colors hover:text-gray-700 active:bg-gray-100"
               >
-                ✕
+                <X className="h-5 w-5" />
               </button>
             </div>
 
@@ -819,12 +863,12 @@ export default function Hero() {
             </p>
 
             {/* Agency + Source */}
-            <div className="border-t border-gray-100 pt-4 space-y-1.5">
-              <p className="text-xs text-gray-400">
+            <div className="border-t border-[color:var(--color-rule)] pt-4 space-y-1.5">
+              <p className="text-xs text-gray-500">
                 <span className="font-semibold text-gray-600">Agency: </span>
                 {activeProject.agency}
               </p>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-500">
                 <span className="font-semibold text-gray-600">Source: </span>
                 {activeProject.source}
               </p>
@@ -834,7 +878,7 @@ export default function Hero() {
             <Link
               to={activeProject.href}
               onClick={() => setActiveProject(null)}
-              className={cn(buttonClasses('primary', 'md'), 'mt-4 w-full')}
+              className={cn(buttonClasses('primary', 'md'), 'mt-5 w-full py-3')}
             >
               See all infrastructure projects
               <ArrowRight className="h-4 w-4" />

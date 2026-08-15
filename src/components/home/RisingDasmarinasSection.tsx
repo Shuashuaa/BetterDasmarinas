@@ -74,7 +74,7 @@ export default function RisingDasmarinasSection() {
             <h2 className="text-2xl font-bold text-gray-900">
               What&apos;s Rising in Dasmariñas
             </h2>
-            <p className="text-sm text-gray-400 mt-1.5 max-w-lg leading-relaxed">
+            <p className="text-sm text-gray-500 mt-1.5 max-w-lg leading-relaxed">
               Major infrastructure, transit, education, and community projects
               shaping the city&apos;s future — sourced from the{' '}
               <span className="text-gray-600">
@@ -107,7 +107,7 @@ export default function RisingDasmarinasSection() {
                 {/* Top row */}
                 <div className="flex items-center justify-between">
                   <Icon className="h-4 w-4 text-gray-400" />
-                  <span className="text-[11px] font-medium text-gray-400 uppercase tracking-wide">
+                  <span className="text-xs lg:text-[11px] font-medium text-gray-500 uppercase tracking-wide">
                     {project.badge}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function RisingDasmarinasSection() {
                   <h3 className="text-sm font-semibold text-gray-900 leading-snug">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-gray-400 mt-0.5">
+                  <p className="text-xs text-gray-500 mt-0.5">
                     {project.subtitle}
                   </p>
                 </div>
@@ -133,12 +133,12 @@ export default function RisingDasmarinasSection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-gray-400 leading-relaxed flex-1">
+                <p className="text-xs text-gray-500 leading-relaxed flex-1">
                   {project.desc}
                 </p>
 
                 {/* Agency */}
-                <p className="text-xs text-gray-400 pt-3 border-t border-gray-100">
+                <p className="text-xs text-gray-500 pt-3 border-t border-gray-100">
                   <span className="text-gray-500 font-medium">
                     {project.agency}
                   </span>

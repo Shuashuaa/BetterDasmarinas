@@ -74,24 +74,34 @@
   --color-error-800: #5a1212;
   --color-error-900: #2d0909;
 
-  --color-gray-50: #f8f9fa;
-  --color-gray-100: #f1f3f5;
-  --color-gray-200: #e9ecef;
-  --color-gray-300: #dee2e6;
-  --color-gray-400: #ced4da;
-  --color-gray-500: #adb5bd;
-  --color-gray-600: #868e96;
-  --color-gray-700: #495057;
-  --color-gray-800: #343a40;
-  --color-gray-900: #212529;
+  /* Gray ramp — one cool family, tinted toward the civic navy so grays never
+     read warm next to the blue surfaces.
 
-  /* Elevation — soft, layered, low-alpha */
+     The previous ramp topped out too light for text: gray-500 (#adb5bd) sat at
+     ~2.2:1 on white and gray-400 at ~1.6:1, so every "secondary" and "meta"
+     label on the site failed WCAG AA. The steps below keep 50–300 as surface
+     and hairline values but pull 500 up to AA-passing body contrast, which
+     fixes the existing `text-gray-500` / `text-gray-600` usage in place. */
+  --color-gray-50: #f8f9fb;
+  --color-gray-100: #f1f3f7;
+  --color-gray-200: #e4e8ef;
+  --color-gray-300: #cdd5e0;
+  --color-gray-400: #97a3b6; /* ~3.0:1 — icons and dividers, not body text */
+  --color-gray-500: #6b7789; /* ~4.7:1 — AA for body text */
+  --color-gray-600: #4e5868; /* ~7.3:1 */
+  --color-gray-700: #3a4356; /* ~9.5:1 */
+  --color-gray-800: #2a3142;
+  --color-gray-900: #1a1f2b;
+
+  /* Elevation — soft, layered, low-alpha.
+     Tinted with the civic navy (10,35,80) so shadows read as the page's own
+     ground shade rather than as generic black at low opacity. */
   --shadow-soft-sm:
-    0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+    0 1px 2px rgba(10, 35, 80, 0.05), 0 1px 3px rgba(10, 35, 80, 0.07);
   --shadow-soft-md:
-    0 2px 4px rgba(16, 24, 40, 0.04), 0 6px 16px rgba(16, 24, 40, 0.08);
+    0 2px 4px rgba(10, 35, 80, 0.05), 0 6px 16px rgba(10, 35, 80, 0.09);
   --shadow-soft-lg:
-    0 4px 8px rgba(16, 24, 40, 0.04), 0 16px 32px rgba(16, 24, 40, 0.1);
+    0 4px 8px rgba(10, 35, 80, 0.05), 0 16px 32px rgba(10, 35, 80, 0.11);
 
   /* Radius scale (monotonic across the Tailwind --radius-* namespace) */
   --radius-sm: 0.5rem;
@@ -116,6 +126,22 @@
   --color-rule: #d8e4f3;
   --color-civic: #0052bc;
   --color-civic-bright: #0066eb;
+
+  /* Layering scale — every stacking context in the app picks from these
+     instead of inventing a number. Higher = closer to the viewer. */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 40;
+  --z-nav: 50;
+  --z-dropdown: 60;
+  --z-overlay: 70;
+  --z-modal: 80;
+  --z-tooltip: 90;
+
+  /* Height of the stacked sticky chrome. Anchor targets offset by this so they
+     don't land underneath it. Overridden per breakpoint below, since the
+     hotline row collapses and the info bar drops out on small screens. */
+  --nav-offset: 7.5rem;
 
   --animate-fade-in: fadeIn 0.5s ease-in-out;
   --animate-slide-in: slideIn 0.5s ease-out;
@@ -146,6 +172,173 @@
   --font-mono: var(--font-kapwa-mono);
 }
 
+/* ── Responsive type floor ───────────────────────────────────────
+   The design leans on text-xs for meta and text-sm for body, which reads fine
+   at arm's length on a desktop and far too small held in one hand. Lifting the
+   two scale steps raises every one of them at once, instead of sprinkling
+   responsive overrides across ~100 call sites. The 834px boundary clears every
+   common portrait tablet (768 / 810 / 820 / 834) — those are held at reading
+   distance like a phone — while leaving laptop widths on the desktop scale. */
+@media (max-width: 834px) {
+  :root {
+    --text-xs: 0.8125rem; /* 12 → 13 */
+    --text-xs--line-height: calc(1.125 / 0.8125);
+    --text-sm: 0.9375rem; /* 14 → 15 */
+    --text-sm--line-height: calc(1.375 / 0.9375);
+    --text-base: 1rem;
+  }
+}
+
+/* Chrome height per breakpoint — keep in step with Navbar's own heights.
+   Below md: collapsed hotline row (44) + nav (64) = 108.
+   md:       + info bar (~33) = 141.
+   lg:       inline hotline row + nav h-20 = 165. */
+@media (min-width: 768px) {
+  :root {
+    --nav-offset: 9.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --nav-offset: 11rem;
+  }
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Stops iOS Safari inflating type in landscape without blocking zoom. */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Anchor targets clear the sticky nav stack instead of hiding behind it. */
+  :target,
+  [id] {
+    scroll-margin-top: var(--nav-offset);
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    /* Page gutter, shared by the layout containers and the bleed rails so a
+       rail's negative margin always matches the real edge padding. */
+    --gutter: 1rem;
+    /* Chrome paints its own translucent gray flash on every tap; the pressed
+       states below are the designed replacement. */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      --gutter: 1.5rem;
+    }
+  }
+
+  /* Touch devices get no hover, so any control whose meaning depends on one
+     must also work on tap. Nothing here relies on that, but pointer-coarse
+     targets are padded to the 44px floor where the class opts in. */
+  @media (pointer: coarse) {
+    .tap-44 {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* One visible focus indicator for every interactive element. Keyboard-only,
+     so it never fires on mouse clicks. */
+  :focus-visible {
+    outline: 2px solid var(--color-civic-bright);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Headings avoid a single orphaned word on the last line; body prose gets
+     the cheaper orphan/ragging pass. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* Figures line up in columns everywhere numbers are displayed. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+}
+
+/* ── Horizontal rails ────────────────────────────────────────────
+   `scrollbar-hide` was in use on the What's Rising strip but never defined
+   anywhere, so the rail rendered a native scrollbar on every platform that
+   shows one. Defining it, and pairing it with scroll-snap so a swipe lands on
+   a card edge rather than mid-card. */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-rail {
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-rail > * {
+  scroll-snap-align: start;
+}
+
+/* Edge-to-edge rail on phones: the row bleeds into the page gutter so cards
+   run off the screen edge, which is what tells you it scrolls. */
+.rail-bleed {
+  margin-inline: calc(var(--gutter, 1rem) * -1);
+  padding-inline: var(--gutter, 1rem);
+}
+
+/* Hit area expander — grows a small control to a 44px touch target without
+   changing how it looks. */
+.tap-44 {
+  position: relative;
+}
+.tap-44::after {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: max(100%, 44px);
+  height: max(100%, 44px);
+  transform: translate(-50%, -50%);
+}
+
+/* Skip link — hidden until focused, then pinned over the nav. */
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: var(--z-tooltip);
+  padding: 0.625rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-civic);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft-lg);
+  transform: translateY(-150%);
+  transition: transform var(--duration-base) var(--ease-emphasized);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 /* ── Elevation utilities ─────────────────────────────────────── */
 .shadow-soft-sm {
   box-shadow: var(--shadow-soft-sm);
@@ -157,11 +350,12 @@
   box-shadow: var(--shadow-soft-lg);
 }
 
-/* Standard card surface — white bg, hairline border, soft elevation */
+/* Standard card surface — white bg, hairline border, soft elevation.
+   Shares the blue hairline with .civic-card so the two card families read as
+   one system rather than two. */
 .card-surface {
   background-color: #ffffff;
-  border: 1px solid var(--color-gray-200);
-  box-shadow: var(--shadow-soft-md);
+  border: 1px solid var(--color-rule);
 }
 
 /* ── Civic design system (Bright Civic Clarity) ───────────────── */
@@ -171,11 +365,21 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.75rem;
+  /* Hard-coded rather than a scale step, so it needs its own mobile lift —
+     uppercase at wide tracking is the least legible setting on the page. */
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-civic);
+  text-wrap: balance;
+}
+
+@media (min-width: 835px) {
+  .civic-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+  }
 }
 .civic-eyebrow::before {
   content: '';
@@ -185,13 +389,14 @@
   border-radius: 1px;
 }
 
-/* Civic card — white, blue hairline, soft elevation; optional top-rule + hover lift */
+/* Civic card — white, blue hairline. Elevation is declared once: the hairline
+   holds the card at rest and shadow only appears when the card lifts, so a
+   resting card is never a 1px border floating under a soft shadow. */
 .civic-card {
   position: relative;
   background: #ffffff;
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft-sm);
   transition:
     box-shadow var(--duration-base) var(--ease-emphasized),
     transform var(--duration-base) var(--ease-emphasized),
@@ -209,10 +414,23 @@
   );
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
-.civic-card--interactive:hover {
-  box-shadow: var(--shadow-soft-lg);
-  transform: translateY(-3px);
+/* Lift is a pointer affordance. On touch there is no hover, and applying it
+   anyway leaves a card stuck in the lifted state after a tap. */
+@media (hover: hover) and (pointer: fine) {
+  .civic-card--interactive:hover {
+    box-shadow: var(--shadow-soft-lg);
+    transform: translateY(-3px);
+    border-color: #b9d2f0;
+  }
+}
+
+/* Pressed — reads as a physical settle under a cursor, and as immediate tap
+   feedback on touch, where it is the only state the finger ever sees. */
+.civic-card--interactive:active {
   border-color: #b9d2f0;
+  background: var(--color-surface-muted);
+  transform: translateY(0);
+  transition-duration: var(--duration-fast);
 }
 
 /* Muted civic band background */
@@ -240,7 +458,9 @@
   );
 }
 
-/* Light civic hero canvas — pale-blue wash + faint navy dot grid */
+/* Light civic hero canvas — pale-blue wash under a faint navy dot grid. The
+   grid is the only texture here, and it earns its place by reading as
+   registration marks on civic paper rather than as generic decoration. */
 .civic-hero {
   background-color: #f4f8fd;
   background-image: radial-gradient(
@@ -249,6 +469,19 @@
     transparent 0
   );
   background-size: 22px 22px;
+}
+
+/* The grid is tuned for desktop viewing distance; at phone size the same
+   density turns to noise behind text, so it coarsens and fades. */
+@media (max-width: 834px) {
+  .civic-hero {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(10, 45, 110, 0.045) 1px,
+      transparent 0
+    );
+    background-size: 28px 28px;
+  }
 }
 
 /* ── History card butterfly & cocoon decorations ─────────────── */
@@ -669,6 +902,20 @@
   transform: translateY(0) scale(1);
 }
 
+/* Reduced motion — content is present immediately, never animated in. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ── Rising tile border animations ───────────────────────────── */
 
 /* Under Construction — slow marching ants encircling clockwise */
@@ -776,7 +1023,7 @@
 
 /* Checklist styling */
 .task-list-item {
-  @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;
+  @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer;
 }
 
 /* Sticky table styling */

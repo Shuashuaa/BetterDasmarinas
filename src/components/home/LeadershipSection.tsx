@@ -66,9 +66,9 @@ function OfficialCard({ official, index }: OfficialCardProps) {
       {/* Top accent bar */}
       <div className="h-1.5 bg-primary-700 w-full" />
 
-      <div className="p-5 flex gap-4">
+      <div className="p-4 sm:p-5 flex gap-3.5 sm:gap-4">
         {/* Avatar */}
-        <div className="w-14 h-14 rounded-full bg-primary-100 text-primary-700 font-black text-lg flex items-center justify-center shrink-0">
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary-100 text-primary-700 font-black text-base sm:text-lg flex items-center justify-center shrink-0">
           {official.initials}
         </div>
 
@@ -77,15 +77,18 @@ function OfficialCard({ official, index }: OfficialCardProps) {
           <Badge tone="primary" className="border border-primary-100 mb-1.5">
             {t(official.badgeKey)}
           </Badge>
-          <h3 className="font-black text-sm text-gray-900 leading-snug truncate mb-0.5">
+          {/* Was `truncate`, which clipped the Vice Mayor's name on every
+              phone. An official's name is the one thing here that must never
+              be cut. */}
+          <h3 className="font-black text-sm text-gray-900 leading-snug text-balance mb-0.5">
             {official.name}
           </h3>
           <p className="text-xs text-gray-500 mb-3">{t(official.titleKey)}</p>
 
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-0.5">
             <a
               href={`tel:${official.tel}`}
-              className="flex items-center gap-2 text-xs text-gray-600 hover:text-primary-700 transition-colors"
+              className="-mx-1 flex min-h-[40px] items-center gap-2 rounded-[var(--radius-sm)] px-1 text-xs tabular text-gray-600 transition-colors hover:text-primary-700 active:bg-primary-50"
             >
               <Phone className="h-3.5 w-3.5 text-primary-500 shrink-0" />
               {official.phone}
@@ -93,10 +96,10 @@ function OfficialCard({ official, index }: OfficialCardProps) {
             {official.email && (
               <a
                 href={`mailto:${official.email}`}
-                className="flex items-center gap-2 text-xs text-gray-600 hover:text-primary-700 transition-colors"
+                className="-mx-1 flex min-h-[40px] items-center gap-2 rounded-[var(--radius-sm)] px-1 text-xs text-gray-600 transition-colors hover:text-primary-700 active:bg-primary-50"
               >
                 <Mail className="h-3.5 w-3.5 text-primary-500 shrink-0" />
-                {official.email}
+                <span className="break-all">{official.email}</span>
               </a>
             )}
           </div>
@@ -105,7 +108,7 @@ function OfficialCard({ official, index }: OfficialCardProps) {
         {/* External link */}
         <Link
           to="/government/departments/executive"
-          className="shrink-0 self-start text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
+          className="-m-1 grid h-11 w-11 shrink-0 self-start place-items-center rounded-[var(--radius-md)] text-[color:var(--color-civic)] transition-colors hover:text-primary-800 active:bg-primary-50"
           aria-label={t('leadership.viewProfile')}
         >
           <ExternalLink className="h-4 w-4" />
@@ -155,7 +158,7 @@ export default function LeadershipSection() {
           </h2>
           <Link
             to="/government/departments/executive"
-            className="text-sm font-semibold text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
+            className="shrink-0 -mr-2 rounded-[var(--radius-sm)] px-2 py-2.5 text-sm font-semibold text-[color:var(--color-civic)] transition-colors hover:text-primary-800 active:bg-primary-50"
           >
             {t('leadership.viewAll')}
           </Link>

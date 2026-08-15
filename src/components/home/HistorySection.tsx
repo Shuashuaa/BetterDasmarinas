@@ -44,7 +44,7 @@ function TimelineItem({ year, title, text, isLast, index }: TimelineItemProps) {
   return (
     <div
       ref={ref}
-      className="flex gap-6"
+      className="flex gap-4 sm:gap-6"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(20px)',
@@ -127,7 +127,7 @@ export default function HistorySection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left — timeline */}
           <div>
             {EVENT_KEYS.map((key, idx) => (
@@ -142,19 +142,22 @@ export default function HistorySection() {
             ))}
           </div>
 
-          {/* Right — feature cards (desktop only) */}
+          {/* The two founding dates. These were `hidden lg:flex`, so phone
+              readers lost both headline facts entirely. On small screens they
+              lead instead — they are the summary the timeline then details —
+              and they return to the right column at lg. */}
           <div
             ref={rightRef}
-            className="hidden lg:flex flex-col gap-6 justify-center"
+            className="order-first grid grid-cols-1 gap-4 sm:grid-cols-2 lg:order-none lg:flex lg:flex-col lg:justify-center lg:gap-6"
             style={{
               opacity: rightVisible ? 1 : 0,
-              transform: rightVisible ? 'translateX(0)' : 'translateX(32px)',
+              transform: rightVisible ? 'none' : 'translateY(20px)',
               transition:
                 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 200ms, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 200ms',
             }}
           >
             {/* Cityhood card — butterfly resting at top-right */}
-            <div className="bg-primary-700 text-white rounded-[var(--radius-lg)] p-8 shadow-soft-lg relative overflow-visible">
+            <div className="bg-primary-700 text-white rounded-[var(--radius-lg)] p-6 lg:p-8 shadow-soft-lg relative overflow-visible">
               {/* Butterfly — toggle with VITE_BUTTERFLIES_ENABLED */}
               {import.meta.env.VITE_BUTTERFLIES_ENABLED === 'true' && (
                 <svg
@@ -224,10 +227,10 @@ export default function HistorySection() {
                 </svg>
               )}
 
-              <div className="text-5xl font-black mb-1">
+              <div className="tabular text-4xl lg:text-5xl font-black tracking-tight mb-1">
                 {t('history.cityhoodYear', '1998')}
               </div>
-              <div className="text-lg font-semibold mb-3">
+              <div className="text-base lg:text-lg font-semibold mb-3 text-balance">
                 {t('history.cityhoodLabel', 'Year Chartered as a City')}
               </div>
               <p className="text-primary-100 text-sm leading-relaxed">
@@ -239,11 +242,11 @@ export default function HistorySection() {
             </div>
 
             {/* Founded card — chrysalis hanging at bottom-right */}
-            <div className="civic-card civic-card--rule p-8 pt-9 relative overflow-visible">
-              <div className="text-5xl font-black text-[color:var(--color-civic)] mb-1">
+            <div className="civic-card civic-card--rule p-6 pt-7 lg:p-8 lg:pt-9 relative overflow-visible">
+              <div className="tabular text-4xl lg:text-5xl font-black tracking-tight text-[color:var(--color-civic)] mb-1">
                 {t('history.foundedYear', '1742')}
               </div>
-              <div className="text-lg font-semibold text-gray-800 mb-3">
+              <div className="text-base lg:text-lg font-semibold text-gray-800 mb-3 text-balance">
                 {t('history.foundedLabel', 'Year Founded')}
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">
@@ -261,7 +264,7 @@ export default function HistorySection() {
                   viewBox="0 0 22 54"
                   width="22"
                   height="54"
-                  className="history-card-cocoon absolute pointer-events-none"
+                  className="history-card-cocoon absolute pointer-events-none hidden lg:block"
                   style={{ top: '100%', right: '28px' }}
                 >
                   {/* Silk thread */}

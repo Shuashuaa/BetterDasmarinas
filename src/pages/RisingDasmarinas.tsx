@@ -276,7 +276,7 @@ function ProjectCard({ project }: { project: Project }) {
             <ExternalLink className="h-3 w-3" />
           </a>
         ) : (
-          <span className="text-xs text-gray-400">{project.source}</span>
+          <span className="text-xs text-gray-500">{project.source}</span>
         )}
       </div>
     </div>

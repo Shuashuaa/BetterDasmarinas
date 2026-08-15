@@ -62,23 +62,23 @@ export default function Footer() {
 
   return (
     <footer className="bg-[color:var(--color-ink)] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         {/* Cost banner — full width top row */}
-        <div className="flex items-center justify-center gap-3 w-full border border-green-800 bg-green-900/20 rounded-[var(--radius-lg)] px-6 py-4 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 w-full border border-green-800 bg-green-900/20 rounded-[var(--radius-lg)] px-5 py-4 mb-8 sm:mb-10 text-center">
           <span className="text-green-400 text-sm font-semibold">
             {t('footer.costLabel')}
           </span>
           <span className="text-3xl font-black text-yellow-300">₱0</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 sm:mb-10">
           {/* Brand */}
           <div>
             <div className="mb-3">
               <img
                 src="/logo.png"
                 alt="BetterDasmariñas"
-                className="h-20 w-auto"
+                className="h-16 sm:h-20 w-auto"
                 onError={e => {
                   (e.currentTarget as HTMLImageElement).style.display = 'none';
                 }}
@@ -87,12 +87,12 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               {t('footer.mission')}
             </p>
-            <div className="flex gap-3 mb-6">
+            <div className="-ml-2 flex gap-1 mb-5">
               <a
                 href="https://www.facebook.com/1023346407535869"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
+                className="grid h-11 w-11 place-items-center rounded-[var(--radius-md)] text-gray-400 transition-colors hover:text-[color:var(--color-civic-bright)] active:bg-white/10"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -101,7 +101,7 @@ export default function Footer() {
                 href="https://github.com/Shuashuaa/betterdasmarinas"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
+                className="grid h-11 w-11 place-items-center rounded-[var(--radius-md)] text-gray-400 transition-colors hover:text-[color:var(--color-civic-bright)] active:bg-white/10"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -110,7 +110,7 @@ export default function Footer() {
                 href="https://discord.gg/bettergovph"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-[color:var(--color-civic-bright)] transition-colors"
+                className="grid h-11 w-11 place-items-center rounded-[var(--radius-md)] text-gray-400 transition-colors hover:text-[color:var(--color-civic-bright)] active:bg-white/10"
                 aria-label="Discord"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -133,15 +133,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
               {t('footer.quickLinks')}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="-mx-2 space-y-0.5">
               {QUICK_LINKS.map(link => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-[color:var(--color-civic-bright)] text-sm transition-colors"
+                    className="flex min-h-[40px] items-center rounded-[var(--radius-sm)] px-2 text-sm text-gray-400 transition-colors hover:text-[color:var(--color-civic-bright)] active:bg-white/10"
                   >
                     {t(link.labelKey)}
                   </Link>
@@ -152,17 +152,17 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
               {t('footer.resources')}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="-mx-2 space-y-0.5">
               {RESOURCES.map(link => (
                 <li key={link.label}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-gray-400 hover:text-[color:var(--color-civic-bright)] text-sm transition-colors"
+                    className="flex min-h-[40px] items-center rounded-[var(--radius-sm)] px-2 text-sm text-gray-400 transition-colors hover:text-[color:var(--color-civic-bright)] active:bg-white/10"
                   >
                     {link.label}
                   </a>
@@ -197,7 +197,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[color:var(--color-rule)] mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+        <div className="mt-2 flex flex-col items-center justify-between gap-3 border-t border-white/10 py-5 text-center text-xs text-gray-400 lg:flex-row lg:gap-2 lg:text-left">
           <span>
             © {new Date().getFullYear()} BetterDasmariñas.org
             <span className="mx-2 opacity-40">|</span>
@@ -205,9 +205,9 @@ export default function Footer() {
             <span className="mx-2 opacity-40">|</span>
             {t('footer.attribution')}
           </span>
-          <span className="flex items-center gap-1.5 text-gray-500">
+          <span className="flex items-center gap-1.5 text-gray-400">
             <Eye className="h-3 w-3" />
-            <span>
+            <span className="tabular">
               {visitCount != null ? visitCount.toLocaleString() : '—'} visits
             </span>
           </span>
@@ -215,12 +215,12 @@ export default function Footer() {
             href="https://github.com/Shuashuaa"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 text-gray-600 hover:text-gray-300 transition-colors group"
+            className="flex items-center gap-1.5 text-gray-400 hover:text-gray-200 transition-colors group"
           >
-            <Heart className="h-3 w-3 text-gray-600 group-hover:text-red-400 group-hover:fill-red-400 transition-colors" />
+            <Heart className="h-3 w-3 text-gray-400 group-hover:text-red-400 group-hover:fill-red-400 transition-colors" />
             <span>
               {t('footer.builtBy')}{' '}
-              <span className="text-gray-400 group-hover:text-white transition-colors font-medium">
+              <span className="text-gray-200 group-hover:text-white transition-colors font-medium">
                 Joshua Tania
               </span>
             </span>
@@ -244,7 +244,7 @@ export default function Footer() {
                 d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
               />
             </svg>
-            Ver. 1.0.0
+            Ver. {__APP_VERSION__}
           </span>
         </div>
       </div>

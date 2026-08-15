@@ -68,7 +68,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
       ref={ref}
       href={contact.href}
       {...(contact.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-      className="group civic-card civic-card--interactive p-5 flex gap-4"
+      className="group civic-card civic-card--interactive p-4 sm:p-5 flex gap-3.5 sm:gap-4 min-h-[76px] items-center"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -89,8 +89,10 @@ function ContactCard({ contact, index }: ContactCardProps) {
         <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-0.5">
           {t(contact.labelKey)}
         </span>
+        {/* `truncate` clipped the city-hall address and the mayor's email on
+            phones. Contact details are the payload of this card — they wrap. */}
         <span
-          className={`font-bold text-sm ${contact.color} group-hover:underline truncate`}
+          className={`font-bold text-sm ${contact.color} group-hover:underline break-words`}
         >
           {contact.external ? t(contact.primary) : contact.primary}
         </span>
@@ -145,7 +147,7 @@ export default function ContactSection() {
           </h2>
           <Link
             to="/government/departments"
-            className="text-sm font-semibold text-[color:var(--color-civic)] hover:text-primary-800 transition-colors"
+            className="shrink-0 -mr-2 rounded-[var(--radius-sm)] px-2 py-2.5 text-sm font-semibold text-[color:var(--color-civic)] transition-colors hover:text-primary-800 active:bg-primary-50"
           >
             {t('contact.viewAll')}
           </Link>

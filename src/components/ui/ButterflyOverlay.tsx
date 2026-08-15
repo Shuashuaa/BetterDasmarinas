@@ -52,7 +52,7 @@ export default function ButterflyOverlay() {
   return (
     <div
       className="fixed inset-0 pointer-events-none overflow-hidden"
-      style={{ zIndex: 9999 }}
+      style={{ zIndex: 'var(--z-overlay)' }}
     >
       {butterflies.map(b => (
         <div

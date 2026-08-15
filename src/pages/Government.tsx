@@ -62,7 +62,7 @@ const Government: React.FC = () => {
   }
   if (!categoryData) {
     return (
-      <Section className="mb-12" innerClassName="p-3">
+      <Section className="mb-12">
         <Breadcrumbs className="mb-8" />
         <Banner
           type="error"
@@ -81,7 +81,7 @@ const Government: React.FC = () => {
         description={categoryData.description}
         keywords={`${categoryData.category}, government services, public services, local government`}
       />
-      <Section className="mb-12" innerClassName="p-3">
+      <Section className="mb-12">
         <Breadcrumbs className="mb-8" />
         <Icon className="h-8 w-8 mb-4 text-[color:var(--color-civic)] rounded-md" />
         <Heading className="accent-heading text-[color:var(--color-ink)]">
@@ -116,6 +116,7 @@ const Government: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/government/${category}/${subcategory.slug}`}
+                    className="block h-full"
                   >
                     <Card
                       hoverable
@@ -144,6 +145,7 @@ const Government: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/government/${category}/${subcategory.slug}`}
+                    className="block h-full"
                   >
                     <Card
                       hoverable

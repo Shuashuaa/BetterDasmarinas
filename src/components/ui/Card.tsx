@@ -29,8 +29,10 @@ export default function Card({
       className: cn(
         'card-surface rounded-[var(--radius-lg)]',
         paddingMap[padding],
+        // Matches .civic-card--interactive so both card families lift, tint,
+        // and settle identically.
         interactive &&
-          'transition-shadow duration-[var(--duration-base)] ease-[var(--ease-emphasized)] hover:shadow-soft-lg',
+          'transition-[box-shadow,transform,border-color] duration-[var(--duration-base)] ease-[var(--ease-emphasized)] hover:shadow-soft-lg hover:-translate-y-0.5 hover:border-primary-200 active:translate-y-0 active:shadow-soft-sm active:duration-75',
         className
       ),
     },
