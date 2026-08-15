@@ -63,3 +63,7 @@ terraform.rc
 # Claude Code local settings
 .claude
 
+
+# Agent skill tooling (installed locally, like .claude)
+.agents
+skills-lock.json

@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:betterindang.org)",
+      "WebFetch(domain:bettertagaytay.org)",
       "WebSearch",
       "Bash(curl -s -L \"https://betterindang.org\" --max-time 15)",
       "Bash(curl -s -L \"https://betterindang.org/assets/index-bA4sRtwa.css\" --max-time 15)",
@@ -11,7 +11,31 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(curl:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(npx lint-staged:*)",
+      "Bash(git commit:*)",
+      "Bash(git fsck:*)",
+      "Bash(grep -oP '\\(?<=<td>|<li>|<h[1-6]>|<p>\\)[^<]{5,}')",
+      "WebFetch(domain:asp.depeddasma.edu.ph)",
+      "Bash(npm install:*)",
+      "Bash(node -e ':*)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.load\\(sys.stdin\\) if f['name'].endswith\\('.md'\\)]\")",
+      "Bash(jq --version)",
+      "Bash(sed -i '/- \\\\*\\\\*Official Website:\\\\*\\\\* http:\\\\/\\\\/www\\\\.dasmarinas\\\\.gov\\\\.ph/d' C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/guides-and-regulations/ordinances.md C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/guides-and-regulations/resolutions.md C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/reports-and-statistics/infrastructure-projects.md C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/legislative/resolutions.md C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/legislative/ordinances.md C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/reports-and-statistics/annual-report.md)",
+      "Bash(sed -i '/- \\\\*\\\\*Official City Website:\\\\*\\\\* http:\\\\/\\\\/www\\\\.dasmarinas\\\\.gov\\\\.ph/d' C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/reports-and-statistics/dti-cmci-profile.md)",
+      "Bash(sed -i '/| \\\\*\\\\*Official Website\\\\*\\\\*.*http:\\\\/\\\\/www\\\\.dasmarinas\\\\.gov\\\\.ph/d' C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/reports-and-statistics/city-profile.md)",
+      "Bash(sed -i '/\\\\[dasmarinas\\\\.gov\\\\.ph\\\\]\\(http:\\\\/\\\\/www\\\\.dasmarinas\\\\.gov\\\\.ph\\)/d' C:/Users/JoviJoshuaTania/Documents/Personal/betterdasmarinas/content/government/departments/executive.md)",
+      "Bash(npx tsc:*)",
+      "Bash(npx vite:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:betterindang.org)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:www.bettergeneraltrias.org)",
+      "WebFetch(domain:api.counterapi.dev)",
+      "Bash(ls api *)",
+      "Bash(cat vercel.json)"
     ]
   }
 }

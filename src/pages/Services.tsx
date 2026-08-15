@@ -2,6 +2,7 @@ import Section from '../components/ui/Section';
 import { useParams, Link } from 'react-router-dom';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
+import { Badge } from '../components/ui/Badge';
 import {
   serviceCategories,
   getCategorySubcategories,
@@ -61,7 +62,7 @@ const Services: React.FC = () => {
   }
   if (!categoryData) {
     return (
-      <Section className="p-3 mb-12">
+      <Section className="mb-12">
         <Breadcrumbs className="mb-8" />
         <Banner
           type="error"
@@ -80,11 +81,15 @@ const Services: React.FC = () => {
         description={categoryData.description}
         keywords={`${categoryData.category}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section className="mb-12">
         <Breadcrumbs className="mb-8" />
-        <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
-        <Heading>{categoryData.category || category}</Heading>
-        <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
+        <Icon className="h-8 w-8 mb-4 text-[color:var(--color-civic)] rounded-md" />
+        <Heading className="accent-heading text-[color:var(--color-ink)]">
+          {categoryData.category || category}
+        </Heading>
+        <Text className="text-[color:var(--color-ink-soft)] mb-6 max-w-lg">
+          {categoryData.description}
+        </Text>
 
         {loading ? (
           <div className="flex justify-center items-center p-8">
@@ -93,10 +98,15 @@ const Services: React.FC = () => {
         ) : (
           <>
             {categoryIndex.title && (
-              <Heading level={3}>{categoryIndex.title}</Heading>
+              <Heading
+                level={3}
+                className="accent-heading text-[color:var(--color-ink)]"
+              >
+                {categoryIndex.title}
+              </Heading>
             )}
             {categoryIndex.description && (
-              <Text className="text-gray-600 mb-4">
+              <Text className="text-[color:var(--color-ink-soft)] mb-4 max-w-lg">
                 {categoryIndex.description}
               </Text>
             )}
@@ -106,23 +116,24 @@ const Services: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/services/${category}/${subcategory.slug}`}
+                    className="block h-full"
                   >
                     <Card
                       hoverable
-                      className="h-full border-t-4 border-primary-500"
+                      className="h-full civic-card civic-card--rule civic-card--interactive"
                     >
                       <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
+                        <h4 className="text-lg font-medium text-[color:var(--color-ink)]">
                           {subcategory.name}
                         </h4>
                         {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
+                          <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
                             {subcategory.description}
                           </p>
                         )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
+                        <Badge tone="neutral" className="mt-2">
                           {categoryData.category || category}
-                        </span>
+                        </Badge>
                       </CardContent>
                     </Card>
                   </Link>
@@ -134,20 +145,24 @@ const Services: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/services/${category}/${subcategory.slug}`}
+                    className="block h-full"
                   >
-                    <Card hoverable className="mb-4">
+                    <Card
+                      hoverable
+                      className="mb-4 civic-card civic-card--interactive"
+                    >
                       <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
+                        <h4 className="text-lg font-medium text-[color:var(--color-ink)]">
                           {subcategory.name}
                         </h4>
                         {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
+                          <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
                             {subcategory.description}
                           </p>
                         )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
+                        <Badge tone="neutral" className="mt-2">
                           {categoryData.category || category}
-                        </span>
+                        </Badge>
                       </CardContent>
                     </Card>
                   </Link>

@@ -15,15 +15,13 @@ const Home: React.FC = () => {
         description="A free, open-source community portal for residents of Dasmariñas City, Cavite. Access government services, officials, and public information."
         keywords="dasmariñas, dasmarinas, cavite, city government, services, public services, CALABARZON, philippines, paru-paro festival"
       />
-      <main className="flex-grow">
-        <Hero />
-        <CityGlanceSection />
-        <HistorySection />
-        <ServicesSection />
-        <GovernmentActivitySection />
-        <LeadershipSection />
-        <ContactSection />
-      </main>
+      <Hero />
+      <CityGlanceSection />
+      <HistorySection />
+      <ServicesSection />
+      <GovernmentActivitySection />
+      <LeadershipSection />
+      <ContactSection />
     </>
   );
 };

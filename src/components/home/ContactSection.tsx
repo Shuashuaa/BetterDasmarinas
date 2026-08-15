@@ -68,7 +68,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
       ref={ref}
       href={contact.href}
       {...(contact.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-      className="group bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex gap-4 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+      className="group civic-card civic-card--interactive p-4 sm:p-5 flex gap-3.5 sm:gap-4 min-h-[76px] items-center"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible
@@ -79,7 +79,7 @@ function ContactCard({ contact, index }: ContactCardProps) {
     >
       {/* Icon box */}
       <div
-        className={`w-11 h-11 rounded-xl ${contact.bg} ${contact.color} flex items-center justify-center shrink-0`}
+        className={`w-11 h-11 rounded-[var(--radius-md)] ${contact.bg} ${contact.color} flex items-center justify-center shrink-0`}
       >
         <Icon className="h-5 w-5" />
       </div>
@@ -89,8 +89,10 @@ function ContactCard({ contact, index }: ContactCardProps) {
         <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-0.5">
           {t(contact.labelKey)}
         </span>
+        {/* `truncate` clipped the city-hall address and the mayor's email on
+            phones. Contact details are the payload of this card — they wrap. */}
         <span
-          className={`font-bold text-sm ${contact.color} group-hover:underline truncate`}
+          className={`font-bold text-sm ${contact.color} group-hover:underline break-words`}
         >
           {contact.external ? t(contact.primary) : contact.primary}
         </span>
@@ -124,7 +126,10 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section id="contact" className="bg-gray-50 py-12 border-b border-gray-100">
+    <section
+      id="contact"
+      className="section-band py-12 border-b border-[color:var(--color-rule)]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div
@@ -137,12 +142,12 @@ export default function ContactSection() {
               'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <h2 className="text-xl font-black text-gray-900">
+          <h2 className="accent-heading text-xl font-black text-[color:var(--color-ink)]">
             {t('contact.title')}
           </h2>
           <Link
             to="/government/departments"
-            className="text-sm font-semibold text-primary-700 hover:text-primary-800 transition-colors"
+            className="shrink-0 -mr-2 rounded-[var(--radius-sm)] px-2 py-2.5 text-sm font-semibold text-[color:var(--color-civic)] transition-colors hover:text-primary-800 active:bg-primary-50"
           >
             {t('contact.viewAll')}
           </Link>

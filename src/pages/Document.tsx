@@ -2,7 +2,7 @@ import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
-import { Banner } from '@bettergov/kapwa/banner';
+import NotFound from './NotFound';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -119,26 +119,38 @@ export default function Document({
     loadContent();
   }, [documentSlug, category, categoryType]);
 
+  // Skeleton mirrors the shape of the loaded document — breadcrumb rule,
+  // heading, then prose — so the page doesn't reflow when content lands.
   if (loading) {
     return (
-      <Section className="p-3 mb-12">
-        <Banner type="info" description="Loading document..." />
+      <Section className="mb-12">
+        <div className="animate-pulse" aria-busy="true" aria-live="polite">
+          <span className="sr-only">Loading document</span>
+          <div className="h-3 w-64 rounded bg-[color:var(--color-rule)] mb-8" />
+          <div className="card-surface rounded-[var(--radius-lg)] p-6">
+            <div className="h-8 w-2/3 rounded bg-[color:var(--color-rule)] mb-6" />
+            <div className="space-y-3">
+              <div className="h-3 w-full rounded bg-gray-100" />
+              <div className="h-3 w-11/12 rounded bg-gray-100" />
+              <div className="h-3 w-full rounded bg-gray-100" />
+              <div className="h-3 w-4/6 rounded bg-gray-100" />
+            </div>
+            <div className="h-5 w-1/3 rounded bg-[color:var(--color-rule)] mt-8 mb-4" />
+            <div className="space-y-3">
+              <div className="h-3 w-full rounded bg-gray-100" />
+              <div className="h-3 w-10/12 rounded bg-gray-100" />
+              <div className="h-3 w-9/12 rounded bg-gray-100" />
+            </div>
+          </div>
+        </div>
       </Section>
     );
   }
 
+  // A document that can't be resolved is a missing page — send readers to the
+  // same branded dead-end as any other bad URL, which offers a way back.
   if (error) {
-    return (
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" items={breadcrumbs} />
-        <Banner
-          type="error"
-          title="Document Not Found"
-          description={error}
-          icon
-        />
-      </Section>
-    );
+    return <NotFound />;
   }
 
   if (nestedIndex) {
@@ -149,13 +161,18 @@ export default function Document({
           title={documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
-        <Section className="p-3 mb-12">
+        <Section className="mb-12">
           <Breadcrumbs className="mb-8" items={breadcrumbs} />
           {nestedIndex.title && (
-            <Heading level={2}>{nestedIndex.title}</Heading>
+            <Heading
+              level={2}
+              className="accent-heading text-[color:var(--color-ink)]"
+            >
+              {nestedIndex.title}
+            </Heading>
           )}
           {nestedIndex.description && (
-            <Text className="text-gray-600 mb-4">
+            <Text className="text-[color:var(--color-ink-soft)] mb-4 max-w-lg">
               {nestedIndex.description}
             </Text>
           )}
@@ -213,20 +230,24 @@ export default function Document({
         }
         keywords={`${documentSlug}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
+      <Section className="mb-12">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
         <Card className="mb-8 markdown-content">
           <CardHeader>
             {markdownContent.description && (
               <CardContent>{markdownContent.description}</CardContent>
             )}
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]}
-              components={markdownComponents}
-            >
-              {markdownContent.content}
-            </ReactMarkdown>
+            {/* Blocks stay full width for tables and images, but running text
+                is held to a ~68ch measure so long lines stay readable. */}
+            <div className="prose prose-gray max-w-none prose-headings:tracking-tight prose-headings:text-balance prose-p:max-w-[68ch] prose-li:max-w-[66ch] prose-a:text-primary-600 prose-a:hover:text-primary-700">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={markdownComponents}
+              >
+                {markdownContent.content}
+              </ReactMarkdown>
+            </div>
           </CardHeader>
         </Card>
       </Section>

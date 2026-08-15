@@ -2,6 +2,7 @@ import Section from '../ui/Section';
 import * as LucideIcons from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import { Badge } from '../ui/Badge';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -38,10 +39,15 @@ export default function GovernmentActivitySection({
   const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <Section id="#government">
+    <Section id="government" surface="muted">
       <div ref={headingRef} className="reveal">
-        <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
-        <Text className="text-gray-600 mb-6">
+        <Heading
+          level={2}
+          className="accent-heading text-[color:var(--color-ink)]"
+        >
+          {title || t('governmentActivity.title')}
+        </Heading>
+        <Text className="text-gray-600 mb-6 max-w-lg">
           {description || t('governmentActivity.description')}
         </Text>
       </div>
@@ -54,9 +60,9 @@ export default function GovernmentActivitySection({
           <Link
             key={category.slug}
             to={`/government/${category.slug}`}
-            className="group block bg-white rounded-xl border border-gray-100 hover:border-primary-200 hover:shadow-md transition-all duration-200 p-5"
+            className="group flex h-full flex-col civic-card civic-card--interactive p-5"
           >
-            <div className="bg-primary-50 text-primary-700 w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
+            <div className="bg-primary-50 text-[color:var(--color-civic)] w-10 h-10 rounded-[var(--radius-md)] flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
               {getIcon(category.icon)}
             </div>
             <h3 className="text-sm font-bold mb-2 text-gray-900">
@@ -65,15 +71,17 @@ export default function GovernmentActivitySection({
                 category.category
               )}
             </h3>
-            <p className="text-xs text-gray-500 leading-relaxed mb-3">
+            <p className="text-xs text-gray-500 leading-relaxed mb-4">
               {t(
                 `governmentActivity.categories.${category.slug}.description`,
                 category.description
               )}
             </p>
-            <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full bg-primary-50 text-primary-700">
-              Government
-            </span>
+            {/* mt-auto pins the badge to the card floor so it lines up across
+                the row regardless of description length. */}
+            <div className="mt-auto">
+              <Badge tone="primary">Government</Badge>
+            </div>
           </Link>
         ))}
       </div>
